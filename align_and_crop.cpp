@@ -139,8 +139,6 @@ void align_and_crop(Mat &image, Ptr<aruco::Dictionary> arucoDict, Ptr<aruco::Det
     // imshow("Final Image", final_image);
     GlobalData::getInstance()->setFrameData(final_image);
     // ocr(final_image);
-    // display_bounding(final_image);
-    // get_results(final_image);
     get_circle_results(final_image);
     waitKey(0);
     destroyAllWindows();

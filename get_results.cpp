@@ -109,9 +109,6 @@ bool isCircleFilled(Mat& image, Point p1, Point p2, double fillThreshold = 0.8) 
     Mat kernel = getStructuringElement(MORPH_ELLIPSE, Size(5, 5));
     morphologyEx(thresh, morph, MORPH_CLOSE, kernel);
 
-    // Debugging: Show the threshold and morph images
-    // imshow("thresh.jpg", thresh);
-    // imshow("morph.jpg", morph);
 
     // Detect circles using Hough Circle Transform with adjusted parameters
     vector<Vec3f> circles;
@@ -131,180 +128,21 @@ bool isCircleFilled(Mat& image, Point p1, Point p2, double fillThreshold = 0.8) 
     Mat mask = Mat::zeros(morph.size(), morph.type());
     cv::circle(mask, center, radius, Scalar(255, 255, 255), -1);
 
-    // Debugging: Show the mask image
-    // imshow("mask.jpg", mask);
 
     // Calculate the filled area within the circle
     Mat circleArea;
     bitwise_and(morph, mask, circleArea);
 
-    // Debugging: Show the circle area image
-    // imshow("circleArea.jpg", circleArea);
 
     double totalPixels = countNonZero(mask);
     double filledPixels = countNonZero(circleArea);
 
     double fillRatio = filledPixels / totalPixels;
 
-    // cout << "Total Pixels in Circle: " << totalPixels << endl;
-    // cout << "Filled Pixels in Circle: " << filledPixels << endl;
-    // cout << "Fill Ratio: " << fillRatio << endl;
-
     // Determine if the circle is filled based on the threshold
     return fillRatio > fillThreshold;
 }
 
-double get_contrast(cv::Mat &image, Point p1, Point p2) {
-    cv::Rect roi(p1.x, p1.y, p2.x-p1.x, p2.y-p1.y);
-    cv::Mat roiImage = image(roi);
-
-
-    cv::Mat grayROI;
-    cv::cvtColor(roiImage, grayROI, cv::COLOR_BGR2GRAY);
-
-    cv::Mat bwImage;
-    double thresholdValue = 128;
-    double maxValue = 255;
-    cv::threshold(grayROI, bwImage, thresholdValue, maxValue, cv::THRESH_BINARY);
-
-
-    cv::Scalar meanLightness = cv::mean(roiImage);
-
-    // imshow("ROI: " + to_string(meanLightness[0]), bwImage);
-
-    return meanLightness[0];
-}
-
-bool draw_box(cv::Mat &image, Point p1, Point p2) {
-    // cout << "[INFO] Drawing " << p1.x << ", " << p1.y << " and " << p2.x << ", " << p2.y << endl;
-    double lightness = get_contrast(image, p1, p2);
-    rectangle(image, p1, p2, Scalar(255,0,0));
-    if (lightness < 220) {
-    putText(image, to_string(lightness), p1,
-                FONT_HERSHEY_SIMPLEX, 0.5, Scalar(0, 255, 0), 2);
-    } else {
-        putText(image, to_string(lightness), p1,
-                    FONT_HERSHEY_SIMPLEX, 0.5, Scalar(0, 0, 255), 2);
-    }
-    return lightness<220;
-}
-
-void display_bounding(cv::Mat &image) {
-    const int image_width = image.cols;
-    const int image_height = image.rows;
-
-    cout << "[INFO] Image width " << image_width << endl;
-    cout << "[INFO] Image height " << image_height << "\n" << endl;
-
-    draw_box(
-        image,
-        Point(image_width * 0.5, image_height * 0.01),
-        Point(image_width * 0.56, image_height * 0.02)
-            );
-
-    bool* results = new bool[40];
-
-    // Loop through all points and draw boxes and lighness value.
-    for (int i = 0; i < 5; ++i) {
-        for (int j = 0; j < 2; ++j) {
-            for (int k = 0; k < 4; ++k) {
-                bool checked = draw_box(
-                    image,
-                    Point(static_cast<int>(std::round(image_width * points[i][j][k][0][0])), static_cast<int>(std::round(image_height * points[i][j][k][0][1]))),
-                    Point(static_cast<int>(std::round(image_width * points[i][j][k][1][0])), static_cast<int>(std::round(image_height * points[i][j][k][1][1])))
-                    );
-                cout << "Q" << i+1 << ".";
-                if(j>0){cout << "Against: ";}else{cout << "For: ";}
-                cout << checked << endl;
-                if (checked) {
-                    results[i*8+j*4+k] = true;
-                } else {
-                    results[i*8+j*4+k] = false;
-                }
-                // cout << "" << endl;
-            }
-        }
-    }
-
-    cout << "[RESULTS] ";
-    for (int i=0; i<40; i++) {
-        cout << results[i] << " ";
-    }
-    cout << endl;
-
-    imshow("Bounding boxes", image);
-    waitKey(0);
-    destroyAllWindows();
-}
-
-string get_resultsString(bool* &results) {
-    string resultsString;
-    for (int i = 0; i < 5; ++i) {
-        resultsString += "Question " + to_string(i) + ". ";
-        for (int j = 0; j < 2; ++j) {
-            if (j == 0) {
-                resultsString += "For: ";
-            } else {
-                resultsString += "Against: ";
-            }
-            for (int k = 0; k < 4; ++k) {
-                if (results[i*8+j*4+k]) {
-                    resultsString += "True, ";
-                } else {
-                    resultsString += "False, ";
-                }
-                // resultsString += results[i*8+j*4+k] + ", ";
-            }
-        }
-    }
-    return resultsString;
-}
-
-bool* get_results(cv::Mat &image) {
-    const int image_width = image.cols;
-    const int image_height = image.rows;
-
-    double whiteLevel = get_contrast(
-                    image,
-                    Point(image_width * 0.5, image_height * 0.01),
-                    Point(image_width * 0.56, image_height * 0.02)
-                    );
-
-    cout << "[White Level] " << whiteLevel << endl;
-
-    bool* results = new bool[40];
-
-    for (int i = 0; i < 5; ++i) {
-        for (int j = 0; j < 2; ++j) {
-            for (int k = 0; k < 4; ++k) {
-                double lightness = get_contrast(
-                    image,
-                    Point(static_cast<int>(std::round(image_width * points[i][j][k][0][0])), static_cast<int>(std::round(image_height * points[i][j][k][0][1]))),
-                    Point(static_cast<int>(std::round(image_width * points[i][j][k][1][0])), static_cast<int>(std::round(image_height * points[i][j][k][1][1])))
-                    );
-                // results.set(i*j*k) = lightness<220;
-                cout << "[LIGHTNESS] " << lightness << endl;
-                if (lightness < 220) {
-                    results[i*8+j*4+k] = true;
-                } else {
-                    results[i*8+j*4+k] = false;
-                }
-            }
-        }
-    }
-
-    // results.set(0);
-
-    cout << "[RESULTS] ";
-    for (int i=0; i<40; i++) {
-        cout << results[i] << " ";
-    }
-    cout << endl;
-
-    cout << get_resultsString(results) << endl;
-
-    return results;
-}
 
 bool* get_circle_results(cv::Mat &image) {
     const int image_width = image.cols;
@@ -340,10 +178,13 @@ bool* get_circle_results(cv::Mat &image) {
         }
     }
 
-    // imshow("Circles", image);
+    bool hasValue = false;
 
     cout << "[RESULTS] ";
     for (int i=0; i<40; i++) {
+        if (results[i]) {
+            hasValue = true;
+        }
         cout << results[i] << " ";
     }
     cout << endl;
@@ -353,17 +194,12 @@ bool* get_circle_results(cv::Mat &image) {
     waitKey(0);
     destroyAllWindows();
 
-    return results;
+    if (hasValue) {
+        // TODO: Process results with LLM here!!
+        return results;
+    }
+
+    return nullptr;
 }
 
-// int main() {
-//     cv::Mat test_image = imread("/home/williamwestwood/Documents/test_image.jpg");
-//
-//     get_circle_results(test_image);
-//
-//     waitKey(0);
-//     destroyAllWindows();
-//     // get_results(test_image);
-//
-//     return 0;
-// }
+// TODO: Implement OCR for written responses

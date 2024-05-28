@@ -10,8 +10,6 @@
 
 using namespace cv;
 
-bool* get_results(Mat &image);
-void display_bounding(Mat &image);
 bool* get_circle_results(Mat &image);
 
 #endif //GET_RESULTS_H
