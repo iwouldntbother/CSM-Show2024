@@ -1,0 +1,7 @@
+<RCC>
+  <qresource prefix="/">
+    <file alias="src/form-min.svg">/home/williamwestwood/CLionProjects/form-scan/src/form-min.svg</file>
+    <file alias="src/form-tiny.svg">/home/williamwestwood/CLionProjects/form-scan/src/form-tiny.svg</file>
+  </qresource>
+</RCC>
+

@@ -1,0 +1,114 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"jsonFile" : "directory-.-Debug-f5ebdc15457944623624.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.16"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "form_scan",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4,
+						5,
+						6
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "display_bounding::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-display_bounding-Debug-f667ee5fb92df0524f67.json",
+					"name" : "display_bounding",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "display_bounding_autogen::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-display_bounding_autogen-Debug-545cc7eac0228a2e39fc.json",
+					"name" : "display_bounding_autogen",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "display_bounding_autogen_timestamp_deps::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-display_bounding_autogen_timestamp_deps-Debug-b5551919fb7ba11f48fa.json",
+					"name" : "display_bounding_autogen_timestamp_deps",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "form_scan::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-form_scan-Debug-b7f936d5e7c28296d801.json",
+					"name" : "form_scan",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "form_scan_autogen::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-form_scan_autogen-Debug-dc126d646718148a61b2.json",
+					"name" : "form_scan_autogen",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "form_scan_autogen_timestamp_deps::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-form_scan_autogen_timestamp_deps-Debug-0be0ff4a3b435727a0f0.json",
+					"name" : "form_scan_autogen_timestamp_deps",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "form_scan_other_files::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-form_scan_other_files-Debug-36df826fc87b46e116f6.json",
+					"name" : "form_scan_other_files",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/williamwestwood/CLionProjects/form-scan/cmake-build-debug",
+		"source" : "/home/williamwestwood/CLionProjects/form-scan"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 6
+	}
+}

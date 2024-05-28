@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>DisplayWidget</class>
+ <widget class="QWidget" name="DisplayWidget">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1920</width>
+    <height>1080</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>William Westwood - CSM2024</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">
+    #DisplayWidget {
+    background-color: rgb(14, 14, 14);
+    }
+
+    QLabel {
+    color: rgb(255, 255, 255);
+    font: 75 12pt "Roboto Mono";
+    }
+   </string>
+  </property>
+
+  <widget class="QLabel" name="logoLabel">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>20</y>
+     <width>297</width>
+     <height>89</height>
+    </rect>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::Shape::Box</enum>
+   </property>
+   <property name="text">
+    <string>Hello :)</string>
+   </property>
+  </widget>
+
+  <widget class="QLabel" name="progressLabel">
+   <property name="geometry">
+    <rect>
+     <x>367</x>
+     <y>20</y>
+     <width>1533</width>
+     <height>89</height>
+    </rect>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::Shape::Box</enum>
+   </property>
+   <property name="text">
+    <string>Progress Prompts</string>
+   </property>
+  </widget>
+
+  <widget class="QLabel" name="frameTitle">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>130</y>
+     <width>419</width>
+     <height>36</height>
+    </rect>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::Shape::Box</enum>
+   </property>
+   <property name="text">
+    <string>Vision - Form Scanner Preview</string>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">
+     background-color: rgb(255, 255, 255);
+     color: rgb(0, 0, 0);
+    </string>
+   </property>
+  </widget>
+
+  <widget class="QLabel" name="frameLabel">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>179</y>
+     <width>633</width>
+     <height>881</height>
+    </rect>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::Shape::Box</enum>
+   </property>
+
+   <widget class="QLabel" name="frameWidget">
+
+    <property name="geometry">
+     <rect>
+      <x>5</x>
+      <y>5</y>
+      <width>623</width>
+      <height>871</height>
+     </rect>
+    </property>
+   </widget>
+
+  </widget>
+
+  <widget class="QLabel" name="faceLabel">
+   <property name="geometry">
+    <rect>
+     <x>703</x>
+     <y>179</y>
+     <width>514</width>
+     <height>514</height>
+    </rect>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::Shape::Box</enum>
+   </property>
+   <property name="text">
+    <string>Face Camera</string>
+   </property>
+  </widget>
+
+  <widget class="QLabel" name="statsLabel">
+   <property name="geometry">
+    <rect>
+     <x>703</x>
+     <y>763</y>
+     <width>514</width>
+     <height>297</height>
+    </rect>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::Shape::Box</enum>
+   </property>
+   <property name="text">
+    <string>System Stats</string>
+   </property>
+  </widget>
+
+  <widget class="QLabel" name="resultsLabel">
+   <property name="geometry">
+    <rect>
+     <x>1267</x>
+     <y>179</y>
+     <width>633</width>
+     <height>881</height>
+    </rect>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::Shape::Box</enum>
+   </property>
+
+   <widget class="QSvgWidget" name="svgWidget" native="true">
+    <property name="geometry">
+     <rect>
+      <x>5</x>
+      <y>5</y>
+      <width>623</width>
+      <height>871</height>
+     </rect>
+    </property>
+   </widget>
+
+  </widget>
+
+
+ </widget>
+
+ <customwidgets>
+  <customwidget>
+   <class>QSvgWidget</class>
+   <extends>QWidget</extends>
+   <header>qsvgwidget.h</header>
+  </customwidget>
+ </customwidgets>
+</ui>

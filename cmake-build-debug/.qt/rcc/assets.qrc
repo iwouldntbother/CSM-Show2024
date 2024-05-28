@@ -1,0 +1,8 @@
+<RCC>
+  <qresource prefix="/">
+    <file alias="assets/form-min.svg">/home/williamwestwood/CLionProjects/form-scan/assets/form-min.svg</file>
+    <file alias="assets/images/form-tiny.svg">/home/williamwestwood/CLionProjects/form-scan/assets/images/form-tiny.svg</file>
+    <file alias="assets/fonts/ChakraPetch-Regular.ttf">/home/williamwestwood/CLionProjects/form-scan/assets/fonts/ChakraPetch-Regular.ttf</file>
+  </qresource>
+</RCC>
+
