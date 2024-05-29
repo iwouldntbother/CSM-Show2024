@@ -12,6 +12,7 @@
 #include "SharedData.h"
 #include <thread>
 
+#include "detect_faces.h"
 #include "GlobalData.h"
 
 using namespace std;
@@ -33,6 +34,8 @@ int main(int argc, char *argv[]) {
     GlobalData::getInstance()->setResultsData(boolArray.data());
 
     std::thread DetectionThread(detect_markers);
+    std::thread FaceDetectionThread(start_face_cam);
+
     QApplication app(argc, argv);
 
     DisplayWidget displayWidget;

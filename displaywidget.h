@@ -33,9 +33,11 @@ private:
     GLImageProcessor *glProcessor;
     void showFrame(const cv::Mat &frame);
 
-    void showResults(const bool *results);
+    void showFace(const cv::Mat &frame) const;
 
-    void showSvg(const std::string &svg);
+    void showResults(const bool *results) const;
+
+    void showSvg(const std::string &svg) const;
 };
 
 #endif // DISPLAYWIDGET_H

@@ -34,9 +34,9 @@ DisplayWidget::DisplayWidget(QWidget *parent) :
         qWarning("Failed to load the font.");
     }
 
-    SharedData sharedData;
-    auto container = sharedData.getDataContainer();
-    DisplayWidget::showResults(container->getResults());
+    // SharedData sharedData;
+    // auto container = sharedData.getDataContainer();
+    // DisplayWidget::showResults(container->getResults());
 
     connect(timer, &QTimer::timeout, this, &DisplayWidget::updateFrame);
     timer->start(40); // Adjust the interval as needed
@@ -59,8 +59,8 @@ DisplayWidget::DisplayWidget(QWidget *parent) :
     ui->frameWidget->setScaledContents(true);
 
     // UI Styling
-    // glProcessor->setParent(ui->frameWidget);
-    // glProcessor->setFixedSize(640, 480);
+    glProcessor->setParent(ui->faceWidget);
+    glProcessor->setFixedSize(504, 504);
 
 }
 
@@ -69,13 +69,18 @@ DisplayWidget::~DisplayWidget() {
 }
 
 void DisplayWidget::updateFrame() {
-    cv::Mat globalFrame = GlobalData::getInstance()->getFrameData();
-    bool* results = GlobalData::getInstance()->getResultsData();
+    const cv::Mat globalFrame = GlobalData::getInstance()->getFrameData();
+    const bool* results = GlobalData::getInstance()->getResultsData();
+    const cv::Mat faceFrame = GlobalData::getInstance()->getFaceFrame();
 
     showResults(results);
 
     if (!globalFrame.empty()) {
         showFrame(globalFrame);
+    }
+
+    if (!faceFrame.empty()) {
+        showFace(faceFrame);
     }
 }
 
@@ -86,13 +91,21 @@ void DisplayWidget::showFrame(const cv::Mat &frame) {
     cv::cvtColor(frame, grayFrame, cv::COLOR_BGR2GRAY);
     cv::rotate(grayFrame, grayFrame, cv::ROTATE_90_CLOCKWISE);
     const QImage qimg(grayFrame.data, grayFrame.cols, grayFrame.rows, grayFrame.step, QImage::Format_Grayscale8);
-    QImage scaled_frame = qimg.scaled(ui->frameWidget->size(), Qt::KeepAspectRatio);
+    // QImage scaled_frame = qimg.scaled(ui->frameWidget->size(), Qt::KeepAspectRatio);
     ui->frameWidget->setPixmap(QPixmap::fromImage(qimg.scaled(ui->frameWidget->size(), Qt::KeepAspectRatio)));
     // std::cout << "Frame updating" << std::endl;
-    // glProcessor->updateFrame(frame);
 }
 
-void DisplayWidget::showResults(const bool* results) {
+void DisplayWidget::showFace(const cv::Mat &frame) const {
+    cv::rotate(frame, frame, cv::ROTATE_180);
+    cv::Mat resized_frame;
+    cv::resize(frame, resized_frame, cv::Size(504,504), 0, 0, cv::INTER_LINEAR);
+    glProcessor->updateFrame(resized_frame);
+}
+
+void DisplayWidget::showResults(const bool* results) const {
+
+// TODO: Implement this function to actually show results on svg yk
 
     string resultsString;
 
@@ -105,12 +118,9 @@ void DisplayWidget::showResults(const bool* results) {
 
 
 
-void DisplayWidget::showSvg(const string &svg) {
-    cout << "Showing SVG" << endl;
-    QString qSvg = ":/" + QString::fromStdString(svg);
-
-    bool* testResults = new bool[40];
-    testResults[0] = true;
+void DisplayWidget::showSvg(const string &svg) const {
+    // cout << "Showing SVG" << endl;
+    const QString qSvg = ":/" + QString::fromStdString(svg);
 
     ui->svgWidget->load(qSvg);
 }
