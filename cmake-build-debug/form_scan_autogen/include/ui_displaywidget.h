@@ -26,6 +26,7 @@ public:
     QLabel *frameLabel;
     QLabel *frameWidget;
     QLabel *faceLabel;
+    QLabel *faceWidget;
     QLabel *statsLabel;
     QLabel *resultsLabel;
     QSvgWidget *svgWidget;
@@ -72,6 +73,9 @@ public:
         faceLabel->setObjectName("faceLabel");
         faceLabel->setGeometry(QRect(703, 179, 514, 514));
         faceLabel->setFrameShape(QFrame::Shape::Box);
+        faceWidget = new QLabel(faceLabel);
+        faceWidget->setObjectName("faceWidget");
+        faceWidget->setGeometry(QRect(5, 5, 504, 504));
         statsLabel = new QLabel(DisplayWidget);
         statsLabel->setObjectName("statsLabel");
         statsLabel->setGeometry(QRect(703, 763, 514, 297));

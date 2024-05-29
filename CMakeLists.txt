@@ -44,6 +44,8 @@ add_executable(form_scan main.cpp
         SvgWidget.cpp
         GLImageProcessor.cpp
         GLImageProcessor.h
+        detect_faces.cpp
+        detect_faces.h
 )
 
 # Include OpenCV headers
@@ -69,4 +71,11 @@ qt_add_resources(form_scan "assets"
         assets/form-min.svg
         assets/images/form-tiny.svg
         assets/fonts/ChakraPetch-Regular.ttf
+        assets/haarcascades/haarcascade_frontalface_alt.xml
         )
+
+configure_file(
+        "${CMAKE_SOURCE_DIR}/assets/haarcascades/haarcascade_frontalface_alt.xml"
+        "${CMAKE_BINARY_DIR}/assets/haarcascades/haarcascade_frontalface_alt.xml"
+        COPYONLY
+)

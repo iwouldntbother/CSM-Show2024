@@ -39,12 +39,12 @@ int getIndex(vector<int> v, int K)
 
 void detect_markers()
 {
-  SharedData sharedData;
-  auto container = sharedData.getDataContainer();
+  // SharedData sharedData;
+  // auto container = sharedData.getDataContainer();
 
   // Define names of each possible ArUco tag OpenCV supports
-  Ptr<aruco::Dictionary> arucoDict = makePtr<aruco::Dictionary>(aruco::getPredefinedDictionary(aruco::DICT_7X7_100));
-  Ptr<aruco::DetectorParameters> arucoParams = makePtr<aruco::DetectorParameters>();
+  const Ptr<aruco::Dictionary> arucoDict = makePtr<aruco::Dictionary>(aruco::getPredefinedDictionary(aruco::DICT_7X7_100));
+  const Ptr<aruco::DetectorParameters> arucoParams = makePtr<aruco::DetectorParameters>();
 
   // Initialize the video capture with lower resolution for display
   cout << "[INFO] Starting video stream..." << endl;

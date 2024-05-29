@@ -414,7 +414,8 @@
 		"/usr/lib64/cmake/leptonica/LeptonicaTargets-release.cmake",
 		"/usr/lib64/cmake/tesseract/TesseractTargets.cmake",
 		"/usr/lib64/cmake/tesseract/TesseractTargets-release.cmake",
-		"/home/williamwestwood/Qt/6.7.1/gcc_64/lib/cmake/Qt6Core/Qt6CoreConfigureFileTemplate.in"
+		"/home/williamwestwood/Qt/6.7.1/gcc_64/lib/cmake/Qt6Core/Qt6CoreConfigureFileTemplate.in",
+		"/home/williamwestwood/CLionProjects/form-scan/assets/haarcascades/haarcascade_frontalface_alt.xml"
 	],
 	"CMAKE_SOURCE_DIR" : "/home/williamwestwood/CLionProjects/form-scan",
 	"DEP_FILE" : "/home/williamwestwood/CLionProjects/form-scan/cmake-build-debug/form_scan_autogen/deps",
@@ -455,6 +456,12 @@
 			"/home/williamwestwood/CLionProjects/form-scan/align_and_crop.h",
 			"MU",
 			"EWIEGA46WW/moc_align_and_crop.cpp",
+			null
+		],
+		[
+			"/home/williamwestwood/CLionProjects/form-scan/detect_faces.h",
+			"MU",
+			"EWIEGA46WW/moc_detect_faces.cpp",
 			null
 		],
 		[
@@ -576,6 +583,11 @@
 		],
 		[
 			"/home/williamwestwood/CLionProjects/form-scan/align_and_crop.cpp",
+			"MU",
+			null
+		],
+		[
+			"/home/williamwestwood/CLionProjects/form-scan/detect_faces.cpp",
 			"MU",
 			null
 		],

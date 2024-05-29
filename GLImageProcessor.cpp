@@ -28,7 +28,7 @@ void GLImageProcessor::initializeGL() {
     QOpenGLWidget::initializeGL(); // Ensure parent initialization
 
     setupShaders();
-    setupTexture(640, 480);
+    setupTexture(504, 504);
 
     glEnable(GL_BLEND);
     glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
