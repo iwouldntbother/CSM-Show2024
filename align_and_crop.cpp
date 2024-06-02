@@ -137,7 +137,7 @@ void align_and_crop(Mat &image, Ptr<aruco::Dictionary> arucoDict, Ptr<aruco::Det
       final_image = output_image_flipped;
     }
     // imshow("Final Image", final_image);
-    GlobalData::getInstance()->setFrameData(final_image);
+    // GlobalData::getInstance()->setFrameData(final_image);
     // ocr(final_image);
     get_circle_results(final_image);
     waitKey(0);

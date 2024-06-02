@@ -12,8 +12,9 @@ private:
     cv::Mat frameData;
     bool* resultsData;
     bool ready;
-    cv::Mat faceFrame;
-    bool facesDetected;
+    cv::Mat faceFrame{};
+    bool facesDetected{};
+    std::string analysisResults{};
 
     // Private constructor
     GlobalData();
@@ -39,6 +40,8 @@ public:
     [[nodiscard]] cv::Mat getFaceFrame() const;
     void setFacesDetected(bool value);
     [[nodiscard]] bool getFacesDetected() const;
+    void setAnalsysResults(const std::string& value);
+    [[nodiscard]] std::string getAnalsysResults() const;
 };
 
 #endif // GLOBALDATA_H

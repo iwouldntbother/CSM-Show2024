@@ -415,7 +415,11 @@
 		"/usr/lib64/cmake/tesseract/TesseractTargets.cmake",
 		"/usr/lib64/cmake/tesseract/TesseractTargets-release.cmake",
 		"/home/williamwestwood/Qt/6.7.1/gcc_64/lib/cmake/Qt6Core/Qt6CoreConfigureFileTemplate.in",
-		"/home/williamwestwood/CLionProjects/form-scan/assets/haarcascades/haarcascade_frontalface_alt.xml"
+		"/home/williamwestwood/CLionProjects/form-scan/assets/haarcascades/haarcascade_frontalface_alt.xml",
+		"/home/williamwestwood/CLionProjects/form-scan/llm_python/summarise.py",
+		"/home/williamwestwood/CLionProjects/form-scan/llm_python/llm-model.gguf",
+		"/home/williamwestwood/CLionProjects/form-scan/print_python/print_receipt.py",
+		"/home/williamwestwood/CLionProjects/form-scan/assets/images/print_logo.png"
 	],
 	"CMAKE_SOURCE_DIR" : "/home/williamwestwood/CLionProjects/form-scan",
 	"DEP_FILE" : "/home/williamwestwood/CLionProjects/form-scan/cmake-build-debug/form_scan_autogen/deps",
@@ -459,6 +463,12 @@
 			null
 		],
 		[
+			"/home/williamwestwood/CLionProjects/form-scan/analyse_results.h",
+			"MU",
+			"EWIEGA46WW/moc_analyse_results.cpp",
+			null
+		],
+		[
 			"/home/williamwestwood/CLionProjects/form-scan/detect_faces.h",
 			"MU",
 			"EWIEGA46WW/moc_detect_faces.cpp",
@@ -486,6 +496,12 @@
 			"/home/williamwestwood/CLionProjects/form-scan/ocr.h",
 			"MU",
 			"EWIEGA46WW/moc_ocr.cpp",
+			null
+		],
+		[
+			"/home/williamwestwood/CLionProjects/form-scan/printer.h",
+			"MU",
+			"EWIEGA46WW/moc_printer.cpp",
 			null
 		]
 	],
@@ -587,6 +603,11 @@
 			null
 		],
 		[
+			"/home/williamwestwood/CLionProjects/form-scan/analyse_results.cpp",
+			"MU",
+			null
+		],
+		[
 			"/home/williamwestwood/CLionProjects/form-scan/detect_faces.cpp",
 			"MU",
 			null
@@ -607,7 +628,12 @@
 			null
 		],
 		[ "/home/williamwestwood/CLionProjects/form-scan/main.cpp", "MU", null ],
-		[ "/home/williamwestwood/CLionProjects/form-scan/ocr.cpp", "MU", null ]
+		[ "/home/williamwestwood/CLionProjects/form-scan/ocr.cpp", "MU", null ],
+		[
+			"/home/williamwestwood/CLionProjects/form-scan/printer.cpp",
+			"MU",
+			null
+		]
 	],
 	"UIC_OPTIONS" : [],
 	"UIC_SEARCH_PATHS" : [],

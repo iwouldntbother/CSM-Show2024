@@ -7,7 +7,7 @@
 GlobalData* GlobalData::instance = nullptr;  // Definition
 std::mutex GlobalData::mtx;                  // Definition
 
-GlobalData::GlobalData() : frameData(), resultsData(new bool[40]), ready(false), faceFrame() {}
+GlobalData::GlobalData() : frameData(), resultsData(new bool[40]), ready(false) {}
 
 GlobalData::~GlobalData() {
     delete[] resultsData;
@@ -69,4 +69,14 @@ void GlobalData::setFacesDetected(const bool value) {
 bool GlobalData::getFacesDetected() const {
     std::lock_guard<std::mutex> lock(mtx);
     return facesDetected;
+}
+
+void GlobalData::setAnalsysResults(const std::string& value) {
+    std::lock_guard<std::mutex> lock(mtx);
+    analysisResults = value;
+}
+
+std::string GlobalData::getAnalsysResults() const {
+    std::lock_guard<std::mutex> lock(mtx);
+    return analysisResults;
 }

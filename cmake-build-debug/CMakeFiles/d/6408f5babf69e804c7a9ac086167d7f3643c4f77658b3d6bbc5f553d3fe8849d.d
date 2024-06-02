@@ -10,10 +10,16 @@ form_scan_autogen/timestamp: \
   /home/williamwestwood/CLionProjects/form-scan/SvgWidget.h \
   /home/williamwestwood/CLionProjects/form-scan/align_and_crop.cpp \
   /home/williamwestwood/CLionProjects/form-scan/align_and_crop.h \
+  /home/williamwestwood/CLionProjects/form-scan/analyse_results.cpp \
+  /home/williamwestwood/CLionProjects/form-scan/analyse_results.h \
+  /home/williamwestwood/CLionProjects/form-scan/assets/haarcascades/haarcascade_frontalface_alt.xml \
+  /home/williamwestwood/CLionProjects/form-scan/assets/images/print_logo.png \
   CMakeFiles/3.28.1/CMakeCCompiler.cmake \
   CMakeFiles/3.28.1/CMakeCXXCompiler.cmake \
   CMakeFiles/3.28.1/CMakeSystem.cmake \
   form_scan_autogen/moc_predefs.h \
+  /home/williamwestwood/CLionProjects/form-scan/detect_faces.cpp \
+  /home/williamwestwood/CLionProjects/form-scan/detect_faces.h \
   /home/williamwestwood/CLionProjects/form-scan/detect_markers.cpp \
   /home/williamwestwood/CLionProjects/form-scan/detect_markers.h \
   /home/williamwestwood/CLionProjects/form-scan/displaywidget.cpp \
@@ -21,9 +27,14 @@ form_scan_autogen/timestamp: \
   /home/williamwestwood/CLionProjects/form-scan/displaywidget.ui \
   /home/williamwestwood/CLionProjects/form-scan/get_results.cpp \
   /home/williamwestwood/CLionProjects/form-scan/get_results.h \
+  /home/williamwestwood/CLionProjects/form-scan/llm_python/llm-model.gguf \
+  /home/williamwestwood/CLionProjects/form-scan/llm_python/summarise.py \
   /home/williamwestwood/CLionProjects/form-scan/main.cpp \
   /home/williamwestwood/CLionProjects/form-scan/ocr.cpp \
   /home/williamwestwood/CLionProjects/form-scan/ocr.h \
+  /home/williamwestwood/CLionProjects/form-scan/print_python/print_receipt.py \
+  /home/williamwestwood/CLionProjects/form-scan/printer.cpp \
+  /home/williamwestwood/CLionProjects/form-scan/printer.h \
   /home/williamwestwood/Qt/6.7.1/gcc_64/include/QtCore/QObject \
   /home/williamwestwood/Qt/6.7.1/gcc_64/include/QtCore/QScopedPointer \
   /home/williamwestwood/Qt/6.7.1/gcc_64/include/QtCore/QTimer \

@@ -9,6 +9,7 @@
 #include <cmath>
 #include <string>
 
+#include "analyse_results.h"
 #include "GlobalData.h"
 
 using namespace std;
@@ -195,7 +196,7 @@ bool* get_circle_results(cv::Mat &image) {
     destroyAllWindows();
 
     if (hasValue) {
-        // TODO: Process results with LLM here!!
+        analyse_results(results);
         return results;
     }
 
