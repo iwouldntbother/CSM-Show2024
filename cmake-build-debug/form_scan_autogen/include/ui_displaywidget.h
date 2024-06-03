@@ -10,7 +10,6 @@
 #define UI_DISPLAYWIDGET_H
 
 #include <QtCore/QVariant>
-#include <QtSvgWidgets/QSvgWidget>
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QLabel>
 #include <QtWidgets/QWidget>
@@ -29,7 +28,7 @@ public:
     QLabel *faceWidget;
     QLabel *statsLabel;
     QLabel *resultsLabel;
-    QSvgWidget *svgWidget;
+    QLabel *svgWidget;
 
     void setupUi(QWidget *DisplayWidget)
     {
@@ -84,7 +83,7 @@ public:
         resultsLabel->setObjectName("resultsLabel");
         resultsLabel->setGeometry(QRect(1267, 179, 633, 881));
         resultsLabel->setFrameShape(QFrame::Shape::Box);
-        svgWidget = new QSvgWidget(resultsLabel);
+        svgWidget = new QLabel(resultsLabel);
         svgWidget->setObjectName("svgWidget");
         svgWidget->setGeometry(QRect(5, 5, 623, 871));
 

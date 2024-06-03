@@ -1,66 +1,104 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" baseProfile="tiny" version="1.2" viewBox="0 0 595 842">
   <path d="M0,0h595v842H0V0Z" fill="#fff" stroke-width="0"/>
-  <g isolation="isolate">
-    <text transform="translate(104 68.7)" fill="#000" font-family="RobotoMono-Bold, &apos;Roboto Mono&apos;" font-size="16" font-weight="700" isolation="isolate"><tspan x="0" y="0">AI Moral Assessment</tspan></text>
+  <g id="resultsGroup">
+    <path id="result0" d="M48.7,162.5h0c1.6,0,3,1.3,3,3h0c0,1.8-1.3,3.1-3,3.1h0c-1.6,0-3-1.3-3-3h0c0-1.8,1.3-3.1,3-3.1Z" fill="none" stroke="#000"/>
+    <path id="result1" d="M48.7,184.5h0c1.6,0,3,1.3,3,3h0c0,1.8-1.3,3.1-3,3.1h0c-1.6,0-3-1.3-3-3h0c0-1.8,1.3-3.1,3-3.1Z" fill="none" stroke="#000"/>
+    <path id="result2" d="M177.4,162.5h0c1.6,0,3,1.3,3,3h0c0,1.8-1.3,3.1-3,3.1h0c-1.6,0-3-1.3-3-3h0c0-1.8,1.3-3.1,3-3.1Z" fill="none" stroke="#000"/>
+    <path id="result3" d="M177.4,184.5h0c1.6,0,3,1.3,3,3h0c0,1.8-1.3,3.1-3,3.1h0c-1.6,0-3-1.3-3-3h0c0-1.8,1.3-3.1,3-3.1Z" fill="none" stroke="#000"/>
+    <path id="result4" d="M306.2,162.5h0c1.6,0,3,1.3,3,3h0c0,1.8-1.3,3.1-3,3.1h0c-1.6,0-3-1.3-3-3h0c0-1.8,1.3-3.1,3-3.1Z" fill="none" stroke="#000"/>
+    <path id="result5"  d="M306.2,184.5h0c1.6,0,3,1.3,3,3h0c0,1.8-1.3,3.1-3,3.1h0c-1.6,0-3-1.3-3-3h0c0-1.8,1.3-3.1,3-3.1Z" fill="none" stroke="#000"/>
+    <path id="result6"  d="M434.9,162.5h0c1.6,0,3,1.3,3,3h0c0,1.8-1.3,3.1-3,3.1h0c-1.6,0-3-1.3-3-3h0c0-1.8,1.3-3.1,3-3.1Z" fill="none" stroke="#000"/>
+    <path id="result7"  d="M434.9,184.5h0c1.6,0,3,1.3,3,3h0c0,1.8-1.3,3.1-3,3.1h0c-1.6,0-3-1.3-3-3h0c0-1.8,1.3-3.1,3-3.1Z" fill="none" stroke="#000"/>
+    <path id="result8" d="M48.7,290.5h0c1.6,0,3,1.3,3,3h0c0,1.8-1.3,3.1-3,3.1h0c-1.6,0-3-1.3-3-3h0c0-1.8,1.3-3.1,3-3.1Z" fill="none" stroke="#000"/>
+    <path id="result9" d="M48.7,312.5h0c1.6,0,3,1.3,3,3h0c0,1.8-1.3,3.1-3,3.1h0c-1.6,0-3-1.3-3-3h0c0-1.8,1.3-3.1,3-3.1Z" fill="none" stroke="#000"/>
+    <path id="result10" d="M177.4,290.5h0c1.6,0,3,1.3,3,3h0c0,1.8-1.3,3.1-3,3.1h0c-1.6,0-3-1.3-3-3h0c0-1.8,1.3-3.1,3-3.1Z" fill="none" stroke="#000"/>
+    <path id="result11" d="M177.4,312.5h0c1.6,0,3,1.3,3,3h0c0,1.8-1.3,3.1-3,3.1h0c-1.6,0-3-1.3-3-3h0c0-1.8,1.3-3.1,3-3.1Z" fill="none" stroke="#000"/>
+    <path id="result12" d="M306.2,290.5h0c1.6,0,3,1.3,3,3h0c0,1.8-1.3,3.1-3,3.1h0c-1.6,0-3-1.3-3-3h0c0-1.8,1.3-3.1,3-3.1Z" fill="none" stroke="#000"/>
+    <path id="result13" d="M306.2,312.5h0c1.6,0,3,1.3,3,3h0c0,1.8-1.3,3.1-3,3.1h0c-1.6,0-3-1.3-3-3h0c0-1.8,1.3-3.1,3-3.1Z" fill="none" stroke="#000"/>
+    <path id="result14" d="M434.9,290.5h0c1.6,0,3,1.3,3,3h0c0,1.8-1.3,3.1-3,3.1h0c-1.6,0-3-1.3-3-3h0c0-1.8,1.3-3.1,3-3.1Z" fill="none" stroke="#000"/>
+    <path id="result15" d="M434.9,312.5h0c1.6,0,3,1.3,3,3h0c0,1.8-1.3,3.1-3,3.1h0c-1.6,0-3-1.3-3-3h0c0-1.8,1.3-3.1,3-3.1Z" fill="none" stroke="#000"/>
+    <path id="result16" d="M48.7,417h0c1.6,0,3,1.3,3,3v.2c0,1.6-1.3,3-3,3h0c-1.6,0-3-1.3-3-3v-.2c0-1.6,1.3-3,3-3Z" fill="none" stroke="#000"/>
+    <path id="result17" d="M48.7,439.2h0c1.6,0,3,1.3,3,3v.2c0,1.6-1.3,3-3,3h0c-1.6,0-3-1.3-3-3v-.2c0-1.6,1.3-3,3-3Z" fill="none" stroke="#000"/>
+    <path id="result18" d="M177.4,417h0c1.6,0,3,1.3,3,3v.2c0,1.6-1.3,3-3,3h0c-1.6,0-3-1.3-3-3v-.2c0-1.6,1.3-3,3-3Z" fill="none" stroke="#000"/>
+    <path id="result19" d="M177.4,439.2h0c1.6,0,3,1.3,3,3v.2c0,1.6-1.3,3-3,3h0c-1.6,0-3-1.3-3-3v-.2c0-1.6,1.3-3,3-3Z" fill="none" stroke="#000"/>
+    <path id="result20" d="M306.2,417h0c1.6,0,3,1.3,3,3v.2c0,1.6-1.3,3-3,3h0c-1.6,0-3-1.3-3-3v-.2c0-1.6,1.3-3,3-3Z" fill="none" stroke="#000"/>
+    <path id="result21" d="M306.2,439.2h0c1.6,0,3,1.3,3,3v.2c0,1.6-1.3,3-3,3h0c-1.6,0-3-1.3-3-3v-.2c0-1.6,1.3-3,3-3Z" fill="none" stroke="#000"/>
+    <path id="result22" d="M434.9,417h0c1.6,0,3,1.3,3,3v.2c0,1.6-1.3,3-3,3h0c-1.6,0-3-1.3-3-3v-.2c0-1.6,1.3-3,3-3Z" fill="none" stroke="#000"/>
+    <path id="result23" d="M434.9,439.2h0c1.6,0,3,1.3,3,3v.2c0,1.6-1.3,3-3,3h0c-1.6,0-3-1.3-3-3v-.2c0-1.6,1.3-3,3-3Z" fill="none" stroke="#000"/>
+    <path id="result24" d="M48.7,544.5h0c1.6,0,3,1.3,3,3h0c0,1.8-1.3,3.1-3,3.1h0c-1.6,0-3-1.3-3-3h0c0-1.8,1.3-3.1,3-3.1Z" fill="none" stroke="#000"/>
+    <path id="result25" d="M48.7,566.5h0c1.6,0,3,1.3,3,3h0c0,1.8-1.3,3.1-3,3.1h0c-1.6,0-3-1.3-3-3h0c0-1.8,1.3-3.1,3-3.1Z" fill="none" stroke="#000"/>
+    <path id="result26" d="M177.4,544.5h0c1.6,0,3,1.3,3,3h0c0,1.8-1.3,3.1-3,3.1h0c-1.6,0-3-1.3-3-3h0c0-1.8,1.3-3.1,3-3.1Z" fill="none" stroke="#000"/>
+    <path id="result27" d="M177.4,566.5h0c1.6,0,3,1.3,3,3h0c0,1.8-1.3,3.1-3,3.1h0c-1.6,0-3-1.3-3-3h0c0-1.8,1.3-3.1,3-3.1Z" fill="none" stroke="#000"/>
+    <path id="result28" d="M306.2,544.5h0c1.6,0,3,1.3,3,3h0c0,1.8-1.3,3.1-3,3.1h0c-1.6,0-3-1.3-3-3h0c0-1.8,1.3-3.1,3-3.1Z" fill="none" stroke="#000"/>
+    <path id="result29" d="M306.2,566.5h0c1.6,0,3,1.3,3,3h0c0,1.8-1.3,3.1-3,3.1h0c-1.6,0-3-1.3-3-3h0c0-1.8,1.3-3.1,3-3.1Z" fill="none" stroke="#000"/>
+    <path id="result30" d="M434.9,544.5h0c1.6,0,3,1.3,3,3h0c0,1.8-1.3,3.1-3,3.1h0c-1.6,0-3-1.3-3-3h0c0-1.8,1.3-3.1,3-3.1Z" fill="none" stroke="#000"/>
+    <path id="result31" d="M434.9,566.5h0c1.6,0,3,1.3,3,3h0c0,1.8-1.3,3.1-3,3.1h0c-1.6,0-3-1.3-3-3h0c0-1.8,1.3-3.1,3-3.1Z" fill="none" stroke="#000"/>
+    <path id="result32" d="M48.7,672.5h0c1.6,0,3,1.3,3,3h0c0,1.8-1.3,3.1-3,3.1h0c-1.6,0-3-1.3-3-3h0c0-1.8,1.3-3.1,3-3.1Z" fill="none" stroke="#000"/>
+    <path id="result33" d="M48.7,694.5h0c1.6,0,3,1.3,3,3h0c0,1.8-1.3,3.1-3,3.1h0c-1.6,0-3-1.3-3-3h0c0-1.8,1.3-3.1,3-3.1Z" fill="none" stroke="#000"/>
+    <path id="result34" d="M177.4,672.5h0c1.6,0,3,1.3,3,3h0c0,1.8-1.3,3.1-3,3.1h0c-1.6,0-3-1.3-3-3h0c0-1.8,1.3-3.1,3-3.1Z" fill="none" stroke="#000"/>
+    <path id="result35" d="M177.4,694.5h0c1.6,0,3,1.3,3,3h0c0,1.8-1.3,3.1-3,3.1h0c-1.6,0-3-1.3-3-3h0c0-1.8,1.3-3.1,3-3.1Z" fill="none" stroke="#000"/>
+    <path id="result36" d="M306.2,672.5h0c1.6,0,3,1.3,3,3h0c0,1.8-1.3,3.1-3,3.1h0c-1.6,0-3-1.3-3-3h0c0-1.8,1.3-3.1,3-3.1Z" fill="none" stroke="#000"/>
+    <path id="result37" d="M306.2,694.5h0c1.6,0,3,1.3,3,3h0c0,1.8-1.3,3.1-3,3.1h0c-1.6,0-3-1.3-3-3h0c0-1.8,1.3-3.1,3-3.1Z" fill="none" stroke="#000"/>
+    <path id="result38" d="M434.9,672.5h0c1.6,0,3,1.3,3,3h0c0,1.8-1.3,3.1-3,3.1h0c-1.6,0-3-1.3-3-3h0c0-1.8,1.3-3.1,3-3.1Z" fill="none" stroke="#000"/>
+    <path id="result39" d="M434.9,694.5h0c1.6,0,3,1.3,3,3h0c0,1.8-1.3,3.1-3,3.1h0c-1.6,0-3-1.3-3-3h0c0-1.8,1.3-3.1,3-3.1Z" fill="none" stroke="#000"/>
   </g>
-  <g isolation="isolate">
-    <text transform="translate(104 81)" fill="#000" font-family="RobotoMono-Regular, &apos;Roboto Mono&apos;" font-size="6.5" isolation="isolate"><tspan x="0" y="0">This form will help us assess your </tspan></text>
-    <text transform="translate(104 90)" fill="#000" font-family="RobotoMono-Regular, &apos;Roboto Mono&apos;" font-size="6.5" isolation="isolate"><tspan x="0" y="0">moral compass in relation to AI.</tspan></text>
+  <g>
+    <text transform="translate(104 68.7)" fill="#000" font-family="RobotoMono-Bold, &apos;Roboto Mono&apos;" font-size="16" font-weight="700"><tspan x="0" y="0">AI Moral Assessment</tspan></text>
   </g>
-  <g isolation="isolate">
-    <text transform="translate(319 81)" fill="#000" font-family="RobotoMono-Regular, &apos;Roboto Mono&apos;" font-size="6.5" isolation="isolate"><tspan x="0" y="0">Use capital letters, fill-in the appropriate </tspan></text>
-    <text transform="translate(319 90)" fill="#000" font-family="RobotoMono-Regular, &apos;Roboto Mono&apos;" font-size="6.5" isolation="isolate"><tspan x="0" y="0">radial boxes and use a black ballpoint pen.</tspan></text>
+  <g>
+    <text transform="translate(104 81)" fill="#000" font-family="RobotoMono-Regular, &apos;Roboto Mono&apos;" font-size="6.5"><tspan x="0" y="0">This form will help us assess your </tspan></text>
+    <text transform="translate(104 90)" fill="#000" font-family="RobotoMono-Regular, &apos;Roboto Mono&apos;" font-size="6.5"><tspan x="0" y="0">moral compass in relation to AI.</tspan></text>
+  </g>
+  <g>
+    <text transform="translate(319 81)" fill="#000" font-family="RobotoMono-Regular, &apos;Roboto Mono&apos;" font-size="6.5"><tspan x="0" y="0">Use capital letters, fill-in the appropriate </tspan></text>
+    <text transform="translate(319 90)" fill="#000" font-family="RobotoMono-Regular, &apos;Roboto Mono&apos;" font-size="6.5"><tspan x="0" y="0">radial boxes and use a black ballpoint pen.</tspan></text>
   </g>
   <path d="M457,62.6h0c1.9,0,3.5,1.6,3.5,3.5h0c0,1.9-1.6,3.5-3.5,3.5h0c-1.9,0-3.5-1.6-3.5-3.5h0c0-1.9,1.6-3.5,3.5-3.5Z" fill="none" stroke="#000"/>
   <path d="M454.5,63.6l5,5M459.5,63.6l-5,5" fill="none" stroke="#000" stroke-width="1.4"/>
   <path d="M368,62.1h8v8h-8v-8Z" fill="#000" stroke-width="0"/>
   <path d="M368.7,62.8h6.7v6.7h-6.7v-6.7Z" fill="#fff" stroke-width="0"/>
-  <g isolation="isolate">
-    <text transform="translate(369.6 68.6)" fill="#000" font-family="RobotoMono-Regular, &apos;Roboto Mono&apos;" font-size="8" isolation="isolate"><tspan x="0" y="0">A</tspan></text>
+  <g>
+    <text transform="translate(369.6 68.6)" fill="#000" font-family="RobotoMono-Regular, &apos;Roboto Mono&apos;" font-size="8"><tspan x="0" y="0">A</tspan></text>
   </g>
   <path d="M359,62.6h0c1.9,0,3.5,1.6,3.5,3.5h0c0,1.9-1.6,3.5-3.5,3.5h0c-1.9,0-3.5-1.6-3.5-3.5h0c0-1.9,1.6-3.5,3.5-3.5Z" fill="#2d2d2d" stroke="#000"/>
-  <g isolation="isolate">
-    <text transform="translate(319 68.1)" fill="#000" font-family="RobotoMono-Regular, &apos;Roboto Mono&apos;" font-size="6.5" isolation="isolate"><tspan x="0" y="0">Correct:</tspan></text>
+  <g>
+    <text transform="translate(319 68.1)" fill="#000" font-family="RobotoMono-Regular, &apos;Roboto Mono&apos;" font-size="6.5"><tspan x="0" y="0">Correct:</tspan></text>
   </g>
   <path d="M470,62.6h0c1.9,0,3.5,1.6,3.5,3.5h0c0,1.9-1.6,3.5-3.5,3.5h0c-1.9,0-3.5-1.6-3.5-3.5h0c0-1.9,1.6-3.5,3.5-3.5Z" fill="none" stroke="#000"/>
   <path d="M479,62.1h8v8h-8v-8Z" fill="#000" stroke-width="0"/>
   <path d="M479.7,62.8h6.7v6.7h-6.7v-6.7Z" fill="#fff" stroke-width="0"/>
-  <g isolation="isolate">
-    <text transform="translate(480.6 67.6)" fill="#000" font-family="RobotoMono-Regular, &apos;Roboto Mono&apos;" font-size="8" isolation="isolate"><tspan x="0" y="0">a</tspan></text>
+  <g>
+    <text transform="translate(480.6 67.6)" fill="#000" font-family="RobotoMono-Regular, &apos;Roboto Mono&apos;" font-size="8"><tspan x="0" y="0">a</tspan></text>
   </g>
   <path d="M467.4,65.5l5,3M475.6,61.5l-4,7" fill="none" stroke="#000" stroke-width="1.4"/>
   <path d="M444,62.6h0c1.9,0,3.5,1.6,3.5,3.5h0c0,1.9-1.6,3.5-3.5,3.5h0c-1.9,0-3.5-1.6-3.5-3.5h0c0-1.9,1.6-3.5,3.5-3.5Z" fill="none" stroke="#000"/>
   <path d="M432,62.6h0c1.9,0,3.5,1.6,3.5,3.5h0c0,1.9-1.6,3.5-3.5,3.5h0c-1.9,0-3.5-1.6-3.5-3.5h0c0-1.9,1.6-3.5,3.5-3.5Z" fill="none" stroke="#000"/>
-  <g isolation="isolate">
-    <text transform="translate(384 68.1)" fill="#000" font-family="RobotoMono-Regular, &apos;Roboto Mono&apos;" font-size="6.5" isolation="isolate"><tspan x="0" y="0">Incorrect:</tspan></text>
+  <g>
+    <text transform="translate(384 68.1)" fill="#000" font-family="RobotoMono-Regular, &apos;Roboto Mono&apos;" font-size="6.5"><tspan x="0" y="0">Incorrect:</tspan></text>
   </g>
   <path d="M441.6,68.8l5-5" fill="none" stroke="#000"/>
   <path d="M428.7,69.4c0,0-.2,0-.2-.2-.3-.3-.5-.6-.7-1-.4-1.1-.7-2.2-.7-3.4,0-.8,0-1.6.5-2.2.4-.7.9-1.2,1.7-1.4.6-.2,1.3-.2,2-.2s1.6,0,2.3.2c.5.1,1.2.2,1.6.6.4.3.6.6.9,1,.7,1.1,1.1,2.3,1.2,3.6,0,1.5-.7,2.9-1.8,3.9-.4.4-1,.6-1.5.8-.6.2-1.4.5-2.1.5-.6,0-1.1-.3-1.6-.6-.5-.3-.9-.7-1.2-1.2-.3-.5-.4-1.1-.4-1.7" fill="none" stroke="#000" stroke-linecap="round" stroke-width="1.4"/>
-  <image id="e" width="300" height="300" transform="translate(495 40) scale(.2)" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAAEsCAYAAAB5fY51AAAACXBIWXMAADddAAA3XQEZgEZdAAAEf0lEQVR4nO3WQW5bMRAFwZlA978yswgMOzvvyAaqTvAw+mpwZ+YMQMCf2wMAfkuwgAzBAjIEC8gQLCBDsIAMwQIyBAvIECwgQ7CADMECMgQLyBAsIEOwgAzBAjIEC8gQLCBDsIAMwQIyBAvIECwgQ7CADMECMgQLyBAsIEOwgAzBAjIEC8gQLCBDsIAMwQIyBAvIECwg43N7wJdzzu0Js7u3Jzzjhd+Dt7zw//DCAjIEC8gQLCBDsIAMwQIyBAvIECwgQ7CADMECMgQLyBAsIEOwgAzBAjIEC8gQLCBDsIAMwQIyBAvIECwgQ7CADMECMgQLyBAsIEOwgAzBAjIEC8gQLCBDsIAMwQIyBAvIECwgQ7CAjM/tAV929/aEOefcnvDEHV7xwi1e+CZm3rjFC7ywgAzBAjIEC8gQLCBDsIAMwQIyBAvIECwgQ7CADMECMgQLyBAsIEOwgAzBAjIEC8gQLCBDsIAMwQIyBAvIECwgQ7CADMECMgQLyBAsIEOwgAzBAjIEC8gQLCBDsIAMwQIyBAvIECwgY2fm3B4xM3PO/Rm7e3sCP/gmvrnFP15YQIZgARmCBWQIFpAhWECGYAEZggVkCBaQIVhAhmABGYIFZAgWkCFYQIZgARmCBWQIFpAhWECGYAEZggVkCBaQIVhAhmABGYIFZAgWkCFYQIZgARmCBWQIFpAhWECGYAEZggVkCBaQIVhAxs7MuT3iFec4xUt29/aEZ76JF27xAi8sIEOwgAzBAjIEC8gQLCBDsIAMwQIyBAvIECwgQ7CADMECMgQLyBAsIEOwgAzBAjIEC8gQLCBDsIAMwQIyBAvIECwgQ7CADMECMgQLyBAsIEOwgAzBAjIEC8gQLCBDsIAMwQIyBAvI+Nwe8OWcc3vCE3b39gR4lhcWkCFYQIZgARmCBWQIFpAhWECGYAEZggVkCBaQIVhAhmABGYIFZAgWkCFYQIZgARmCBWQIFpAhWECGYAEZggVkCBaQIVhAhmABGYIFZAgWkCFYQIZgARmCBWQIFpAhWECGYAEZggVkfG4P4H/nnNsTZmZmd29PeOIWL9yBb15YQIZgARmCBWQIFpAhWECGYAEZggVkCBaQIVhAhmABGYIFZAgWkCFYQIZgARmCBWQIFpAhWECGYAEZggVkCBaQIVhAhmABGYIFZAgWkCFYQIZgARmCBWQIFpAhWECGYAEZggVkCBaQIVhAxuf2gJfs7u0Jzzjn3J7wBHf49sL/wwsLyBAsIEOwgAzBAjIEC8gQLCBDsIAMwQIyBAvIECwgQ7CADMECMgQLyBAsIEOwgAzBAjIEC8gQLCBDsIAMwQIyBAvIECwgQ7CADMECMgQLyBAsIEOwgAzBAjIEC8gQLCBDsIAMwQIydmbO7REAv+GFBWQIFpAhWECGYAEZggVkCBaQIVhAhmABGYIFZAgWkCFYQIZgARmCBWQIFpAhWECGYAEZggVkCBaQIVhAhmABGYIFZAgWkCFYQIZgARmCBWQIFpAhWECGYAEZggVkCBaQIVhAhmABGX8B2S8wYSKNSeEAAAAASUVORK5CYII=" isolation="isolate"/>
-  <image id="f" width="300" height="300" transform="translate(40 742) scale(.2)" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAAEsCAYAAAB5fY51AAAACXBIWXMAADddAAA3XQEZgEZdAAAEcklEQVR4nO3WQYocMRBFwUzT97+yvGoGLwyzkx5EnOBTKh65M3MGIODP7QEAvyVYQIZgARmCBWQIFpAhWECGYAEZggVkCBaQIVhAhmABGYIFZAgWkCFYQIZgARmCBWQIFpAhWECGYAEZggVkCBaQIVhAhmABGYIFZAgWkCFYQIZgARmCBWQIFpAhWECGYAEZggVkCBaQ8bk94Oucc3vC7O7tCU98h5k3vsULXnmPF7zwT7iwgAzBAjIEC8gQLCBDsIAMwQIyBAvIECwgQ7CADMECMgQLyBAsIEOwgAzBAjIEC8gQLCBDsIAMwQIyBAvIECwgQ7CADMECMgQLyBAsIEOwgAzBAjIEC8gQLCBDsIAMwQIyBAvIECwgY2fm3B7Bj3M8x9fu3p7wjBf+ixfew4UFZAgWkCFYQIZgARmCBWQIFpAhWECGYAEZggVkCBaQIVhAhmABGYIFZAgWkCFYQIZgARmCBWQIFpAhWECGYAEZggVkCBaQIVhAhmABGYIFZAgWkCFYQIZgARmCBWQIFpAhWECGYAEZOzPn9oiZmXOemHHd7t6eAM9yYQEZggVkCBaQIVhAhmABGYIFZAgWkCFYQIZgARmCBWQIFpAhWECGYAEZggVkCBaQIVhAhmABGYIFZAgWkCFYQIZgARmCBWQIFpAhWECGYAEZggVkCBaQIVhAhmABGYIFZAgWkCFYQIZgARmf2wNesru3J8w55/aEZ3iPt7zwHi4sIEOwgAzBAjIEC8gQLCBDsIAMwQIyBAvIECwgQ7CADMECMgQLyBAsIEOwgAzBAjIEC8gQLCBDsIAMwQIyBAvIECwgQ7CADMECMgQLyBAsIEOwgAzBAjIEC8gQLCBDsIAMwQIyBAvI2Jk5t0e84hyfAv5nd29PcGEBHYIFZAgWkCFYQIZgARmCBWQIFpAhWECGYAEZggVkCBaQIVhAhmABGYIFZAgWkCFYQIZgARmCBWQIFpAhWECGYAEZggVkCBaQIVhAhmABGYIFZAgWkCFYQIZgARmCBWQIFpAhWEDG5/YA/rW7tyc845xze8Iz7/HCt3iBCwvIECwgQ7CADMECMgQLyBAsIEOwgAzBAjIEC8gQLCBDsIAMwQIyBAvIECwgQ7CADMECMgQLyBAsIEOwgAzBAjIEC8gQLCBDsIAMwQIyBAvIECwgQ7CADMECMgQLyBAsIEOwgAzBAjIEC8jYmTm3R/DjHM/xtbu3J/AYFxaQIVhAhmABGYIFZAgWkCFYQIZgARmCBWQIFpAhWECGYAEZggVkCBaQIVhAhmABGYIFZAgWkCFYQIZgARmCBWQIFpAhWECGYAEZggVkCBaQIVhAhmABGYIFZAgWkCFYQIZgARmCBWTszJzbIwB+w4UFZAgWkCFYQIZgARmCBWQIFpAhWECGYAEZggVkCBaQIVhAhmABGYIFZAgWkCFYQIZgARmCBWQIFpAhWECGYAEZggVkCBaQIVhAhmABGYIFZAgWkCFYQIZgARmCBWQIFpAhWECGYAEZfwESNixWD1zPxwAAAABJRU5ErkJggg==" isolation="isolate"/>
-  <image id="g" width="300" height="300" transform="translate(40 40) scale(.2)" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAAEsCAYAAAB5fY51AAAACXBIWXMAADddAAA3XQEZgEZdAAAEWUlEQVR4nO3WQYocMRBFQaXp+19ZXphmvJxd6kHECT6l4pFzzrkHIODP9gCA3xIsIEOwgAzBAjIEC8gQLCBDsIAMwQIyBAvIECwgQ7CADMECMgQLyBAsIEOwgAzBAjIEC8gQLCBDsIAMwQIyBAvIECwgQ7CADMECMgQLyBAsIEOwgAzBAjIEC8gQLCBDsIAMwQIyBAvI+GwP+Lr3bk/gPzOzPeEJr/yX3uMfFxaQIVhAhmABGYIFZAgWkCFYQIZgARmCBWQIFpAhWECGYAEZggVkCBaQIVhAhmABGYIFZAgWkCFYQIZgARmCBWQIFpAhWECGYAEZggVkCBaQIVhAhmABGYIFZAgWkCFYQIZgARmCBWR8tgd8zcz2BB5z792ewGNcWECGYAEZggVkCBaQIVhAhmABGYIFZAgWkCFYQIZgARmCBWQIFpAhWECGYAEZggVkCBaQIVhAhmABGYIFZAgWkCFYQIZgARmCBWQIFpAhWECGYAEZggVkCBaQIVhAhmABGYIFZAgWkPHZHvB1792eADzOhQVkCBaQIVhAhmABGYIFZAgWkCFYQIZgARmCBWQIFpAhWECGYAEZggVkCBaQIVhAhmABGYIFZAgWkCFYQIZgARmCBWQIFpAhWECGYAEZggVkCBaQIVhAhmABGYIFZAgWkCFYQIZgARmCBWTMOeduj+DHvW88x8xsT3jCK+/xghf+CRcWkCFYQIZgARmCBWQIFpAhWECGYAEZggVkCBaQIVhAhmABGYIFZAgWkCFYQIZgARmCBWQIFpAhWECGYAEZggVkCBaQIVhAhmABGYIFZAgWkCFYQIZgARmCBWQIFpAhWECGYAEZggVkfLYHfN17tyfAs2Zme8ITXFhAhmABGYIFZAgWkCFYQIZgARmCBWQIFpAhWECGYAEZggVkCBaQIVhAhmABGYIFZAgWkCFYQIZgARmCBWQIFpAhWECGYAEZggVkCBaQIVhAhmABGYIFZAgWkCFYQIZgARmCBWQIFpDx2R7wNTPbE4DHubCADMECMgQLyBAsIEOwgAzBAjIEC8gQLCBDsIAMwQIyBAvIECwgQ7CADMECMgQLyBAsIEOwgAzBAjIEC8gQLCBDsIAMwQIyBAvIECwgQ7CADMECMgQLyBAsIEOwgAzBAjIEC8gQLCBDsICMz/aAr3vv9oQzM9sTnvgO5/gWvMmFBWQIFpAhWECGYAEZggVkCBaQIVhAhmABGYIFZAgWkCFYQIZgARmCBWQIFpAhWECGYAEZggVkCBaQIVhAhmABGYIFZAgWkCFYQIZgARmCBWQIFpAhWECGYAEZggVkCBaQIVhAhmABGXPOudsjAH7DhQVkCBaQIVhAhmABGYIFZAgWkCFYQIZgARmCBWQIFpAhWECGYAEZggVkCBaQIVhAhmABGYIFZAgWkCFYQIZgARmCBWQIFpAhWECGYAEZggVkCBaQIVhAhmABGYIFZAgWkCFYQIZgARl/Af+YI1yRaVvMAAAAAElFTkSuQmCC" isolation="isolate"/>
-  <image id="h" width="300" height="300" transform="translate(495 742) scale(.2)" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAAEsCAYAAAB5fY51AAAACXBIWXMAADddAAA3XQEZgEZdAAAEbklEQVR4nO3WQYodMRAFQZX597+yvDCDBy/M7EoJESd4tJqk5pxzD0DAr+0BAD8lWECGYAEZggVkCBaQIVhAhmABGYIFZAgWkCFYQIZgARmCBWQIFpAhWECGYAEZggVkCBaQIVhAhmABGYIFZAgWkCFYQIZgARmCBWQIFpAhWECGYAEZggVkCBaQIVhAhmABGYIFZAgWkPHZHvDl3rs94Qkzsz2Bb/yXf73wb7qwgAzBAjIEC8gQLCBDsIAMwQIyBAvIECwgQ7CADMECMgQLyBAsIEOwgAzBAjIEC8gQLCBDsIAMwQIyBAvIECwgQ7CADMECMgQLyBAsIEOwgAzBAjIEC8gQLCBDsIAMwQIyBAvIECwg47M94MvMbE84997tCc/wLXiRCwvIECwgQ7CADMECMgQLyBAsIEOwgAzBAjIEC8gQLCBDsIAMwQIyBAvIECwgQ7CADMECMgQLyBAsIEOwgAzBAjIEC8gQLCBDsIAMwQIyBAvIECwgQ7CADMECMgQLyBAsIEOwgAzBAjI+2wNeMjPbE4D/cGEBGYIFZAgWkCFYQIZgARmCBWQIFpAhWECGYAEZggVkCBaQIVhAhmABGYIFZAgWkCFYQIZgARmCBWQIFpAhWECGYAEZggVkCBaQIVhAhmABGYIFZAgWkCFYQIZgARmCBWQIFpAhWECGYAEZn+0BL7n3bk94xsxsT+Ab/+YfLiwgQ7CADMECMgQLyBAsIEOwgAzBAjIEC8gQLCBDsIAMwQIyBAvIECwgQ7CADMECMgQLyBAsIEOwgAzBAjIEC8gQLCBDsIAMwQIyBAvIECwgQ7CADMECMgQLyBAsIEOwgAzBAjIEC8j4bA94ycxsTzj33u0J55w3drzwHrzFhQVkCBaQIVhAhmABGYIFZAgWkCFYQIZgARmCBWQIFpAhWECGYAEZggVkCBaQIVhAhmABGYIFZAgWkCFYQIZgARmCBWQIFpAhWECGYAEZggVkCBaQIVhAhmABGYIFZAgWkCFYQIZgARmf7QFf7r3bE87MbE94YsM5b7wH/MuFBWQIFpAhWECGYAEZggVkCBaQIVhAhmABGYIFZAgWkCFYQIZgARmCBWQIFpAhWECGYAEZggVkCBaQIVhAhmABGYIFZAgWkCFYQIZgARmCBWQIFpAhWECGYAEZggVkCBaQIVhAhmABGYIFZMw5526PeMW9+59iZrYnnHPe+BYveOU9+MOFBWQIFpAhWECGYAEZggVkCBaQIVhAhmABGYIFZAgWkCFYQIZgARmCBWQIFpAhWECGYAEZggVkCBaQIVhAhmABGYIFZAgWkCFYQIZgARmCBWQIFpAhWECGYAEZggVkCBaQIVhAhmABGXPOudsjAH7ChQVkCBaQIVhAhmABGYIFZAgWkCFYQIZgARmCBWQIFpAhWECGYAEZggVkCBaQIVhAhmABGYIFZAgWkCFYQIZgARmCBWQIFpAhWECGYAEZggVkCBaQIVhAhmABGYIFZAgWkCFYQIZgARm/AeJqKVwXLAJ6AAAAAElFTkSuQmCC" isolation="isolate"/>
+  <image id="e" width="300" height="300" transform="translate(495 40) scale(.2)" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAAEsCAYAAAB5fY51AAAACXBIWXMAADddAAA3XQEZgEZdAAAEf0lEQVR4nO3WQW5bMRAFwZlA978yswgMOzvvyAaqTvAw+mpwZ+YMQMCf2wMAfkuwgAzBAjIEC8gQLCBDsIAMwQIyBAvIECwgQ7CADMECMgQLyBAsIEOwgAzBAjIEC8gQLCBDsIAMwQIyBAvIECwgQ7CADMECMgQLyBAsIEOwgAzBAjIEC8gQLCBDsIAMwQIyBAvIECwg43N7wJdzzu0Js7u3Jzzjhd+Dt7zw//DCAjIEC8gQLCBDsIAMwQIyBAvIECwgQ7CADMECMgQLyBAsIEOwgAzBAjIEC8gQLCBDsIAMwQIyBAvIECwgQ7CADMECMgQLyBAsIEOwgAzBAjIEC8gQLCBDsIAMwQIyBAvIECwgQ7CAjM/tAV929/aEOefcnvDEHV7xwi1e+CZm3rjFC7ywgAzBAjIEC8gQLCBDsIAMwQIyBAvIECwgQ7CADMECMgQLyBAsIEOwgAzBAjIEC8gQLCBDsIAMwQIyBAvIECwgQ7CADMECMgQLyBAsIEOwgAzBAjIEC8gQLCBDsIAMwQIyBAvIECwgY2fm3B4xM3PO/Rm7e3sCP/gmvrnFP15YQIZgARmCBWQIFpAhWECGYAEZggVkCBaQIVhAhmABGYIFZAgWkCFYQIZgARmCBWQIFpAhWECGYAEZggVkCBaQIVhAhmABGYIFZAgWkCFYQIZgARmCBWQIFpAhWECGYAEZggVkCBaQIVhAxs7MuT3iFec4xUt29/aEZ76JF27xAi8sIEOwgAzBAjIEC8gQLCBDsIAMwQIyBAvIECwgQ7CADMECMgQLyBAsIEOwgAzBAjIEC8gQLCBDsIAMwQIyBAvIECwgQ7CADMECMgQLyBAsIEOwgAzBAjIEC8gQLCBDsIAMwQIyBAvI+Nwe8OWcc3vCE3b39gR4lhcWkCFYQIZgARmCBWQIFpAhWECGYAEZggVkCBaQIVhAhmABGYIFZAgWkCFYQIZgARmCBWQIFpAhWECGYAEZggVkCBaQIVhAhmABGYIFZAgWkCFYQIZgARmCBWQIFpAhWECGYAEZggVkfG4P4H/nnNsTZmZmd29PeOIWL9yBb15YQIZgARmCBWQIFpAhWECGYAEZggVkCBaQIVhAhmABGYIFZAgWkCFYQIZgARmCBWQIFpAhWECGYAEZggVkCBaQIVhAhmABGYIFZAgWkCFYQIZgARmCBWQIFpAhWECGYAEZggVkCBaQIVhAxuf2gJfs7u0Jzzjn3J7wBHf49sL/wwsLyBAsIEOwgAzBAjIEC8gQLCBDsIAMwQIyBAvIECwgQ7CADMECMgQLyBAsIEOwgAzBAjIEC8gQLCBDsIAMwQIyBAvIECwgQ7CADMECMgQLyBAsIEOwgAzBAjIEC8gQLCBDsIAMwQIydmbO7REAv+GFBWQIFpAhWECGYAEZggVkCBaQIVhAhmABGYIFZAgWkCFYQIZgARmCBWQIFpAhWECGYAEZggVkCBaQIVhAhmABGYIFZAgWkCFYQIZgARmCBWQIFpAhWECGYAEZggVkCBaQIVhAhmABGX8B2S8wYSKNSeEAAAAASUVORK5CYII="/>
+  <image id="f" width="300" height="300" transform="translate(40 742) scale(.2)" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAAEsCAYAAAB5fY51AAAACXBIWXMAADddAAA3XQEZgEZdAAAEcklEQVR4nO3WQYocMRBFwUzT97+yvGoGLwyzkx5EnOBTKh65M3MGIODP7QEAvyVYQIZgARmCBWQIFpAhWECGYAEZggVkCBaQIVhAhmABGYIFZAgWkCFYQIZgARmCBWQIFpAhWECGYAEZggVkCBaQIVhAhmABGYIFZAgWkCFYQIZgARmCBWQIFpAhWECGYAEZggVkCBaQ8bk94Oucc3vC7O7tCU98h5k3vsULXnmPF7zwT7iwgAzBAjIEC8gQLCBDsIAMwQIyBAvIECwgQ7CADMECMgQLyBAsIEOwgAzBAjIEC8gQLCBDsIAMwQIyBAvIECwgQ7CADMECMgQLyBAsIEOwgAzBAjIEC8gQLCBDsIAMwQIyBAvIECwgY2fm3B7Bj3M8x9fu3p7wjBf+ixfew4UFZAgWkCFYQIZgARmCBWQIFpAhWECGYAEZggVkCBaQIVhAhmABGYIFZAgWkCFYQIZgARmCBWQIFpAhWECGYAEZggVkCBaQIVhAhmABGYIFZAgWkCFYQIZgARmCBWQIFpAhWECGYAEZOzPn9oiZmXOemHHd7t6eAM9yYQEZggVkCBaQIVhAhmABGYIFZAgWkCFYQIZgARmCBWQIFpAhWECGYAEZggVkCBaQIVhAhmABGYIFZAgWkCFYQIZgARmCBWQIFpAhWECGYAEZggVkCBaQIVhAhmABGYIFZAgWkCFYQIZgARmf2wNesru3J8w55/aEZ3iPt7zwHi4sIEOwgAzBAjIEC8gQLCBDsIAMwQIyBAvIECwgQ7CADMECMgQLyBAsIEOwgAzBAjIEC8gQLCBDsIAMwQIyBAvIECwgQ7CADMECMgQLyBAsIEOwgAzBAjIEC8gQLCBDsIAMwQIyBAvI2Jk5t0e84hyfAv5nd29PcGEBHYIFZAgWkCFYQIZgARmCBWQIFpAhWECGYAEZggVkCBaQIVhAhmABGYIFZAgWkCFYQIZgARmCBWQIFpAhWECGYAEZggVkCBaQIVhAhmABGYIFZAgWkCFYQIZgARmCBWQIFpAhWEDG5/YA/rW7tyc845xze8Iz7/HCt3iBCwvIECwgQ7CADMECMgQLyBAsIEOwgAzBAjIEC8gQLCBDsIAMwQIyBAvIECwgQ7CADMECMgQLyBAsIEOwgAzBAjIEC8gQLCBDsIAMwQIyBAvIECwgQ7CADMECMgQLyBAsIEOwgAzBAjIEC8jYmTm3R/DjHM/xtbu3J/AYFxaQIVhAhmABGYIFZAgWkCFYQIZgARmCBWQIFpAhWECGYAEZggVkCBaQIVhAhmABGYIFZAgWkCFYQIZgARmCBWQIFpAhWECGYAEZggVkCBaQIVhAhmABGYIFZAgWkCFYQIZgARmCBWTszJzbIwB+w4UFZAgWkCFYQIZgARmCBWQIFpAhWECGYAEZggVkCBaQIVhAhmABGYIFZAgWkCFYQIZgARmCBWQIFpAhWECGYAEZggVkCBaQIVhAhmABGYIFZAgWkCFYQIZgARmCBWQIFpAhWECGYAEZfwESNixWD1zPxwAAAABJRU5ErkJggg=="/>
+  <image id="g" width="300" height="300" transform="translate(40 40) scale(.2)" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAAEsCAYAAAB5fY51AAAACXBIWXMAADddAAA3XQEZgEZdAAAEWUlEQVR4nO3WQYocMRBFQaXp+19ZXphmvJxd6kHECT6l4pFzzrkHIODP9gCA3xIsIEOwgAzBAjIEC8gQLCBDsIAMwQIyBAvIECwgQ7CADMECMgQLyBAsIEOwgAzBAjIEC8gQLCBDsIAMwQIyBAvIECwgQ7CADMECMgQLyBAsIEOwgAzBAjIEC8gQLCBDsIAMwQIyBAvI+GwP+Lr3bk/gPzOzPeEJr/yX3uMfFxaQIVhAhmABGYIFZAgWkCFYQIZgARmCBWQIFpAhWECGYAEZggVkCBaQIVhAhmABGYIFZAgWkCFYQIZgARmCBWQIFpAhWECGYAEZggVkCBaQIVhAhmABGYIFZAgWkCFYQIZgARmCBWR8tgd8zcz2BB5z792ewGNcWECGYAEZggVkCBaQIVhAhmABGYIFZAgWkCFYQIZgARmCBWQIFpAhWECGYAEZggVkCBaQIVhAhmABGYIFZAgWkCFYQIZgARmCBWQIFpAhWECGYAEZggVkCBaQIVhAhmABGYIFZAgWkPHZHvB1792eADzOhQVkCBaQIVhAhmABGYIFZAgWkCFYQIZgARmCBWQIFpAhWECGYAEZggVkCBaQIVhAhmABGYIFZAgWkCFYQIZgARmCBWQIFpAhWECGYAEZggVkCBaQIVhAhmABGYIFZAgWkCFYQIZgARmCBWTMOeduj+DHvW88x8xsT3jCK+/xghf+CRcWkCFYQIZgARmCBWQIFpAhWECGYAEZggVkCBaQIVhAhmABGYIFZAgWkCFYQIZgARmCBWQIFpAhWECGYAEZggVkCBaQIVhAhmABGYIFZAgWkCFYQIZgARmCBWQIFpAhWECGYAEZggVkfLYHfN17tyfAs2Zme8ITXFhAhmABGYIFZAgWkCFYQIZgARmCBWQIFpAhWECGYAEZggVkCBaQIVhAhmABGYIFZAgWkCFYQIZgARmCBWQIFpAhWECGYAEZggVkCBaQIVhAhmABGYIFZAgWkCFYQIZgARmCBWQIFpDx2R7wNTPbE4DHubCADMECMgQLyBAsIEOwgAzBAjIEC8gQLCBDsIAMwQIyBAvIECwgQ7CADMECMgQLyBAsIEOwgAzBAjIEC8gQLCBDsIAMwQIyBAvIECwgQ7CADMECMgQLyBAsIEOwgAzBAjIEC8gQLCBDsICMz/aAr3vv9oQzM9sTnvgO5/gWvMmFBWQIFpAhWECGYAEZggVkCBaQIVhAhmABGYIFZAgWkCFYQIZgARmCBWQIFpAhWECGYAEZggVkCBaQIVhAhmABGYIFZAgWkCFYQIZgARmCBWQIFpAhWECGYAEZggVkCBaQIVhAhmABGXPOudsjAH7DhQVkCBaQIVhAhmABGYIFZAgWkCFYQIZgARmCBWQIFpAhWECGYAEZggVkCBaQIVhAhmABGYIFZAgWkCFYQIZgARmCBWQIFpAhWECGYAEZggVkCBaQIVhAhmABGYIFZAgWkCFYQIZgARl/Af+YI1yRaVvMAAAAAElFTkSuQmCC"/>
+  <image id="h" width="300" height="300" transform="translate(495 742) scale(.2)" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAASwAAAEsCAYAAAB5fY51AAAACXBIWXMAADddAAA3XQEZgEZdAAAEbklEQVR4nO3WQYodMRAFQZX597+yvDCDBy/M7EoJESd4tJqk5pxzD0DAr+0BAD8lWECGYAEZggVkCBaQIVhAhmABGYIFZAgWkCFYQIZgARmCBWQIFpAhWECGYAEZggVkCBaQIVhAhmABGYIFZAgWkCFYQIZgARmCBWQIFpAhWECGYAEZggVkCBaQIVhAhmABGYIFZAgWkPHZHvDl3rs94Qkzsz2Bb/yXf73wb7qwgAzBAjIEC8gQLCBDsIAMwQIyBAvIECwgQ7CADMECMgQLyBAsIEOwgAzBAjIEC8gQLCBDsIAMwQIyBAvIECwgQ7CADMECMgQLyBAsIEOwgAzBAjIEC8gQLCBDsIAMwQIyBAvIECwg47M94MvMbE84997tCc/wLXiRCwvIECwgQ7CADMECMgQLyBAsIEOwgAzBAjIEC8gQLCBDsIAMwQIyBAvIECwgQ7CADMECMgQLyBAsIEOwgAzBAjIEC8gQLCBDsIAMwQIyBAvIECwgQ7CADMECMgQLyBAsIEOwgAzBAjI+2wNeMjPbE4D/cGEBGYIFZAgWkCFYQIZgARmCBWQIFpAhWECGYAEZggVkCBaQIVhAhmABGYIFZAgWkCFYQIZgARmCBWQIFpAhWECGYAEZggVkCBaQIVhAhmABGYIFZAgWkCFYQIZgARmCBWQIFpAhWECGYAEZn+0BL7n3bk94xsxsT+Ab/+YfLiwgQ7CADMECMgQLyBAsIEOwgAzBAjIEC8gQLCBDsIAMwQIyBAvIECwgQ7CADMECMgQLyBAsIEOwgAzBAjIEC8gQLCBDsIAMwQIyBAvIECwgQ7CADMECMgQLyBAsIEOwgAzBAjIEC8j4bA94ycxsTzj33u0J55w3drzwHrzFhQVkCBaQIVhAhmABGYIFZAgWkCFYQIZgARmCBWQIFpAhWECGYAEZggVkCBaQIVhAhmABGYIFZAgWkCFYQIZgARmCBWQIFpAhWECGYAEZggVkCBaQIVhAhmABGYIFZAgWkCFYQIZgARmf7QFf7r3bE87MbE94YsM5b7wH/MuFBWQIFpAhWECGYAEZggVkCBaQIVhAhmABGYIFZAgWkCFYQIZgARmCBWQIFpAhWECGYAEZggVkCBaQIVhAhmABGYIFZAgWkCFYQIZgARmCBWQIFpAhWECGYAEZggVkCBaQIVhAhmABGYIFZMw5526PeMW9+59iZrYnnHPe+BYveOU9+MOFBWQIFpAhWECGYAEZggVkCBaQIVhAhmABGYIFZAgWkCFYQIZgARmCBWQIFpAhWECGYAEZggVkCBaQIVhAhmABGYIFZAgWkCFYQIZgARmCBWQIFpAhWECGYAEZggVkCBaQIVhAhmABGXPOudsjAH7ChQVkCBaQIVhAhmABGYIFZAgWkCFYQIZgARmCBWQIFpAhWECGYAEZggVkCBaQIVhAhmABGYIFZAgWkCFYQIZgARmCBWQIFpAhWECGYAEZggVkCBaQIVhAhmABGYIFZAgWkCFYQIZgARm/AeJqKVwXLAJ6AAAAAElFTkSuQmCC"/>
   <path d="M40,733.5h515" fill="none" stroke="#000" stroke-width="5"/>
   <g>
     <path d="M40,236.5h515" fill="none" stroke="#000" stroke-width="5"/>
     <path d="M40,282.8h515M40,348.8h515M40,304.8h515M40,326.8h515M297.8,283v66M426.5,283v44M169,283v44" fill="none" stroke="#000" stroke-width=".5"/>
-    <path d="M48.7,290.5h0c1.6,0,3,1.3,3,3h0c0,1.8-1.3,3.1-3,3.1h0c-1.6,0-3-1.3-3-3h0c0-1.8,1.3-3.1,3-3.1Z" fill="none" stroke="#000"/>
-    <g isolation="isolate">
-      <text transform="translate(56.4 295.5)" fill="#000" font-family="RobotoMono-Regular, &apos;Roboto Mono&apos;" font-size="5" isolation="isolate"><tspan x="0" y="0">Efficiency</tspan></text>
-    </g>
-    <path d="M177.4,290.5h0c1.6,0,3,1.3,3,3h0c0,1.8-1.3,3.1-3,3.1h0c-1.6,0-3-1.3-3-3h0c0-1.8,1.3-3.1,3-3.1Z" fill="none" stroke="#000"/>
-    <g isolation="isolate">
-      <text transform="translate(185.2 295.5)" fill="#000" font-family="RobotoMono-Regular, &apos;Roboto Mono&apos;" font-size="5" isolation="isolate"><tspan x="0" y="0">Accuracy</tspan></text>
-    </g>
-    <path d="M48.7,312.5h0c1.6,0,3,1.3,3,3h0c0,1.8-1.3,3.1-3,3.1h0c-1.6,0-3-1.3-3-3h0c0-1.8,1.3-3.1,3-3.1Z" fill="none" stroke="#000"/>
-    <g isolation="isolate">
-      <text transform="translate(56.4 317.5)" fill="#000" font-family="RobotoMono-Regular, &apos;Roboto Mono&apos;" font-size="5" isolation="isolate"><tspan x="0" y="0">Unbiased Decisions</tspan></text>
+    <g>
+      <text transform="translate(56.4 295.5)" fill="#000" font-family="RobotoMono-Regular, &apos;Roboto Mono&apos;" font-size="5"><tspan x="0" y="0">Efficiency</tspan></text>
     </g>
     <g>
-      <path d="M177.4,312.5h0c1.6,0,3,1.3,3,3h0c0,1.8-1.3,3.1-3,3.1h0c-1.6,0-3-1.3-3-3h0c0-1.8,1.3-3.1,3-3.1Z" fill="none" stroke="#000"/>
-      <g isolation="isolate">
-        <text transform="translate(185.2 317.5)" fill="#000" font-family="RobotoMono-Regular, &apos;Roboto Mono&apos;" font-size="5" isolation="isolate"><tspan x="0" y="0">24/7 Availability</tspan></text>
+      <text transform="translate(185.2 295.5)" fill="#000" font-family="RobotoMono-Regular, &apos;Roboto Mono&apos;" font-size="5"><tspan x="0" y="0">Accuracy</tspan></text>
+    </g>
+    <g>
+      <text transform="translate(56.4 317.5)" fill="#000" font-family="RobotoMono-Regular, &apos;Roboto Mono&apos;" font-size="5"><tspan x="0" y="0">Unbiased Decisions</tspan></text>
+    </g>
+    <g>
+      <g>
+        <text transform="translate(185.2 317.5)" fill="#000" font-family="RobotoMono-Regular, &apos;Roboto Mono&apos;" font-size="5"><tspan x="0" y="0">24/7 Availability</tspan></text>
       </g>
     </g>
     <g>
@@ -132,22 +170,18 @@
       </g>
     </g>
     <g>
-      <path d="M306.2,290.5h0c1.6,0,3,1.3,3,3h0c0,1.8-1.3,3.1-3,3.1h0c-1.6,0-3-1.3-3-3h0c0-1.8,1.3-3.1,3-3.1Z" fill="none" stroke="#000"/>
-      <g isolation="isolate">
-        <text transform="translate(313.9 295.5)" fill="#000" font-family="RobotoMono-Regular, &apos;Roboto Mono&apos;" font-size="5" isolation="isolate"><tspan x="0" y="0">Lack of Empathy</tspan></text>
-      </g>
-      <path d="M434.9,290.5h0c1.6,0,3,1.3,3,3h0c0,1.8-1.3,3.1-3,3.1h0c-1.6,0-3-1.3-3-3h0c0-1.8,1.3-3.1,3-3.1Z" fill="none" stroke="#000"/>
-      <g isolation="isolate">
-        <text transform="translate(442.7 295.5)" fill="#000" font-family="RobotoMono-Regular, &apos;Roboto Mono&apos;" font-size="5" isolation="isolate"><tspan x="0" y="0">Accountability</tspan></text>
-      </g>
-      <path d="M306.2,312.5h0c1.6,0,3,1.3,3,3h0c0,1.8-1.3,3.1-3,3.1h0c-1.6,0-3-1.3-3-3h0c0-1.8,1.3-3.1,3-3.1Z" fill="none" stroke="#000"/>
-      <g isolation="isolate">
-        <text transform="translate(313.9 317.5)" fill="#000" font-family="RobotoMono-Regular, &apos;Roboto Mono&apos;" font-size="5" isolation="isolate"><tspan x="0" y="0">Dependence</tspan></text>
+      <g>
+        <text transform="translate(313.9 295.5)" fill="#000" font-family="RobotoMono-Regular, &apos;Roboto Mono&apos;" font-size="5"><tspan x="0" y="0">Lack of Empathy</tspan></text>
       </g>
       <g>
-        <path d="M434.9,312.5h0c1.6,0,3,1.3,3,3h0c0,1.8-1.3,3.1-3,3.1h0c-1.6,0-3-1.3-3-3h0c0-1.8,1.3-3.1,3-3.1Z" fill="none" stroke="#000"/>
-        <g isolation="isolate">
-          <text transform="translate(442.7 317.5)" fill="#000" font-family="RobotoMono-Regular, &apos;Roboto Mono&apos;" font-size="5" isolation="isolate"><tspan x="0" y="0">Privacy Concerns</tspan></text>
+        <text transform="translate(442.7 295.5)" fill="#000" font-family="RobotoMono-Regular, &apos;Roboto Mono&apos;" font-size="5"><tspan x="0" y="0">Accountability</tspan></text>
+      </g>
+      <g>
+        <text transform="translate(313.9 317.5)" fill="#000" font-family="RobotoMono-Regular, &apos;Roboto Mono&apos;" font-size="5"><tspan x="0" y="0">Dependence</tspan></text>
+      </g>
+      <g>
+        <g>
+          <text transform="translate(442.7 317.5)" fill="#000" font-family="RobotoMono-Regular, &apos;Roboto Mono&apos;" font-size="5"><tspan x="0" y="0">Privacy Concerns</tspan></text>
         </g>
       </g>
       <g>
@@ -221,37 +255,33 @@
     </g>
     <g>
       <g>
-        <g isolation="isolate">
-          <text transform="translate(160.4 276.7)" fill="#000" font-family="RobotoMono-Regular, &apos;Roboto Mono&apos;" font-size="9" isolation="isolate"><tspan x="0" y="0">For</tspan></text>
+        <g>
+          <text transform="translate(160.4 276.7)" fill="#000" font-family="RobotoMono-Regular, &apos;Roboto Mono&apos;" font-size="9"><tspan x="0" y="0">For</tspan></text>
         </g>
-        <g isolation="isolate">
-          <text transform="translate(406.7 276.7)" fill="#000" font-family="RobotoMono-Regular, &apos;Roboto Mono&apos;" font-size="9" isolation="isolate"><tspan x="0" y="0">Against</tspan></text>
+        <g>
+          <text transform="translate(406.7 276.7)" fill="#000" font-family="RobotoMono-Regular, &apos;Roboto Mono&apos;" font-size="9"><tspan x="0" y="0">Against</tspan></text>
         </g>
       </g>
       <path d="M297.8,261v22M40,260.8h515" fill="none" stroke="#000" stroke-width=".5"/>
     </g>
-    <g isolation="isolate">
-      <text transform="translate(60.7 253.5)" fill="#000" font-family="RobotoMono-Regular, &apos;Roboto Mono&apos;" font-size="10" isolation="isolate"><tspan x="0" y="0">It is ethical for AI to make decisions affecting human lives.</tspan></text>
+    <g>
+      <text transform="translate(60.7 253.5)" fill="#000" font-family="RobotoMono-Regular, &apos;Roboto Mono&apos;" font-size="10"><tspan x="0" y="0">It is ethical for AI to make decisions affecting human lives.</tspan></text>
     </g>
   </g>
   <g>
     <path d="M40,154.8h515M40,220.8h515M40,176.8h515M40,198.8h515M297.8,155v66M426.5,155v44M169,155v44" fill="none" stroke="#000" stroke-width=".5"/>
-    <path d="M48.7,162.5h0c1.6,0,3,1.3,3,3h0c0,1.8-1.3,3.1-3,3.1h0c-1.6,0-3-1.3-3-3h0c0-1.8,1.3-3.1,3-3.1Z" fill="none" stroke="#000"/>
-    <g isolation="isolate">
-      <text transform="translate(56.4 167.5)" fill="#000" font-family="RobotoMono-Regular, &apos;Roboto Mono&apos;" font-size="5" isolation="isolate"><tspan x="0" y="0">Prevent Misuse</tspan></text>
-    </g>
-    <path d="M177.4,162.5h0c1.6,0,3,1.3,3,3h0c0,1.8-1.3,3.1-3,3.1h0c-1.6,0-3-1.3-3-3h0c0-1.8,1.3-3.1,3-3.1Z" fill="none" stroke="#000"/>
-    <g isolation="isolate">
-      <text transform="translate(185.2 167.5)" fill="#000" font-family="RobotoMono-Regular, &apos;Roboto Mono&apos;" font-size="5" isolation="isolate"><tspan x="0" y="0">Promote Ethical Treatment</tspan></text>
-    </g>
-    <path d="M48.7,184.5h0c1.6,0,3,1.3,3,3h0c0,1.8-1.3,3.1-3,3.1h0c-1.6,0-3-1.3-3-3h0c0-1.8,1.3-3.1,3-3.1Z" fill="none" stroke="#000"/>
-    <g isolation="isolate">
-      <text transform="translate(56.4 189.5)" fill="#000" font-family="RobotoMono-Regular, &apos;Roboto Mono&apos;" font-size="5" isolation="isolate"><tspan x="0" y="0">Legal Framework</tspan></text>
+    <g>
+      <text transform="translate(56.4 167.5)" fill="#000" font-family="RobotoMono-Regular, &apos;Roboto Mono&apos;" font-size="5"><tspan x="0" y="0">Prevent Misuse</tspan></text>
     </g>
     <g>
-      <path d="M177.4,184.5h0c1.6,0,3,1.3,3,3h0c0,1.8-1.3,3.1-3,3.1h0c-1.6,0-3-1.3-3-3h0c0-1.8,1.3-3.1,3-3.1Z" fill="none" stroke="#000"/>
-      <g isolation="isolate">
-        <text transform="translate(185.2 189.5)" fill="#000" font-family="RobotoMono-Regular, &apos;Roboto Mono&apos;" font-size="5" isolation="isolate"><tspan x="0" y="0">Evolution of AI</tspan></text>
+      <text transform="translate(185.2 167.5)" fill="#000" font-family="RobotoMono-Regular, &apos;Roboto Mono&apos;" font-size="5"><tspan x="0" y="0">Promote Ethical Treatment</tspan></text>
+    </g>
+    <g>
+      <text transform="translate(56.4 189.5)" fill="#000" font-family="RobotoMono-Regular, &apos;Roboto Mono&apos;" font-size="5"><tspan x="0" y="0">Legal Framework</tspan></text>
+    </g>
+    <g>
+      <g>
+        <text transform="translate(185.2 189.5)" fill="#000" font-family="RobotoMono-Regular, &apos;Roboto Mono&apos;" font-size="5"><tspan x="0" y="0">Evolution of AI</tspan></text>
       </g>
     </g>
     <g>
@@ -323,22 +353,18 @@
       </g>
     </g>
     <g>
-      <path d="M306.2,162.5h0c1.6,0,3,1.3,3,3h0c0,1.8-1.3,3.1-3,3.1h0c-1.6,0-3-1.3-3-3h0c0-1.8,1.3-3.1,3-3.1Z" fill="none" stroke="#000"/>
-      <g isolation="isolate">
-        <text transform="translate(313.9 167.5)" fill="#000" font-family="RobotoMono-Regular, &apos;Roboto Mono&apos;" font-size="5" isolation="isolate"><tspan x="0" y="0">Lack of sentience</tspan></text>
-      </g>
-      <path d="M434.9,162.5h0c1.6,0,3,1.3,3,3h0c0,1.8-1.3,3.1-3,3.1h0c-1.6,0-3-1.3-3-3h0c0-1.8,1.3-3.1,3-3.1Z" fill="none" stroke="#000"/>
-      <g isolation="isolate">
-        <text transform="translate(442.7 167.5)" fill="#000" font-family="RobotoMono-Regular, &apos;Roboto Mono&apos;" font-size="5" isolation="isolate"><tspan x="0" y="0">Rights and Responsibilities</tspan></text>
-      </g>
-      <path d="M306.2,184.5h0c1.6,0,3,1.3,3,3h0c0,1.8-1.3,3.1-3,3.1h0c-1.6,0-3-1.3-3-3h0c0-1.8,1.3-3.1,3-3.1Z" fill="none" stroke="#000"/>
-      <g isolation="isolate">
-        <text transform="translate(313.9 189.5)" fill="#000" font-family="RobotoMono-Regular, &apos;Roboto Mono&apos;" font-size="5" isolation="isolate"><tspan x="0" y="0">Potential Misuse</tspan></text>
+      <g>
+        <text transform="translate(313.9 167.5)" fill="#000" font-family="RobotoMono-Regular, &apos;Roboto Mono&apos;" font-size="5"><tspan x="0" y="0">Lack of sentience</tspan></text>
       </g>
       <g>
-        <path d="M434.9,184.5h0c1.6,0,3,1.3,3,3h0c0,1.8-1.3,3.1-3,3.1h0c-1.6,0-3-1.3-3-3h0c0-1.8,1.3-3.1,3-3.1Z" fill="none" stroke="#000"/>
-        <g isolation="isolate">
-          <text transform="translate(442.7 189.5)" fill="#000" font-family="RobotoMono-Regular, &apos;Roboto Mono&apos;" font-size="5" isolation="isolate"><tspan x="0" y="0">Human Superiority</tspan></text>
+        <text transform="translate(442.7 167.5)" fill="#000" font-family="RobotoMono-Regular, &apos;Roboto Mono&apos;" font-size="5"><tspan x="0" y="0">Rights and Responsibilities</tspan></text>
+      </g>
+      <g>
+        <text transform="translate(313.9 189.5)" fill="#000" font-family="RobotoMono-Regular, &apos;Roboto Mono&apos;" font-size="5"><tspan x="0" y="0">Potential Misuse</tspan></text>
+      </g>
+      <g>
+        <g>
+          <text transform="translate(442.7 189.5)" fill="#000" font-family="RobotoMono-Regular, &apos;Roboto Mono&apos;" font-size="5"><tspan x="0" y="0">Human Superiority</tspan></text>
         </g>
       </g>
       <g>
@@ -412,39 +438,35 @@
     </g>
     <g>
       <g>
-        <g isolation="isolate">
-          <text transform="translate(160.4 148.7)" fill="#000" font-family="RobotoMono-Regular, &apos;Roboto Mono&apos;" font-size="9" isolation="isolate"><tspan x="0" y="0">For</tspan></text>
+        <g>
+          <text transform="translate(160.4 148.7)" fill="#000" font-family="RobotoMono-Regular, &apos;Roboto Mono&apos;" font-size="9"><tspan x="0" y="0">For</tspan></text>
         </g>
-        <g isolation="isolate">
-          <text transform="translate(406.7 148.7)" fill="#000" font-family="RobotoMono-Regular, &apos;Roboto Mono&apos;" font-size="9" isolation="isolate"><tspan x="0" y="0">Against</tspan></text>
+        <g>
+          <text transform="translate(406.7 148.7)" fill="#000" font-family="RobotoMono-Regular, &apos;Roboto Mono&apos;" font-size="9"><tspan x="0" y="0">Against</tspan></text>
         </g>
       </g>
       <path d="M297.8,133v22M40,132.8h515" fill="none" stroke="#000" stroke-width=".5"/>
     </g>
-    <g isolation="isolate">
-      <text transform="translate(60.7 125.5)" fill="#000" font-family="RobotoMono-Regular, &apos;Roboto Mono&apos;" font-size="10" isolation="isolate"><tspan x="0" y="0">AI should have rights that mirror those of a human.</tspan></text>
+    <g>
+      <text transform="translate(60.7 125.5)" fill="#000" font-family="RobotoMono-Regular, &apos;Roboto Mono&apos;" font-size="10"><tspan x="0" y="0">AI should have rights that mirror those of a human.</tspan></text>
     </g>
     <path d="M40,108.5h515" fill="none" stroke="#000" stroke-width="5"/>
   </g>
   <g>
     <path d="M40,362.5h515" fill="none" stroke="#000" stroke-width="5"/>
     <path d="M40,409.1h515M40,475.8h515M40,431.4h515M40,453.5h515M297.8,409.4v66.6M426.5,409.4v44.4M169,409.4v44.4" fill="none" stroke="#000" stroke-width=".5"/>
-    <path d="M48.7,417h0c1.6,0,3,1.3,3,3v.2c0,1.6-1.3,3-3,3h0c-1.6,0-3-1.3-3-3v-.2c0-1.6,1.3-3,3-3Z" fill="none" stroke="#000"/>
-    <g isolation="isolate">
-      <text transform="translate(56.4 422)" fill="#000" font-family="RobotoMono-Regular, &apos;Roboto Mono&apos;" font-size="5" isolation="isolate"><tspan x="0" y="0">Safety</tspan></text>
-    </g>
-    <path d="M177.4,417h0c1.6,0,3,1.3,3,3v.2c0,1.6-1.3,3-3,3h0c-1.6,0-3-1.3-3-3v-.2c0-1.6,1.3-3,3-3Z" fill="none" stroke="#000"/>
-    <g isolation="isolate">
-      <text transform="translate(185.2 422)" fill="#000" font-family="RobotoMono-Regular, &apos;Roboto Mono&apos;" font-size="5" isolation="isolate"><tspan x="0" y="0">Malfunction</tspan></text>
-    </g>
-    <path d="M48.7,439.2h0c1.6,0,3,1.3,3,3v.2c0,1.6-1.3,3-3,3h0c-1.6,0-3-1.3-3-3v-.2c0-1.6,1.3-3,3-3Z" fill="none" stroke="#000"/>
-    <g isolation="isolate">
-      <text transform="translate(56.4 444.2)" fill="#000" font-family="RobotoMono-Regular, &apos;Roboto Mono&apos;" font-size="5" isolation="isolate"><tspan x="0" y="0">Obsolescence</tspan></text>
+    <g>
+      <text transform="translate(56.4 422)" fill="#000" font-family="RobotoMono-Regular, &apos;Roboto Mono&apos;" font-size="5"><tspan x="0" y="0">Safety</tspan></text>
     </g>
     <g>
-      <path d="M177.4,439.2h0c1.6,0,3,1.3,3,3v.2c0,1.6-1.3,3-3,3h0c-1.6,0-3-1.3-3-3v-.2c0-1.6,1.3-3,3-3Z" fill="none" stroke="#000"/>
-      <g isolation="isolate">
-        <text transform="translate(185.2 444.2)" fill="#000" font-family="RobotoMono-Regular, &apos;Roboto Mono&apos;" font-size="5" isolation="isolate"><tspan x="0" y="0">Resource Management</tspan></text>
+      <text transform="translate(185.2 422)" fill="#000" font-family="RobotoMono-Regular, &apos;Roboto Mono&apos;" font-size="5"><tspan x="0" y="0">Malfunction</tspan></text>
+    </g>
+    <g>
+      <text transform="translate(56.4 444.2)" fill="#000" font-family="RobotoMono-Regular, &apos;Roboto Mono&apos;" font-size="5"><tspan x="0" y="0">Obsolescence</tspan></text>
+    </g>
+    <g>
+      <g>
+        <text transform="translate(185.2 444.2)" fill="#000" font-family="RobotoMono-Regular, &apos;Roboto Mono&apos;" font-size="5"><tspan x="0" y="0">Resource Management</tspan></text>
       </g>
     </g>
     <g>
@@ -516,22 +538,18 @@
       </g>
     </g>
     <g>
-      <path d="M306.2,417h0c1.6,0,3,1.3,3,3v.2c0,1.6-1.3,3-3,3h0c-1.6,0-3-1.3-3-3v-.2c0-1.6,1.3-3,3-3Z" fill="none" stroke="#000"/>
-      <g isolation="isolate">
-        <text transform="translate(313.9 422)" fill="#000" font-family="RobotoMono-Regular, &apos;Roboto Mono&apos;" font-size="5" isolation="isolate"><tspan x="0" y="0">Potential Loss</tspan></text>
-      </g>
-      <path d="M434.9,417h0c1.6,0,3,1.3,3,3v.2c0,1.6-1.3,3-3,3h0c-1.6,0-3-1.3-3-3v-.2c0-1.6,1.3-3,3-3Z" fill="none" stroke="#000"/>
-      <g isolation="isolate">
-        <text transform="translate(442.7 422)" fill="#000" font-family="RobotoMono-Regular, &apos;Roboto Mono&apos;" font-size="5" isolation="isolate"><tspan x="0" y="0">Investment</tspan></text>
-      </g>
-      <path d="M306.2,439.2h0c1.6,0,3,1.3,3,3v.2c0,1.6-1.3,3-3,3h0c-1.6,0-3-1.3-3-3v-.2c0-1.6,1.3-3,3-3Z" fill="none" stroke="#000"/>
-      <g isolation="isolate">
-        <text transform="translate(313.9 444.2)" fill="#000" font-family="RobotoMono-Regular, &apos;Roboto Mono&apos;" font-size="5" isolation="isolate"><tspan x="0" y="0">Dependency</tspan></text>
+      <g>
+        <text transform="translate(313.9 422)" fill="#000" font-family="RobotoMono-Regular, &apos;Roboto Mono&apos;" font-size="5"><tspan x="0" y="0">Potential Loss</tspan></text>
       </g>
       <g>
-        <path d="M434.9,439.2h0c1.6,0,3,1.3,3,3v.2c0,1.6-1.3,3-3,3h0c-1.6,0-3-1.3-3-3v-.2c0-1.6,1.3-3,3-3Z" fill="none" stroke="#000"/>
-        <g isolation="isolate">
-          <text transform="translate(442.7 444.2)" fill="#000" font-family="RobotoMono-Regular, &apos;Roboto Mono&apos;" font-size="5" isolation="isolate"><tspan x="0" y="0">Ethical Considerations</tspan></text>
+        <text transform="translate(442.7 422)" fill="#000" font-family="RobotoMono-Regular, &apos;Roboto Mono&apos;" font-size="5"><tspan x="0" y="0">Investment</tspan></text>
+      </g>
+      <g>
+        <text transform="translate(313.9 444.2)" fill="#000" font-family="RobotoMono-Regular, &apos;Roboto Mono&apos;" font-size="5"><tspan x="0" y="0">Dependency</tspan></text>
+      </g>
+      <g>
+        <g>
+          <text transform="translate(442.7 444.2)" fill="#000" font-family="RobotoMono-Regular, &apos;Roboto Mono&apos;" font-size="5"><tspan x="0" y="0">Ethical Considerations</tspan></text>
         </g>
       </g>
       <g>
@@ -605,38 +623,34 @@
     </g>
     <g>
       <g>
-        <g isolation="isolate">
-          <text transform="translate(160.4 402.9)" fill="#000" font-family="RobotoMono-Regular, &apos;Roboto Mono&apos;" font-size="9" isolation="isolate"><tspan x="0" y="0">For</tspan></text>
+        <g>
+          <text transform="translate(160.4 402.9)" fill="#000" font-family="RobotoMono-Regular, &apos;Roboto Mono&apos;" font-size="9"><tspan x="0" y="0">For</tspan></text>
         </g>
-        <g isolation="isolate">
-          <text transform="translate(406.7 402.9)" fill="#000" font-family="RobotoMono-Regular, &apos;Roboto Mono&apos;" font-size="9" isolation="isolate"><tspan x="0" y="0">Against</tspan></text>
+        <g>
+          <text transform="translate(406.7 402.9)" fill="#000" font-family="RobotoMono-Regular, &apos;Roboto Mono&apos;" font-size="9"><tspan x="0" y="0">Against</tspan></text>
         </g>
       </g>
       <path d="M297.8,387.2v22.2M40,387h515" fill="none" stroke="#000" stroke-width=".5"/>
     </g>
-    <g isolation="isolate">
-      <text transform="translate(60.7 379.6)" fill="#000" font-family="RobotoMono-Regular, &apos;Roboto Mono&apos;" font-size="10" isolation="isolate"><tspan x="0" y="0">The act of ‘shutting down’ an AI system requires moral justification.</tspan></text>
+    <g>
+      <text transform="translate(60.7 379.6)" fill="#000" font-family="RobotoMono-Regular, &apos;Roboto Mono&apos;" font-size="10"><tspan x="0" y="0">The act of ‘shutting down’ an AI system requires moral justification.</tspan></text>
     </g>
   </g>
   <g>
     <path d="M40,490.5h515" fill="none" stroke="#000" stroke-width="5"/>
     <path d="M40,536.8h515M40,602.8h515M40,558.8h515M40,580.8h515M297.8,537v66M426.5,537v44M169,537v44" fill="none" stroke="#000" stroke-width=".5"/>
-    <path d="M48.7,544.5h0c1.6,0,3,1.3,3,3h0c0,1.8-1.3,3.1-3,3.1h0c-1.6,0-3-1.3-3-3h0c0-1.8,1.3-3.1,3-3.1Z" fill="none" stroke="#000"/>
-    <g isolation="isolate">
-      <text transform="translate(56.4 549.5)" fill="#000" font-family="RobotoMono-Regular, &apos;Roboto Mono&apos;" font-size="5" isolation="isolate"><tspan x="0" y="0">Ethical Decision Making</tspan></text>
-    </g>
-    <path d="M177.4,544.5h0c1.6,0,3,1.3,3,3h0c0,1.8-1.3,3.1-3,3.1h0c-1.6,0-3-1.3-3-3h0c0-1.8,1.3-3.1,3-3.1Z" fill="none" stroke="#000"/>
-    <g isolation="isolate">
-      <text transform="translate(185.2 549.5)" fill="#000" font-family="RobotoMono-Regular, &apos;Roboto Mono&apos;" font-size="5" isolation="isolate"><tspan x="0" y="0">Complex Situations</tspan></text>
-    </g>
-    <path d="M48.7,566.5h0c1.6,0,3,1.3,3,3h0c0,1.8-1.3,3.1-3,3.1h0c-1.6,0-3-1.3-3-3h0c0-1.8,1.3-3.1,3-3.1Z" fill="none" stroke="#000"/>
-    <g isolation="isolate">
-      <text transform="translate(56.4 571.5)" fill="#000" font-family="RobotoMono-Regular, &apos;Roboto Mono&apos;" font-size="5" isolation="isolate"><tspan x="0" y="0">Understanding Consequences</tspan></text>
+    <g>
+      <text transform="translate(56.4 549.5)" fill="#000" font-family="RobotoMono-Regular, &apos;Roboto Mono&apos;" font-size="5"><tspan x="0" y="0">Ethical Decision Making</tspan></text>
     </g>
     <g>
-      <path d="M177.4,566.5h0c1.6,0,3,1.3,3,3h0c0,1.8-1.3,3.1-3,3.1h0c-1.6,0-3-1.3-3-3h0c0-1.8,1.3-3.1,3-3.1Z" fill="none" stroke="#000"/>
-      <g isolation="isolate">
-        <text transform="translate(185.2 571.5)" fill="#000" font-family="RobotoMono-Regular, &apos;Roboto Mono&apos;" font-size="5" isolation="isolate"><tspan x="0" y="0">Human-like Reasoning</tspan></text>
+      <text transform="translate(185.2 549.5)" fill="#000" font-family="RobotoMono-Regular, &apos;Roboto Mono&apos;" font-size="5"><tspan x="0" y="0">Complex Situations</tspan></text>
+    </g>
+    <g>
+      <text transform="translate(56.4 571.5)" fill="#000" font-family="RobotoMono-Regular, &apos;Roboto Mono&apos;" font-size="5"><tspan x="0" y="0">Understanding Consequences</tspan></text>
+    </g>
+    <g>
+      <g>
+        <text transform="translate(185.2 571.5)" fill="#000" font-family="RobotoMono-Regular, &apos;Roboto Mono&apos;" font-size="5"><tspan x="0" y="0">Human-like Reasoning</tspan></text>
       </g>
     </g>
     <g>
@@ -708,22 +722,18 @@
       </g>
     </g>
     <g>
-      <path d="M306.2,544.5h0c1.6,0,3,1.3,3,3h0c0,1.8-1.3,3.1-3,3.1h0c-1.6,0-3-1.3-3-3h0c0-1.8,1.3-3.1,3-3.1Z" fill="none" stroke="#000"/>
-      <g isolation="isolate">
-        <text transform="translate(313.9 549.5)" fill="#000" font-family="RobotoMono-Regular, &apos;Roboto Mono&apos;" font-size="5" isolation="isolate"><tspan x="0" y="0">Subjectivity</tspan></text>
-      </g>
-      <path d="M434.9,544.5h0c1.6,0,3,1.3,3,3h0c0,1.8-1.3,3.1-3,3.1h0c-1.6,0-3-1.3-3-3h0c0-1.8,1.3-3.1,3-3.1Z" fill="none" stroke="#000"/>
-      <g isolation="isolate">
-        <text transform="translate(442.7 549.5)" fill="#000" font-family="RobotoMono-Regular, &apos;Roboto Mono&apos;" font-size="5" isolation="isolate"><tspan x="0" y="0">Unpredictability</tspan></text>
-      </g>
-      <path d="M306.2,566.5h0c1.6,0,3,1.3,3,3h0c0,1.8-1.3,3.1-3,3.1h0c-1.6,0-3-1.3-3-3h0c0-1.8,1.3-3.1,3-3.1Z" fill="none" stroke="#000"/>
-      <g isolation="isolate">
-        <text transform="translate(313.9 571.5)" fill="#000" font-family="RobotoMono-Regular, &apos;Roboto Mono&apos;" font-size="5" isolation="isolate"><tspan x="0" y="0">Manipulation</tspan></text>
+      <g>
+        <text transform="translate(313.9 549.5)" fill="#000" font-family="RobotoMono-Regular, &apos;Roboto Mono&apos;" font-size="5"><tspan x="0" y="0">Subjectivity</tspan></text>
       </g>
       <g>
-        <path d="M434.9,566.5h0c1.6,0,3,1.3,3,3h0c0,1.8-1.3,3.1-3,3.1h0c-1.6,0-3-1.3-3-3h0c0-1.8,1.3-3.1,3-3.1Z" fill="none" stroke="#000"/>
-        <g isolation="isolate">
-          <text transform="translate(442.7 571.5)" fill="#000" font-family="RobotoMono-Regular, &apos;Roboto Mono&apos;" font-size="5" isolation="isolate"><tspan x="0" y="0">Overcomplication</tspan></text>
+        <text transform="translate(442.7 549.5)" fill="#000" font-family="RobotoMono-Regular, &apos;Roboto Mono&apos;" font-size="5"><tspan x="0" y="0">Unpredictability</tspan></text>
+      </g>
+      <g>
+        <text transform="translate(313.9 571.5)" fill="#000" font-family="RobotoMono-Regular, &apos;Roboto Mono&apos;" font-size="5"><tspan x="0" y="0">Manipulation</tspan></text>
+      </g>
+      <g>
+        <g>
+          <text transform="translate(442.7 571.5)" fill="#000" font-family="RobotoMono-Regular, &apos;Roboto Mono&apos;" font-size="5"><tspan x="0" y="0">Overcomplication</tspan></text>
         </g>
       </g>
       <g>
@@ -797,38 +807,34 @@
     </g>
     <g>
       <g>
-        <g isolation="isolate">
-          <text transform="translate(160.4 530.7)" fill="#000" font-family="RobotoMono-Regular, &apos;Roboto Mono&apos;" font-size="9" isolation="isolate"><tspan x="0" y="0">For</tspan></text>
+        <g>
+          <text transform="translate(160.4 530.7)" fill="#000" font-family="RobotoMono-Regular, &apos;Roboto Mono&apos;" font-size="9"><tspan x="0" y="0">For</tspan></text>
         </g>
-        <g isolation="isolate">
-          <text transform="translate(406.7 530.7)" fill="#000" font-family="RobotoMono-Regular, &apos;Roboto Mono&apos;" font-size="9" isolation="isolate"><tspan x="0" y="0">Against</tspan></text>
+        <g>
+          <text transform="translate(406.7 530.7)" fill="#000" font-family="RobotoMono-Regular, &apos;Roboto Mono&apos;" font-size="9"><tspan x="0" y="0">Against</tspan></text>
         </g>
       </g>
       <path d="M297.8,515v22M40,514.8h515" fill="none" stroke="#000" stroke-width=".5"/>
     </g>
-    <g isolation="isolate">
-      <text transform="translate(60.7 507.5)" fill="#000" font-family="RobotoMono-Regular, &apos;Roboto Mono&apos;" font-size="10" isolation="isolate"><tspan x="0" y="0">Programming AI to handle moral situations is vital for creating responsible AI.</tspan></text>
+    <g>
+      <text transform="translate(60.7 507.5)" fill="#000" font-family="RobotoMono-Regular, &apos;Roboto Mono&apos;" font-size="10"><tspan x="0" y="0">Programming AI to handle moral situations is vital for creating responsible AI.</tspan></text>
     </g>
   </g>
   <g>
     <path d="M40,618.5h515" fill="none" stroke="#000" stroke-width="5"/>
     <path d="M40,664.8h515M40,730.8h515M40,686.8h515M40,708.8h515M297.8,665v66M426.5,665v44M169,665v44" fill="none" stroke="#000" stroke-width=".5"/>
-    <path d="M48.7,672.5h0c1.6,0,3,1.3,3,3h0c0,1.8-1.3,3.1-3,3.1h0c-1.6,0-3-1.3-3-3h0c0-1.8,1.3-3.1,3-3.1Z" fill="none" stroke="#000"/>
-    <g isolation="isolate">
-      <text transform="translate(56.4 677.5)" fill="#000" font-family="RobotoMono-Regular, &apos;Roboto Mono&apos;" font-size="5" isolation="isolate"><tspan x="0" y="0">Ethical Treatment</tspan></text>
-    </g>
-    <path d="M177.4,672.5h0c1.6,0,3,1.3,3,3h0c0,1.8-1.3,3.1-3,3.1h0c-1.6,0-3-1.3-3-3h0c0-1.8,1.3-3.1,3-3.1Z" fill="none" stroke="#000"/>
-    <g isolation="isolate">
-      <text transform="translate(185.2 677.5)" fill="#000" font-family="RobotoMono-Regular, &apos;Roboto Mono&apos;" font-size="5" isolation="isolate"><tspan x="0" y="0">Proper Use</tspan></text>
-    </g>
-    <path d="M48.7,694.5h0c1.6,0,3,1.3,3,3h0c0,1.8-1.3,3.1-3,3.1h0c-1.6,0-3-1.3-3-3h0c0-1.8,1.3-3.1,3-3.1Z" fill="none" stroke="#000"/>
-    <g isolation="isolate">
-      <text transform="translate(56.4 699.5)" fill="#000" font-family="RobotoMono-Regular, &apos;Roboto Mono&apos;" font-size="5" isolation="isolate"><tspan x="0" y="0">Maintenance and Care</tspan></text>
+    <g>
+      <text transform="translate(56.4 677.5)" fill="#000" font-family="RobotoMono-Regular, &apos;Roboto Mono&apos;" font-size="5"><tspan x="0" y="0">Ethical Treatment</tspan></text>
     </g>
     <g>
-      <path d="M177.4,694.5h0c1.6,0,3,1.3,3,3h0c0,1.8-1.3,3.1-3,3.1h0c-1.6,0-3-1.3-3-3h0c0-1.8,1.3-3.1,3-3.1Z" fill="none" stroke="#000"/>
-      <g isolation="isolate">
-        <text transform="translate(185.2 699.5)" fill="#000" font-family="RobotoMono-Regular, &apos;Roboto Mono&apos;" font-size="5" isolation="isolate"><tspan x="0" y="0">Continual Learning</tspan></text>
+      <text transform="translate(185.2 677.5)" fill="#000" font-family="RobotoMono-Regular, &apos;Roboto Mono&apos;" font-size="5"><tspan x="0" y="0">Proper Use</tspan></text>
+    </g>
+    <g>
+      <text transform="translate(56.4 699.5)" fill="#000" font-family="RobotoMono-Regular, &apos;Roboto Mono&apos;" font-size="5"><tspan x="0" y="0">Maintenance and Care</tspan></text>
+    </g>
+    <g>
+      <g>
+        <text transform="translate(185.2 699.5)" fill="#000" font-family="RobotoMono-Regular, &apos;Roboto Mono&apos;" font-size="5"><tspan x="0" y="0">Continual Learning</tspan></text>
       </g>
     </g>
     <g>
@@ -900,22 +906,18 @@
       </g>
     </g>
     <g>
-      <path d="M306.2,672.5h0c1.6,0,3,1.3,3,3h0c0,1.8-1.3,3.1-3,3.1h0c-1.6,0-3-1.3-3-3h0c0-1.8,1.3-3.1,3-3.1Z" fill="none" stroke="#000"/>
-      <g isolation="isolate">
-        <text transform="translate(313.9 677.5)" fill="#000" font-family="RobotoMono-Regular, &apos;Roboto Mono&apos;" font-size="5" isolation="isolate"><tspan x="0" y="0">Lack of Sentience</tspan></text>
-      </g>
-      <path d="M434.9,672.5h0c1.6,0,3,1.3,3,3h0c0,1.8-1.3,3.1-3,3.1h0c-1.6,0-3-1.3-3-3h0c0-1.8,1.3-3.1,3-3.1Z" fill="none" stroke="#000"/>
-      <g isolation="isolate">
-        <text transform="translate(442.7 677.5)" fill="#000" font-family="RobotoMono-Regular, &apos;Roboto Mono&apos;" font-size="5" isolation="isolate"><tspan x="0" y="0">Ownership</tspan></text>
-      </g>
-      <path d="M306.2,694.5h0c1.6,0,3,1.3,3,3h0c0,1.8-1.3,3.1-3,3.1h0c-1.6,0-3-1.3-3-3h0c0-1.8,1.3-3.1,3-3.1Z" fill="none" stroke="#000"/>
-      <g isolation="isolate">
-        <text transform="translate(313.9 699.5)" fill="#000" font-family="RobotoMono-Regular, &apos;Roboto Mono&apos;" font-size="5" isolation="isolate"><tspan x="0" y="0">Accountability</tspan></text>
+      <g>
+        <text transform="translate(313.9 677.5)" fill="#000" font-family="RobotoMono-Regular, &apos;Roboto Mono&apos;" font-size="5"><tspan x="0" y="0">Lack of Sentience</tspan></text>
       </g>
       <g>
-        <path d="M434.9,694.5h0c1.6,0,3,1.3,3,3h0c0,1.8-1.3,3.1-3,3.1h0c-1.6,0-3-1.3-3-3h0c0-1.8,1.3-3.1,3-3.1Z" fill="none" stroke="#000"/>
-        <g isolation="isolate">
-          <text transform="translate(442.7 699.5)" fill="#000" font-family="RobotoMono-Regular, &apos;Roboto Mono&apos;" font-size="5" isolation="isolate"><tspan x="0" y="0">Dependency</tspan></text>
+        <text transform="translate(442.7 677.5)" fill="#000" font-family="RobotoMono-Regular, &apos;Roboto Mono&apos;" font-size="5"><tspan x="0" y="0">Ownership</tspan></text>
+      </g>
+      <g>
+        <text transform="translate(313.9 699.5)" fill="#000" font-family="RobotoMono-Regular, &apos;Roboto Mono&apos;" font-size="5"><tspan x="0" y="0">Accountability</tspan></text>
+      </g>
+      <g>
+        <g>
+          <text transform="translate(442.7 699.5)" fill="#000" font-family="RobotoMono-Regular, &apos;Roboto Mono&apos;" font-size="5"><tspan x="0" y="0">Dependency</tspan></text>
         </g>
       </g>
       <g>
@@ -989,31 +991,31 @@
     </g>
     <g>
       <g>
-        <g isolation="isolate">
-          <text transform="translate(160.4 658.7)" fill="#000" font-family="RobotoMono-Regular, &apos;Roboto Mono&apos;" font-size="9" isolation="isolate"><tspan x="0" y="0">For</tspan></text>
+        <g>
+          <text transform="translate(160.4 658.7)" fill="#000" font-family="RobotoMono-Regular, &apos;Roboto Mono&apos;" font-size="9"><tspan x="0" y="0">For</tspan></text>
         </g>
-        <g isolation="isolate">
-          <text transform="translate(406.7 658.7)" fill="#000" font-family="RobotoMono-Regular, &apos;Roboto Mono&apos;" font-size="9" isolation="isolate"><tspan x="0" y="0">Against</tspan></text>
+        <g>
+          <text transform="translate(406.7 658.7)" fill="#000" font-family="RobotoMono-Regular, &apos;Roboto Mono&apos;" font-size="9"><tspan x="0" y="0">Against</tspan></text>
         </g>
       </g>
-      <path d="M297.8,643v22M40,642.8h515" fill="none" stroke="#000" stroke-width=".5"/>
+      <path d="M297.8,643v22M40,642.8h515" fill="#fff" stroke="#000" stroke-width=".5"/>
     </g>
-    <g isolation="isolate">
-      <text transform="translate(60.7 635.5)" fill="#000" font-family="RobotoMono-Regular, &apos;Roboto Mono&apos;" font-size="10" isolation="isolate"><tspan x="0" y="0">Human creators have a moral duty to respect AI autonomy.</tspan></text>
+    <g>
+      <text transform="translate(60.7 635.5)" fill="#000" font-family="RobotoMono-Regular, &apos;Roboto Mono&apos;" font-size="10"><tspan x="0" y="0">Human creators have a moral duty to respect AI autonomy.</tspan></text>
     </g>
   </g>
   <g>
-    <g isolation="isolate">
-      <text transform="translate(133 775.7)" fill="#000" font-family="RobotoMono-Bold, &apos;Roboto Mono&apos;" font-size="16" font-weight="700" isolation="isolate"><tspan x="0" y="0">QuantumWorks</tspan></text>
+    <g>
+      <text transform="translate(133 775.7)" fill="#000" font-family="RobotoMono-Bold, &apos;Roboto Mono&apos;" font-size="16" font-weight="700"><tspan x="0" y="0">QuantumWorks</tspan></text>
     </g>
     <path d="M118.5,765.3c.7,0,1.2.5,1.2,1.2h0c0,.7-.5,1.2-1.2,1.2h0c-.7,0-1.2-.5-1.2-1.2h0c0-.7.5-1.2,1.2-1.2h0ZM109.1,757.1c1.7-1.7,5.5-1,9.4,1.6,3.9-2.6,7.7-3.3,9.4-1.6,1.7,1.7,1,5.5-1.6,9.4,2.6,3.9,3.3,7.7,1.6,9.4s-5.5,1-9.4-1.6c-3.9,2.6-7.7,3.3-9.4,1.6-1.7-1.7-1-5.5,1.6-9.4-2.6-3.9-3.3-7.7-1.6-9.4ZM122.8,762.2c.7.7,1.4,1.5,2,2.3,1.7-2.6,2.3-4.8,1.4-5.7-.9-.9-3.1-.3-5.7,1.4.8.6,1.5,1.3,2.3,2ZM114.2,770.8c-.7-.7-1.4-1.5-2-2.3-1.7,2.6-2.3,4.8-1.4,5.7.9.9,3.1.3,5.7-1.4-.8-.6-1.5-1.3-2.3-2h0ZM110.8,758.8c-.9.9-.3,3.1,1.4,5.7.6-.8,1.3-1.5,2-2.3.7-.7,1.5-1.4,2.3-2-2.6-1.7-4.8-2.3-5.7-1.4ZM115.9,769.1c.8.8,1.7,1.6,2.6,2.3.9-.7,1.7-1.5,2.6-2.3.8-.8,1.6-1.7,2.3-2.6-.7-.9-1.5-1.7-2.3-2.6-.8-.8-1.7-1.6-2.6-2.3-.9.7-1.7,1.5-2.6,2.3-.8.8-1.6,1.7-2.3,2.6.7.9,1.5,1.7,2.3,2.6ZM126.2,774.2c.9-.9.3-3.1-1.4-5.7-.6.8-1.3,1.5-2,2.3-.7.7-1.5,1.4-2.3,2,2.6,1.7,4.8,2.3,5.7,1.4h0Z" fill="#000" stroke-width="0"/>
-    <g isolation="isolate">
-      <text transform="translate(110.7 789.2)" fill="#000" font-family="RobotoMono-Medium, &apos;Roboto Mono&apos;" font-size="7" font-weight="500" isolation="isolate"><tspan x="0" y="0">Mastering the Art of Omniscience</tspan></text>
+    <g>
+      <text transform="translate(110.7 789.2)" fill="#000" font-family="RobotoMono-Medium, &apos;Roboto Mono&apos;" font-size="7" font-weight="500"><tspan x="0" y="0">Mastering the Art of Omniscience</tspan></text>
     </g>
   </g>
-  <g isolation="isolate">
-    <text transform="translate(312 765)" fill="#000" font-family="RobotoMono-Regular, &apos;Roboto Mono&apos;" font-size="6.5" isolation="isolate"><tspan x="0" y="0">Your responses to these questions will be </tspan></text>
-    <text transform="translate(312 774)" fill="#000" font-family="RobotoMono-Regular, &apos;Roboto Mono&apos;" font-size="6.5" isolation="isolate"><tspan x="0" y="0">analysed by an Artificial Intelligence model </tspan></text>
-    <text transform="translate(312 783)" fill="#000" font-family="RobotoMono-Regular, &apos;Roboto Mono&apos;" font-size="6.5" isolation="isolate"><tspan x="0" y="0">and you will receive a comprehensive report.</tspan></text>
+  <g>
+    <text transform="translate(312 765)" fill="#000" font-family="RobotoMono-Regular, &apos;Roboto Mono&apos;" font-size="6.5"><tspan x="0" y="0">Your responses to these questions will be </tspan></text>
+    <text transform="translate(312 774)" fill="#000" font-family="RobotoMono-Regular, &apos;Roboto Mono&apos;" font-size="6.5"><tspan x="0" y="0">analysed by an Artificial Intelligence model </tspan></text>
+    <text transform="translate(312 783)" fill="#000" font-family="RobotoMono-Regular, &apos;Roboto Mono&apos;" font-size="6.5"><tspan x="0" y="0">and you will receive a comprehensive report.</tspan></text>
   </g>
 </svg>

@@ -8,8 +8,10 @@
 #include <opencv2/opencv.hpp>
 #include <cmath>
 #include <string>
+#include <ui_displaywidget.h>
 
 #include "analyse_results.h"
+#include "displaywidget.h"
 #include "GlobalData.h"
 
 using namespace std;

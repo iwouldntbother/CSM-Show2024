@@ -8,10 +8,13 @@
 #include "ui_displaywidget.h"
 
 // #include <QTimer>
+#include <qdom.h>
 #include <QFile>
 #include <QSvgWidget>
 #include <QFont>
 #include <QFontDatabase>
+#include <QPainter>
+
 #include "SvgWidget.h"
 #include "SharedData.h"
 #include "GlobalData.h"
@@ -118,9 +121,101 @@ void DisplayWidget::showResults(const bool* results) const {
 
 
 
-void DisplayWidget::showSvg(const string &svg) const {
-    // cout << "Showing SVG" << endl;
-    const QString qSvg = ":/" + QString::fromStdString(svg);
+// void DisplayWidget::showSvg(const string &svg) const {
+//     // cout << "Showing SVG" << endl;
+//     const QString qSvg = ":/" + QString::fromStdString(svg);
+//
+//     ui->svgWidget->load(qSvg);
+// }
 
-    ui->svgWidget->load(qSvg);
+void DisplayWidget::showSvg(const string &svg) const {
+    // Convert the file path to QString
+    QString const qSvgPath = ":/" + QString::fromStdString(svg);
+
+    // Load the SVG file into a QByteArray
+    QFile file(qSvgPath);
+    if (!file.open(QIODevice::ReadOnly)) {
+        qWarning("Cannot open file");
+        return;
+    }
+    QByteArray const svgData = file.readAll();
+
+    // Create an SVG renderer
+    QSvgRenderer renderer(svgData);
+
+    // Modify the SVG data if needed
+    // For example, changing the color of an element with id 'elementId'
+    QDomDocument doc;
+    if (!doc.setContent(svgData)) {
+        qWarning("Cannot parse SVG content");
+        return;
+    }
+
+    const bool* results = GlobalData::getInstance()->getResultsData();
+
+    // QDomElement const root = doc.documentElement();
+    // if (!root.isNull()) {
+    //     for (int i = 0; i < 40; i++) {
+    //         // QDomElement element = root.firstChildElement("result"+QString::fromStdString(std::to_string(i))); // Adjust tag or id accordingly
+    //         QDomElement element = doc.elementById("result"+QString::fromStdString(std::to_string(i)));
+    //         if (results[i]) {
+    //             element.setAttribute("fill", "#f00"); // Change attributes as needed
+    //         }
+    //     }
+    //     // element.setAttribute("fill", "#FF0000"); // Change attributes as needed
+    // }
+
+    // QMap<QString, QDomElement> pathMap;
+    // QDomElement path = doc.documentElement().firstChildElement("g");
+    // while (!path.isNull()) {
+    //     QString id = path.attribute("id");
+    //     pathMap[id] = path;
+    //     path = path.nextSiblingElement("path");
+    // }
+    //
+    // // cout << "Path results0: " << (pathMap[QString("result%1").arg(0)]) << endl;
+    //
+    // for (int n = 0; n < 40; ++n) {
+    //     QString pathId = QString("result%1").arg(n);
+    //     if (pathMap.contains(pathId)) {
+    //         QDomElement path = pathMap[pathId];
+    //         QString newColor = results[n] ? "#000" : "#fff"; // Red if true, Green if false
+    //         path.setAttribute("fill", newColor);
+    //     } else {
+    //         qDebug() << "Path not found: " << pathId;
+    //     }
+    // }
+
+    QDomElement resultsGroup = doc.documentElement().firstChildElement("g");
+    if (resultsGroup.isNull() || resultsGroup.attribute("id") != "resultsGroup") {
+        qDebug() << "Results group not found or incorrect ID";
+        return;
+    }
+
+    QDomElement path = resultsGroup.firstChildElement("path");
+    while (!path.isNull()) {
+        QString pathId = path.attribute("id");
+        bool condition = results[pathId.remove("result").toInt()];
+        QString newColor = condition ? "#000" : "#fff"; // Black if condition is true, otherwise White
+
+        path.setAttribute("fill", newColor);
+        path = path.nextSiblingElement("path");
+    }
+
+
+    // Convert the modified QDomDocument back to QByteArray
+    QByteArray modifiedSvg;
+    QTextStream stream(&modifiedSvg);
+    doc.save(stream, 4); // Save the document back to a QByteArray
+
+    // Update the renderer with modified SVG
+    renderer.load(modifiedSvg);
+
+    // Render the modified SVG on the widget
+    QImage image(renderer.defaultSize(), QImage::Format_ARGB32);
+    QPainter painter(&image);
+    renderer.render(&painter);
+
+    // Set the QImage on a QLabel or convert it to a QPixmap to set on existing widgets
+    ui->svgWidget->setPixmap(QPixmap::fromImage(image));
 }

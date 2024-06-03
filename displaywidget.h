@@ -27,6 +27,8 @@ public:
     private slots:
         void updateFrame();
 
+    void showSvg(const std::string &svg) const;
+
 private:
     Ui::DisplayWidget *ui;
     QTimer *timer;
@@ -37,7 +39,6 @@ private:
 
     void showResults(const bool *results) const;
 
-    void showSvg(const std::string &svg) const;
 };
 
 #endif // DISPLAYWIDGET_H
