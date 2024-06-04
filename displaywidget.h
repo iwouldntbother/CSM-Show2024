@@ -24,10 +24,10 @@ public:
     explicit DisplayWidget(QWidget *parent = nullptr);
     ~DisplayWidget();
 
+    void showSvg() const;
     private slots:
         void updateFrame();
 
-    void showSvg(const std::string &svg) const;
 
 private:
     Ui::DisplayWidget *ui;

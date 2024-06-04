@@ -4,6 +4,8 @@
 
 #include "GlobalData.h"
 
+#include "displaywidget.h"
+
 GlobalData* GlobalData::instance = nullptr;  // Definition
 std::mutex GlobalData::mtx;                  // Definition
 
@@ -19,6 +21,16 @@ GlobalData* GlobalData::getInstance() {
         instance = new GlobalData();
     }
     return instance;
+}
+
+void GlobalData::setDisplayWidget(DisplayWidget* widget) {
+    std::lock_guard<std::mutex> lock(mtx);
+    displayWidget = widget;
+}
+
+DisplayWidget* GlobalData::getDisplayWidget() const {
+    std::lock_guard<std::mutex> lock(mtx);
+    return displayWidget;
 }
 
 void GlobalData::setFrameData(const cv::Mat& newFrameData) {

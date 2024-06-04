@@ -170,8 +170,7 @@
     <enum>QFrame::Shape::Box</enum>
    </property>
 
-<!--   <widget class="QSvgWidget" name="svgWidget" native="true">-->
-    <widget class="QLabel" name="svgWidget" native="true">
+    <widget class="QLabel" name="svgWidget">
     <property name="geometry">
      <rect>
       <x>5</x>

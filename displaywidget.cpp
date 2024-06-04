@@ -45,7 +45,7 @@ DisplayWidget::DisplayWidget(QWidget *parent) :
     timer->start(40); // Adjust the interval as needed
 
 
-    showSvg("assets/images/form-tiny.svg");
+    showSvg();
 
     // Set fonts
     QFont font(fontFamily);
@@ -120,17 +120,9 @@ void DisplayWidget::showResults(const bool* results) const {
 }
 
 
-
-// void DisplayWidget::showSvg(const string &svg) const {
-//     // cout << "Showing SVG" << endl;
-//     const QString qSvg = ":/" + QString::fromStdString(svg);
-//
-//     ui->svgWidget->load(qSvg);
-// }
-
-void DisplayWidget::showSvg(const string &svg) const {
+void DisplayWidget::showSvg() const {
     // Convert the file path to QString
-    QString const qSvgPath = ":/" + QString::fromStdString(svg);
+    QString const qSvgPath = ":/" + QString::fromStdString("assets/images/form-tiny.svg");
 
     // Load the SVG file into a QByteArray
     QFile file(qSvgPath);
@@ -152,39 +144,6 @@ void DisplayWidget::showSvg(const string &svg) const {
     }
 
     const bool* results = GlobalData::getInstance()->getResultsData();
-
-    // QDomElement const root = doc.documentElement();
-    // if (!root.isNull()) {
-    //     for (int i = 0; i < 40; i++) {
-    //         // QDomElement element = root.firstChildElement("result"+QString::fromStdString(std::to_string(i))); // Adjust tag or id accordingly
-    //         QDomElement element = doc.elementById("result"+QString::fromStdString(std::to_string(i)));
-    //         if (results[i]) {
-    //             element.setAttribute("fill", "#f00"); // Change attributes as needed
-    //         }
-    //     }
-    //     // element.setAttribute("fill", "#FF0000"); // Change attributes as needed
-    // }
-
-    // QMap<QString, QDomElement> pathMap;
-    // QDomElement path = doc.documentElement().firstChildElement("g");
-    // while (!path.isNull()) {
-    //     QString id = path.attribute("id");
-    //     pathMap[id] = path;
-    //     path = path.nextSiblingElement("path");
-    // }
-    //
-    // // cout << "Path results0: " << (pathMap[QString("result%1").arg(0)]) << endl;
-    //
-    // for (int n = 0; n < 40; ++n) {
-    //     QString pathId = QString("result%1").arg(n);
-    //     if (pathMap.contains(pathId)) {
-    //         QDomElement path = pathMap[pathId];
-    //         QString newColor = results[n] ? "#000" : "#fff"; // Red if true, Green if false
-    //         path.setAttribute("fill", newColor);
-    //     } else {
-    //         qDebug() << "Path not found: " << pathId;
-    //     }
-    // }
 
     QDomElement resultsGroup = doc.documentElement().firstChildElement("g");
     if (resultsGroup.isNull() || resultsGroup.attribute("id") != "resultsGroup") {
@@ -212,10 +171,10 @@ void DisplayWidget::showSvg(const string &svg) const {
     renderer.load(modifiedSvg);
 
     // Render the modified SVG on the widget
-    QImage image(renderer.defaultSize(), QImage::Format_ARGB32);
+    QImage image(ui->svgWidget->size(), QImage::Format_ARGB32);
     QPainter painter(&image);
     renderer.render(&painter);
 
     // Set the QImage on a QLabel or convert it to a QPixmap to set on existing widgets
-    ui->svgWidget->setPixmap(QPixmap::fromImage(image));
+    ui->svgWidget->setPixmap(QPixmap::fromImage(image.scaled(ui->svgWidget->size(), Qt::KeepAspectRatio)));
 }

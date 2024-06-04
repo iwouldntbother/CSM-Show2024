@@ -49,6 +49,7 @@ int main(int argc, char *argv[]) {
     QApplication app(argc, argv);
 
     DisplayWidget displayWidget;
+    GlobalData::getInstance()->setDisplayWidget(&displayWidget);
     displayWidget.show();
 
     return QApplication::exec();

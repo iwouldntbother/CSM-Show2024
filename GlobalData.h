@@ -4,11 +4,13 @@
 
 #include <mutex>
 #include <opencv2/opencv.hpp>
+#include "displaywidget.h"
 
 class GlobalData {
 private:
     static GlobalData* instance;  // Declaration
     static std::mutex mtx;        // Declaration
+    DisplayWidget *displayWidget;
     cv::Mat frameData;
     bool* resultsData;
     bool ready;
@@ -30,6 +32,8 @@ public:
     static GlobalData* getInstance();
 
     // Data access methods
+    void setDisplayWidget(DisplayWidget *widget);
+    [[nodiscard]] DisplayWidget* getDisplayWidget() const;
     void setFrameData(const cv::Mat& newFrameData);
     [[nodiscard]] cv::Mat getFrameData() const;
     void setResultsData(bool* value);
