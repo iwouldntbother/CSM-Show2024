@@ -11,6 +11,7 @@ set(CMAKE_PREFIX_PATH "/home/williamwestwood/Qt/6.7.1/gcc_64/lib/cmake")
 # set(Qt6_DIR "/home/admin/Qt/6.7.1/gcc_64/lib/cmake/Qt6")
 
 
+
 find_package(OpenCV REQUIRED)
 find_package(Qt6 COMPONENTS
         Core
