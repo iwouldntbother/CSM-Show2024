@@ -23,6 +23,20 @@
     color: rgb(255, 255, 255);
     font: 75 12pt "Roboto Mono";
     }
+
+
+    QProgressBar {
+    border: none;
+    border-radius: 0px;
+    background-color: rgb(14, 14, 14);
+    }
+
+    QProgressBar::chunk {
+    background-color: #FFFFFF;
+    width: 20px;
+    margin: 2px;
+    }
+
    </string>
   </property>
 
@@ -56,7 +70,14 @@
     <enum>QFrame::Shape::Box</enum>
    </property>
    <property name="text">
-    <string>Progress Prompts</string>
+    <string>Harvesting emotional data for collective good… Individual sentiment is secondary.</string>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">
+     font-weight: 500;
+     text-transform: uppercase;
+     font-size: 23pt;
+    </string>
    </property>
   </widget>
 
@@ -79,6 +100,8 @@
     <string notr="true">
      background-color: rgb(255, 255, 255);
      color: rgb(0, 0, 0);
+     font-weight: 600;
+     text-transform: uppercase;
     </string>
    </property>
   </widget>
@@ -108,6 +131,31 @@
     </property>
    </widget>
 
+  </widget>
+
+  <widget class="QLabel" name="faceTitle">
+   <property name="geometry">
+    <rect>
+     <x>703</x>
+     <y>128</y>
+     <width>419</width>
+     <height>36</height>
+    </rect>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::Shape::Box</enum>
+   </property>
+   <property name="text">
+    <string>Vision - Facial Recognition</string>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">
+     background-color: rgb(255, 255, 255);
+     color: rgb(0, 0, 0);
+     font-weight: 600;
+     text-transform: uppercase;
+    </string>
+   </property>
   </widget>
 
   <widget class="QLabel" name="faceLabel">
@@ -140,6 +188,31 @@
 
   </widget>
 
+  <widget class="QLabel" name="statsTitle">
+   <property name="geometry">
+    <rect>
+     <x>703</x>
+     <y>710</y>
+     <width>419</width>
+     <height>36</height>
+    </rect>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::Shape::Box</enum>
+   </property>
+   <property name="text">
+    <string>Data - System Statistics</string>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">
+     background-color: rgb(255, 255, 255);
+     color: rgb(0, 0, 0);
+     font-weight: 600;
+     text-transform: uppercase;
+    </string>
+   </property>
+  </widget>
+
   <widget class="QLabel" name="statsLabel">
    <property name="geometry">
     <rect>
@@ -152,8 +225,127 @@
    <property name="frameShape">
     <enum>QFrame::Shape::Box</enum>
    </property>
+
+    <widget class="QLabel" name="cpuLabel">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>0</y>
+       <width>504</width>
+       <height>45</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">
+       font-weight: 400;
+       font-size: 16pt;
+       text-transform: uppercase;
+      </string>
+     </property>
+    </widget>
+
+   <widget class="QProgressBar" name="cpuBar">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>45</y>
+      <width>494</width>
+      <height>40</height>
+     </rect>
+    </property>
+    <property name="value">
+     <number>0</number>
+    </property>
+    <property name="minimum">
+     <number>0</number>
+    </property>
+    <property name="maximum">
+     <number>100</number>
+    </property>
+    <property name="textVisible">
+     <bool>false</bool>
+    </property>
+   </widget>
+
+
+    <widget class="QLabel" name="memLabel">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>99</y>
+       <width>504</width>
+       <height>45</height>
+      </rect>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">
+       font-weight: 400;
+       font-size: 16pt;
+       text-transform: uppercase;
+      </string>
+     </property>
+    </widget>
+
+
+
+   <widget class="QProgressBar" name="memBar">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>144</y>
+      <width>494</width>
+      <height>40</height>
+     </rect>
+    </property>
+    <property name="value">
+     <number>0</number>
+    </property>
+    <property name="minimum">
+     <number>0</number>
+    </property>
+    <property name="maximum">
+     <number>100</number>
+    </property>
+    <property name="textVisible">
+     <bool>false</bool>
+    </property>
+   </widget>
+
+   <widget class="QLabel" name="uptimeLabel">
+    <property name="geometry">
+     <rect>
+      <x>5</x>
+      <y>198</y>
+      <width>504</width>
+      <height>45</height>
+     </rect>
+    </property>
+   </widget>
+
+  </widget>
+
+  <widget class="QLabel" name="resultsTitle">
+   <property name="geometry">
+    <rect>
+     <x>1267</x>
+     <y>128</y>
+     <width>419</width>
+     <height>36</height>
+    </rect>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::Shape::Box</enum>
+   </property>
    <property name="text">
-    <string>System Stats</string>
+    <string>Data - Form Results</string>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">
+     background-color: rgb(255, 255, 255);
+     color: rgb(0, 0, 0);
+     font-weight: 600;
+     text-transform: uppercase;
+    </string>
    </property>
   </widget>
 

@@ -14,6 +14,9 @@
 #include <QFont>
 #include <QFontDatabase>
 #include <QPainter>
+#include <QImage>
+#include <QTextStream>
+#include <QRegularExpression>
 
 #include "SvgWidget.h"
 #include "SharedData.h"
@@ -28,6 +31,8 @@ DisplayWidget::DisplayWidget(QWidget *parent) :
     glProcessor(new GLImageProcessor(this))
 {
     ui->setupUi(this);
+
+    this->setCursor(Qt::BlankCursor);
 
     // Load the font from resources
     int fontId = QFontDatabase::addApplicationFont(":/assets/fonts/ChakraPetch-Regular.ttf");
@@ -64,7 +69,10 @@ DisplayWidget::DisplayWidget(QWidget *parent) :
     // UI Styling
     glProcessor->setParent(ui->faceWidget);
     glProcessor->setFixedSize(504, 504);
+    // const QImage logo = QImage::load(":/assets/images/print_logo.png");
 
+    ui->logoLabel->setPixmap(QPixmap(":/assets/images/logo.png"));
+    // ui->logoLabel->setPixmap(QPixmap::fromImage(logo.scaled(ui->logoLabel->size(), Qt::KeepAspectRatio)));
 }
 
 DisplayWidget::~DisplayWidget() {
@@ -85,6 +93,8 @@ void DisplayWidget::updateFrame() {
     if (!faceFrame.empty()) {
         showFace(faceFrame);
     }
+
+    DisplayWidget::updateSystemStats();
 }
 
 void DisplayWidget::showFrame(const cv::Mat &frame) {
@@ -178,3 +188,75 @@ void DisplayWidget::showSvg() const {
     // Set the QImage on a QLabel or convert it to a QPixmap to set on existing widgets
     ui->svgWidget->setPixmap(QPixmap::fromImage(image.scaled(ui->svgWidget->size(), Qt::KeepAspectRatio)));
 }
+
+QRegularExpression const memorySplitRegEx = QRegularExpression("\\s+");
+
+int parseMemoryLine(const QString &line) {
+    return line.split(memorySplitRegEx, Qt::SkipEmptyParts)[1].toInt();
+}
+
+void DisplayWidget::updateSystemStats() const {
+    if (QFile file("/proc/stat"); file.open(QIODevice::ReadOnly | QIODevice::Text)) {
+        QTextStream stream(&file);
+        const QString line = stream.readLine();
+        file.close();
+
+        if (QStringList values = line.split(memorySplitRegEx, Qt::SkipEmptyParts); values.size() > 4) {
+            const long long user = values[1].toLongLong();
+            const long long nice = values[2].toLongLong();
+            const long long system = values[3].toLongLong();
+            const long long idle = values[4].toLongLong();
+
+            const long long total = user + nice + system + idle;
+            const long long idleTime = idle;
+
+            static long long prevTotal = 0;
+            static long long prevIdle = 0;
+
+            const long long totalDelta = total - prevTotal;
+            const long long idleDelta = idleTime - prevIdle;
+
+            const double cpuUsage = 100.0 * (totalDelta - idleDelta) / totalDelta;
+
+            ui->cpuLabel->setText(QString("CPU Usage: %1%").arg(cpuUsage, 0, 'f', 2));
+            ui->cpuBar->setValue(static_cast<int>(cpuUsage));
+
+            prevTotal = total;
+            prevIdle = idleTime;
+        }
+
+    }
+
+    if (QFile memFile("/proc/meminfo"); memFile.open(QIODevice::ReadOnly | QIODevice::Text)) {
+        QTextStream stream(&memFile);
+        const QString totalLine = stream.readLine();
+        const QString freeLine = stream.readLine();
+        memFile.close();
+
+        const int totalMemory = parseMemoryLine(totalLine);
+        const int freeMemory = parseMemoryLine(freeLine);
+
+        const int usedMemory = totalMemory - freeMemory;
+
+        const double memUsagePercentage = (static_cast<double>(usedMemory) / totalMemory) * 100.0;
+
+        ui->memLabel->setText(QString("Memory Usage: %1 MB Used").arg(usedMemory / 1024));
+        ui->memBar->setValue(static_cast<int>(memUsagePercentage));
+    }
+
+    if (QFile upFile("/proc/uptime"); upFile.open(QIODevice::ReadOnly | QIODevice::Text)) {
+        QTextStream stream(&upFile);
+        const QString uptime = stream.readLine();
+        upFile.close();
+
+        const int uptimeSeconds = uptime.split(" ")[0].toInt();
+        const int uptimeMinutes = uptimeSeconds / 60;
+        const int uptimeHours = uptimeMinutes / 60;
+        const int uptimeDays = uptimeHours / 24;
+
+        ui->uptimeLabel->setText(QString("Uptime: %1 days, %2 hours, %3 minutes")
+                                 .arg(uptimeDays).arg(uptimeHours % 24).arg(uptimeMinutes % 60));
+    }
+}
+
+

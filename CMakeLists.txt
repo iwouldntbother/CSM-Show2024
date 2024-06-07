@@ -6,7 +6,9 @@ set(CMAKE_AUTOMOC ON)
 set(CMAKE_AUTORCC ON)
 set(CMAKE_AUTOUIC ON)
 
+# DONT MOVE THE BELLOW LINE !!
 set(CMAKE_PREFIX_PATH "/home/williamwestwood/Qt/6.7.1/gcc_64/lib/cmake")
+# set(Qt6_DIR "/home/admin/Qt/6.7.1/gcc_64/lib/cmake/Qt6")
 
 
 find_package(OpenCV REQUIRED)
@@ -71,6 +73,7 @@ qt_add_resources(form_scan "assets"
         FILES
         assets/form-min.svg
         assets/images/form-tiny.svg
+        assets/images/logo.png
         assets/fonts/ChakraPetch-Regular.ttf
         )
 

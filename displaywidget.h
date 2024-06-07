@@ -39,6 +39,8 @@ private:
 
     void showResults(const bool *results) const;
 
+    void updateSystemStats() const;
+
 };
 
 #endif // DISPLAYWIDGET_H

@@ -33,8 +33,8 @@ int main(int argc, char *argv[]) {
 
     std::array<bool, 40> boolArray{};
     boolArray.fill(false);
-    boolArray[0] = true;
-    boolArray[3] = true;
+    // boolArray[0] = true;
+    // boolArray[3] = true;
 
     // cout << "Analyzing results..." << endl;
     // std::string const analysis = analyse_results(boolArray.data());
