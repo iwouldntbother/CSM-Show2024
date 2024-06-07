@@ -71,6 +71,7 @@ qt_add_resources(form_scan "assets"
         FILES
         assets/form-min.svg
         assets/images/form-tiny.svg
+        assets/images/logo.png
         assets/fonts/ChakraPetch-Regular.ttf
         )
 
