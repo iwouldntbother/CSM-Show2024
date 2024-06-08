@@ -26,7 +26,9 @@ bool detect_faces(Mat &frame) {
 	std::cout << "[detect_faces] Loading haarcascade" << std::endl;
 
     CascadeClassifier face_cascade;
-    face_cascade.load("assets/haarcascades/haarcascade_frontalface_alt.xml");
+    if (!face_cascade.load("/home/admin/form-scan/debug/assets/haarcascades/haarcascade_frontalface_alt.xml")) {
+	std::cout << "[detect_faces] haarcascade load failed" << std::endl;
+    }
 
 	std::cout << "[detect_faces] Loaded haarcascade" << std::endl;
 
