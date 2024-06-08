@@ -22,11 +22,11 @@ void print_results() {
         scaleResults += std::to_string(finalVal) + "|";
     }
 
-    std::cout << "Printing results:\n" << scaleResults << "\n" << analysis << std::endl;
+    //std::cout << "Printing results:\n" << scaleResults << "\n" << analysis << std::endl;
 
-    const std::string cmd = "python print_python/print_receipt.py -results \"" + scaleResults + "\" -analysis \"" + analysis + "\"";
+    const std::string cmd = "python3 /home/admin/form-scan/build/print_python/print_receipt.py -results \"" + scaleResults + "\" -analysis \"" + analysis + "\"";
 
-    std::cout << "Running command: " << cmd << std::endl;
+    //std::cout << "Running command: " << cmd << std::endl;
     std::cout << "Printing receipt... " << cmd.c_str() << std::endl;
 
     system(cmd.c_str());

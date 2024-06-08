@@ -155,9 +155,9 @@ void detect_markers()
           cap.set(CAP_PROP_FRAME_HEIGHT, 2448);
 
           // Apply the copied camera settings to the high-resolution frame
-          cap.set(CAP_PROP_EXPOSURE, exposure);
-          cap.set(CAP_PROP_BRIGHTNESS, brightness);
-          cap.set(CAP_PROP_GAIN, gain);
+          //cap.set(CAP_PROP_EXPOSURE, exposure);
+          //cap.set(CAP_PROP_BRIGHTNESS, brightness);
+          //cap.set(CAP_PROP_GAIN, gain);
 
           // Print the camera settings after applying them
           // cout << "[INFO] Settings after resolution change:" << endl;
@@ -166,7 +166,7 @@ void detect_markers()
           // cout << "Gain: " << cap.get(CAP_PROP_GAIN) << endl;
 
           // Manually adjust the exposure to a lower value to prevent overexposure
-          cap.set(CAP_PROP_EXPOSURE, -6); // Adjust this value as needed
+          cap.set(CAP_PROP_EXPOSURE, 150); // Adjust this value as needed
 
           // Print the camera settings after manual adjustment
           // cout << "[INFO] Settings after manual adjustment:" << endl;
@@ -175,7 +175,7 @@ void detect_markers()
           // cout << "Gain: " << cap.get(CAP_PROP_GAIN) << endl;
 
           // Wait a moment for the settings to take effect
-          std::this_thread::sleep_for(chrono::milliseconds(500));
+          std::this_thread::sleep_for(chrono::seconds(1));
 
           // Capture a high-resolution frame
           Mat high_res_frame;
@@ -188,6 +188,8 @@ void detect_markers()
             // Send the high-resolution frame for cropping and alignment
             // cout << "[INFO] Marker 1, is at: " << corners[getIndex(ids, 1)] << endl;
 
+	    cv::imwrite("/tmp/pre-align-image.jpg", high_res_frame);
+
             // Check if marker one is in the top right corner
             vector<Point2f> markerOneLocation = corners[getIndex(ids, 1)];
             bool rotate;
@@ -196,14 +198,14 @@ void detect_markers()
             } else {
               rotate = false;
             }
-            // cout << "[INFO] Rotate page? " << rotate << endl;
+            cout << "[INFO] Rotate page? " << rotate << endl;
             // Set the ready status to false
             GlobalData::getInstance()->setReadyStatus(false);
             align_and_crop(high_res_frame, arucoDict, arucoParams, rotate);
           }
           else
           {
-            cerr << "[ERROR] Failed to capture high-resolution frame." << endl;
+            cout << "[ERROR] Failed to capture high-resolution frame." << endl;
           }
 
           // Reset the timer

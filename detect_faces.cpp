@@ -45,7 +45,9 @@ bool detect_faces(Mat &frame) {
 
 //	std::cout << "[detect_faces] Detecting faces" << std::endl;
 
-    global_face_cascade.detectMultiScale(frame_gray, faces);
+// TODO: You commented the line bellow out to improve performance btw ;*
+
+    //global_face_cascade.detectMultiScale(frame_gray, faces);
 
 //	std::cout << "[detect_faces] Looping through faces" << std::endl;
 

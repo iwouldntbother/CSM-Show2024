@@ -86,7 +86,8 @@ void align_and_crop(Mat &image, Ptr<aruco::Dictionary> arucoDict, Ptr<aruco::Det
 
   if (corners.empty())
   {
-    cerr << "[ERROR] No markers detected in high-resolution frame." << endl;
+    cout << "[ERROR] No markers detected in high-resolution frame." << endl;
+    imwrite("/tmp/img-no-detect.jpg", image);
     return;
   }
 

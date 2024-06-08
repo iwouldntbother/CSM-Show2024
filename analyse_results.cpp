@@ -93,7 +93,7 @@ std::string analyse_results(const bool* results) {
 
     // std::cout << "Input to Python script: " << input << std::endl;
 
-    std::string const command = "echo '" + input + "' | python3 llm_python/summarise.py";
+    std::string const command = "echo '" + input + "' | python3 /home/admin/form-scan/build/llm_python/summarise.py";
     std::string const result = exec(command.c_str());
 
     // std::cout << "Result from Python script: " << result << std::endl;

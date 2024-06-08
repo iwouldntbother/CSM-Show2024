@@ -197,8 +197,8 @@ bool* get_circle_results(cv::Mat &image) {
     DisplayWidget* displaywidget = GlobalData::getInstance()->getDisplayWidget();
     displaywidget->showSvg();
 
-    waitKey(0);
-    destroyAllWindows();
+//    waitKey(0);
+//    destroyAllWindows();
 
     if (hasValue) {
         analyse_results(results);

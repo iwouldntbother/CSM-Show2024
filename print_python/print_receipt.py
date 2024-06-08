@@ -8,7 +8,7 @@ parser.add_argument('-analysis', type=str, help='User analysis', required=True)
 
 args = vars(parser.parse_args())
 
-print("Printing: ", args)
+#print("Printing: ", args)
 
 p = Serial(devfile='/dev/ttyUSB0',
            baudrate=19200,
@@ -76,7 +76,7 @@ def print_scale(text='', value=0):
 
 
 def print_footer():
-    p.image('../assets/images/print_logo.png', center=True)
+    # p.image('../assets/images/print_logo.png', center=True)
     p.set(align='center')
     p.text('A ')
     p.set(bold=True)
