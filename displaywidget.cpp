@@ -67,8 +67,8 @@ DisplayWidget::DisplayWidget(QWidget *parent) :
     ui->frameWidget->setScaledContents(true);
 
     // UI Styling
-    glProcessor->setParent(ui->faceWidget);
-    glProcessor->setFixedSize(504, 504);
+    //glProcessor->setParent(ui->faceWidget);
+    //glProcessor->setFixedSize(504, 504);
     // const QImage logo = QImage::load(":/assets/images/print_logo.png");
 
     ui->logoLabel->setPixmap(QPixmap(":/assets/images/logo.png"));
@@ -110,10 +110,11 @@ void DisplayWidget::showFrame(const cv::Mat &frame) {
 }
 
 void DisplayWidget::showFace(const cv::Mat &frame) const {
-    cv::rotate(frame, frame, cv::ROTATE_180);
-    cv::Mat resized_frame;
-    cv::resize(frame, resized_frame, cv::Size(504,504), 0, 0, cv::INTER_LINEAR);
-    glProcessor->updateFrame(resized_frame);
+    cv::Mat grayFrame;
+    cv::cvtColor(frame, grayFrame, cv::COLOR_BGR2GRAY);
+    const QImage qimg(grayFrame.data, grayFrame.cols, grayFrame.rows, grayFrame.step, QImage::Format_Grayscale8);
+    ui->faceWidget->setPixmap(QPixmap::fromImage(qimg.scaled(ui->faceWidget->size(), Qt::KeepAspectRatio)));
+    //glProcessor->updateFrame(resized_frame);
 }
 
 void DisplayWidget::showResults(const bool* results) const {

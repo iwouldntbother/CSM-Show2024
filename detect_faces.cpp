@@ -23,20 +23,34 @@ Mat cropToSquare(const Mat &frame) {
 
 bool detect_faces(Mat &frame) {
 
+	std::cout << "[detect_faces] Loading haarcascade" << std::endl;
+
     CascadeClassifier face_cascade;
     face_cascade.load("assets/haarcascades/haarcascade_frontalface_alt.xml");
+
+	std::cout << "[detect_faces] Loaded haarcascade" << std::endl;
 
     std::vector<Rect> faces;
     Mat frame_gray;
 
+	std::cout << "[detect_faces] Converting frame to gray" << std::endl;
+
     cvtColor(frame, frame_gray, COLOR_BGR2GRAY);
     equalizeHist(frame_gray, frame_gray);
 
+	std::cout << "[detect_faces] Detecting faces" << std::endl;
+
     face_cascade.detectMultiScale(frame_gray, faces);
+
+// TODO: Fix the above line not working, not sure why but I have to either fix or remove this :(
+
+	std::cout << "[detect_faces] Looping through faces" << std::endl;
 
     for (const auto face : faces) {
         rectangle(frame, face, Scalar(255, 255, 255), 2);
     }
+
+	std::cout << "[detect_faces] Pushing frame to GlobalData" << std::endl;
 
     GlobalData::getInstance()->setFaceFrame(frame);
 
