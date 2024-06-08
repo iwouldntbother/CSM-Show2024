@@ -44,7 +44,9 @@ bool detect_faces(Mat &frame) {
 }
 
 void start_face_cam() {
-    VideoCapture cap(2, cv::CAP_V4L2);
+    int cameraIdx = GlobalData::getInstance()->GlobalData::getFaceCameraIdx();
+    std::cout << "[INFO] Using camera at index: " << cameraIdx << " For face camera" << std::endl;
+    VideoCapture cap(cameraIdx, cv::CAP_V4L2);
     if (!cap.isOpened()) {
         std::cerr << "Error opening video stream or file" << std::endl;
         return;

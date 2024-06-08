@@ -48,7 +48,9 @@ void detect_markers()
 
   // Initialize the video capture with lower resolution for display
   cout << "[INFO] Starting video stream..." << endl;
-  VideoCapture cap(0, cv::CAP_V4L2); // Use V4L2 backend directly
+  int cameraIdx = GlobalData::getInstance()->GlobalData::getFormCameraIdx();
+  cout << "[INFO] Using index: " << cameraIdx << " For form camera" << endl;
+  VideoCapture cap(cameraIdx, cv::CAP_V4L2); // Use V4L2 backend directly
   if (!cap.isOpened())
   {
     cerr << "[ERROR] Unable to open video capture" << endl;

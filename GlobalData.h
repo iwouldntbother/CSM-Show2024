@@ -10,6 +10,8 @@ class GlobalData {
 private:
     static GlobalData* instance;  // Declaration
     static std::mutex mtx;        // Declaration
+    int faceCameraIdx;
+    int formCameraIdx;
     DisplayWidget *displayWidget;
     cv::Mat frameData;
     bool* resultsData;
@@ -32,6 +34,10 @@ public:
     static GlobalData* getInstance();
 
     // Data access methods
+    void setFaceCameraIdx(int index);
+    [[nodiscard]] int getFaceCameraIdx() const;
+    void setFormCameraIdx(int index);
+    [[nodiscard]] int getFormCameraIdx() const;
     void setDisplayWidget(DisplayWidget *widget);
     [[nodiscard]] DisplayWidget* getDisplayWidget() const;
     void setFrameData(const cv::Mat& newFrameData);

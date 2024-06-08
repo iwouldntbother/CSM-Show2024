@@ -23,6 +23,26 @@ GlobalData* GlobalData::getInstance() {
     return instance;
 }
 
+void GlobalData::setFaceCameraIdx(int index) {
+    std::lock_guard<std::mutex> lock(mtx);
+    faceCameraIdx = index;
+}
+
+int GlobalData::getFaceCameraIdx() const {
+    std::lock_guard<std::mutex> lock(mtx);
+    return faceCameraIdx;
+}
+
+void GlobalData::setFormCameraIdx(int index) {
+    std::lock_guard<std::mutex> lock(mtx);
+    formCameraIdx = index;
+}
+
+int GlobalData::getFormCameraIdx() const {
+    std::lock_guard<std::mutex> lock(mtx);
+    return formCameraIdx;
+}
+
 void GlobalData::setDisplayWidget(DisplayWidget* widget) {
     std::lock_guard<std::mutex> lock(mtx);
     displayWidget = widget;
