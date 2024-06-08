@@ -3,6 +3,15 @@
 //
 
 #include <iostream>
+#include <cstdio>
+#include <memory>
+#include <stdexcept>
+#include <string>
+#include <array>
+#include <vector>
+#include <sstream>
+#include <regex>
+#include <map>
 #include <fstream>
 #include <QApplication>
 #include <opencv2/imgcodecs.hpp>
@@ -19,6 +28,42 @@
 
 using namespace std;
 
+std::string exec_cmd(const char* cmd) {
+    std::array<char, 128> buffer;
+    std::string result;
+    std::unique_ptr<FILE, decltype(&pclose)> pipe(popen(cmd, "r"), pclose);
+    if (!pipe) {
+        throw std::runtime_error("popen() failed!");
+    }
+    while (fgets(buffer.data(), static_cast<int>(buffer.size()), pipe.get()) != nullptr) {
+        result += buffer.data();
+    }
+    return result;
+}
+
+std::map<std::string, int> parseDeviceIndecies(const std::string& deviceList) {
+    std::map<std::string, int> cameraIndecies;
+    std::istringstream stream(deviceList);
+    std::string line;
+    std::regex deviceRegex("/dev/video(\\d+)");
+    std:string currentCamera;
+
+    while (std::getline(stream, line)) {
+        if (line.back() ==':') {
+            currentCamera = line.substr(0, line.size() - 1);
+        } else {
+            std::smatch match;
+            if (std::regex_search(line, match, deviceRegex)) {
+                if (!currentCamera.empty()) {
+                    cameraIndecies[currentCamera] = std::stoi(match[1]);
+                    currentCamera.clear();
+                }
+            }
+        }
+    }
+    return cameraIndecies;
+}
+
 
 int main(int argc, char *argv[]) {
     cout << R"(
@@ -30,6 +75,23 @@ int main(int argc, char *argv[]) {
  ╚══╝╚══╝ ╚═╝╚══════╝╚══════╝╚═╝╚═╝  ╚═╝╚═╝     ╚═╝     ╚══╝╚══╝ ╚══════╝╚══════╝   ╚═╝    ╚══╝╚══╝  ╚═════╝  ╚═════╝ ╚═════╝
     )" << endl;
 
+    //std::cout << "Webcams:" << std::endl;
+    //std::cout << exec_cmd("v4l2-ctl --list-devices") << endl;
+
+    try {
+        std::string result = exec_cmd("v4l2-ctl --list-devices");
+
+        std::map<std::string, int> cameraIndecies = parseDeviceIndecies(result);
+
+        for (const auto& camera : cameraIndecies) {
+            std::cout << "Camera: " << camera.first << ", Index: " << camera.second << std::endl;
+// if camera.first contains 'Full HD', set it's index as faceCamIdx
+// if camera.first contains 'USB Camera', set it's index as formCamIdx
+// TODO: Add above cameraIdxVars to GlobalData
+        }
+    } catch (const std::exception& e) {
+        std::cerr << "Error: " << e.what() << std::endl;
+    }
 
     std::array<bool, 40> boolArray{};
     boolArray.fill(false);
