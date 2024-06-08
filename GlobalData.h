@@ -19,6 +19,8 @@ private:
     cv::Mat faceFrame{};
     bool facesDetected{};
     std::string analysisResults{};
+    std::string progressText{};
+    bool showProgress{};
 
     // Private constructor
     GlobalData();
@@ -52,6 +54,10 @@ public:
     [[nodiscard]] bool getFacesDetected() const;
     void setAnalsysResults(const std::string& value);
     [[nodiscard]] std::string getAnalsysResults() const;
+    void setProgressText(const std::string& value);
+    [[nodiscard]] std::string getProgressText() const;
+    void setShowProgress(bool value);
+    [[nodiscard]] bool getShowProgress() const;
 };
 
 #endif // GLOBALDATA_H

@@ -6,6 +6,7 @@
 #include "GlobalData.h"
 #include <cstdlib>
 #include <string>
+#include <thread>
 #include <iostream>
 
 void print_results() {
@@ -29,5 +30,16 @@ void print_results() {
     //std::cout << "Running command: " << cmd << std::endl;
     std::cout << "Printing receipt... " << cmd.c_str() << std::endl;
 
+
+    GlobalData::getInstance()->setProgressText("Analysis complete, printing...");
+
     system(cmd.c_str());
+
+    std::this_thread::sleep_for(std::chrono::seconds(5));
+
+    GlobalData::getInstance()->setProgressText("Please take your results from the printer.");
+
+    std::this_thread::sleep_for(std::chrono::seconds(5));
+
+    GlobalData::getInstance()->setShowProgress(false);
 }

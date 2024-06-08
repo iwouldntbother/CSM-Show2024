@@ -375,14 +375,42 @@
 
   </widget>
 
+  <widget class="QLabel" name="progressWidget">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1920</width>
+     <height>1080</height>
+    </rect>
+   </property>
+
+   <property name="visible">
+    <bool>false</bool>
+   </property>
+
+   <property name="frameShape">
+    <enum>QFrame::Shape::Box</enum>
+   </property>
+
+   <property name="text">
+    <string>TextLabel</string>
+   </property>
+
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+
+   <property name="styleSheet">
+    <string notr="true">
+     background-color: rgba(0, 0, 0, 0.8);
+     font-weight: 600;
+     font-size: 23pt;
+     text-transform: uppercase;
+    </string>
+   </property>
+  </widget>
+
 
  </widget>
-
-<!-- <customwidgets>-->
-<!--  <customwidget>-->
-<!--   <class>QSvgWidget</class>-->
-<!--   <extends>QWidget</extends>-->
-<!--   <header>qsvgwidget.h</header>-->
-<!--  </customwidget>-->
-<!-- </customwidgets>-->
 </ui>

@@ -84,7 +84,7 @@ void DisplayWidget::updateFrame() {
     const bool* results = GlobalData::getInstance()->getResultsData();
     const cv::Mat faceFrame = GlobalData::getInstance()->getFaceFrame();
 
-    showResults(results);
+    // showResults(results);
 
     if (!globalFrame.empty()) {
         showFrame(globalFrame);
@@ -92,6 +92,13 @@ void DisplayWidget::updateFrame() {
 
     if (!faceFrame.empty()) {
         showFace(faceFrame);
+    }
+
+    if (GlobalData::getInstance()->getShowProgress()) {
+        ui->progressWidget->setText(QString::fromStdString(GlobalData::getInstance()->getProgressText()));
+        ui->progressWidget->show();
+    } else {
+        ui->progressWidget->hide();
     }
 
     DisplayWidget::updateSystemStats();
@@ -118,8 +125,6 @@ void DisplayWidget::showFace(const cv::Mat &frame) const {
 }
 
 void DisplayWidget::showResults(const bool* results) const {
-
-// TODO: Implement this function to actually show results on svg yk
 
     string resultsString;
 

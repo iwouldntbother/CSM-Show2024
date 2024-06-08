@@ -112,3 +112,23 @@ std::string GlobalData::getAnalsysResults() const {
     std::lock_guard<std::mutex> lock(mtx);
     return analysisResults;
 }
+
+void GlobalData::setProgressText(const std::string& value) {
+    std::lock_guard<std::mutex> lock(mtx);
+    progressText = value;
+}
+
+std::string GlobalData::getProgressText() const {
+    std::lock_guard<std::mutex> lock(mtx);
+    return progressText;
+}
+
+void GlobalData::setShowProgress(const bool value) {
+    std::lock_guard<std::mutex> lock(mtx);
+    showProgress = value;
+}
+
+bool GlobalData::getShowProgress() const {
+    std::lock_guard<std::mutex> lock(mtx);
+    return showProgress;
+}

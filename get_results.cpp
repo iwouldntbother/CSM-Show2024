@@ -201,6 +201,8 @@ bool* get_circle_results(cv::Mat &image) {
 //    destroyAllWindows();
 
     if (hasValue) {
+        GlobalData::getInstance()->setProgressText("Scanning form data...");
+        GlobalData::getInstance()->setShowProgress(true);
         analyse_results(results);
         return results;
     }

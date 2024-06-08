@@ -99,6 +99,7 @@ std::string analyse_results(const bool* results) {
     // std::cout << "Result from Python script: " << result << std::endl;
 
     GlobalData::getInstance()->setAnalsysResults(result.substr(result.find("##split#here##")+14));
+    GlobalData::getInstance()->setProgressText("Analysing form results...");
     print_results();
     return result.substr(result.find("##split#here##")+14);
     // return "Result from Python script: " ;
