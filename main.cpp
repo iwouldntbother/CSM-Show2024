@@ -33,13 +33,6 @@ int main(int argc, char *argv[]) {
 
     std::array<bool, 40> boolArray{};
     boolArray.fill(false);
-    // boolArray[0] = true;
-    // boolArray[3] = true;
-
-    // cout << "Analyzing results..." << endl;
-    // std::string const analysis = analyse_results(boolArray.data());
-    // cout << "Reply from analysis:" << endl;
-    // cout << analysis << endl;
 
     GlobalData::getInstance()->setResultsData(boolArray.data());
 
@@ -58,3 +51,12 @@ int main(int argc, char *argv[]) {
 // TODO: Add SQLLite database to store results
 // sudo dnf install sqlite sqlite-devel
 // ${SQLite3_LIBRARIES} ${SQLite3_INCLUDE_DIRS} SQLite3vscode
+
+
+// TODO: Read camera devices and set index acordingly
+// v4l2-ctl --list-devices
+// Output:
+// UVC Camera (046d:08ca) (usb-0000:00:14.0-1):
+// /dev/video0
+// /dev/video1
+// /dev/media0
