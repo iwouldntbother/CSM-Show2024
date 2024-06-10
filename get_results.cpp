@@ -90,7 +90,7 @@ vector<vector<vector<vector<vector<float>>>>> points = {
     },
 };
 
-bool isCircleFilled(Mat& image, Point p1, Point p2, double fillThreshold = 0.8) {
+bool isCircleFilled(Mat& image, Point p1, Point p2, double fillThreshold = 0.9) {
 
     cv::Rect roi(p1.x, p1.y, p2.x-p1.x, p2.y-p1.y);
     cv::Mat roiImage = image(roi);
@@ -106,6 +106,7 @@ bool isCircleFilled(Mat& image, Point p1, Point p2, double fillThreshold = 0.8) 
     // Apply Otsu's thresholding
     Mat thresh;
     threshold(blurred, thresh, 0, 255, THRESH_BINARY_INV | THRESH_OTSU);
+    //cv::imwrite("/tmp/thresh.jpg", thresh);
 
     // Apply morphological operations to close small gaps in the detected circles
     Mat morph;
@@ -202,7 +203,7 @@ bool* get_circle_results(cv::Mat &image) {
 
     if (hasValue) {
         GlobalData::getInstance()->setProgressText("Scanning form data...");
-        GlobalData::getInstance()->setShowProgress(true);
+        //GlobalData::getInstance()->setShowProgress(true);
         analyse_results(results);
         return results;
     }

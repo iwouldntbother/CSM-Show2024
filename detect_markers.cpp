@@ -58,17 +58,21 @@ void detect_markers()
   }
   cap.set(CAP_PROP_FRAME_WIDTH, 640);
   cap.set(CAP_PROP_FRAME_HEIGHT, 480);
-  std::this_thread::sleep_for(chrono::seconds(2));
+  //cap.set(CAP_PROP_FRAME_WIDTH, 3264);
+  //cap.set(CAP_PROP_FRAME_HEIGHT, 2448);
+  std::this_thread::sleep_for(chrono::seconds(1));
+
+  cap.set(CAP_PROP_AUTO_EXPOSURE, 3);
 
   // Get the current camera settings
   double exposure = cap.get(CAP_PROP_EXPOSURE);
   double brightness = cap.get(CAP_PROP_BRIGHTNESS);
-  double gain = cap.get(CAP_PROP_GAIN);
+  double gain = cap.get(CAP_PROP_GAMMA);
 
   cout << "[INFO] Current camera settings: " << endl;
   cout << "Exposure: " << exposure << endl;
   cout << "Brightness: " << brightness << endl;
-  cout << "Gain: " << gain << endl;
+  cout << "Gamma: " << gain << endl;
 
   vector<int> foundMarkers;
   auto all_time_start = steady_clock::time_point();
@@ -151,8 +155,15 @@ void detect_markers()
           //         FONT_HERSHEY_SIMPLEX, 0.6, Scalar(0, 255, 0), 2);
 
           // Switch to high resolution for capturing and apply the same settings
-          cap.set(CAP_PROP_FRAME_WIDTH, 3264);
-          cap.set(CAP_PROP_FRAME_HEIGHT, 2448);
+          cap.set(CAP_PROP_AUTO_EXPOSURE, 1);
+          cap.set(CAP_PROP_EXPOSURE, 50);
+          //std::this_thread::sleep_for(chrono::seconds(1));
+          //cap.set(CAP_PROP_FRAME_WIDTH, 3264);
+          //cap.set(CAP_PROP_FRAME_HEIGHT, 2448);
+          cap.set(CAP_PROP_FRAME_WIDTH, 2272);
+          cap.set(CAP_PROP_FRAME_HEIGHT, 1704);
+          //cap.set(CAP_PROP_AUTO_EXPOSURE, 1);
+          std::this_thread::sleep_for(chrono::seconds(1));
 
           // Apply the copied camera settings to the high-resolution frame
           //cap.set(CAP_PROP_EXPOSURE, exposure);
@@ -160,28 +171,48 @@ void detect_markers()
           //cap.set(CAP_PROP_GAIN, gain);
 
           // Print the camera settings after applying them
-          // cout << "[INFO] Settings after resolution change:" << endl;
-          // cout << "Exposure: " << cap.get(CAP_PROP_EXPOSURE) << endl;
-          // cout << "Brightness: " << cap.get(CAP_PROP_BRIGHTNESS) << endl;
+          cout << "[INFO] Settings after resolution change:" << endl;
+          cout << "Exposure: " << cap.get(CAP_PROP_EXPOSURE) << endl;
+          cout << "Brightness: " << cap.get(CAP_PROP_BRIGHTNESS) << endl;
           // cout << "Gain: " << cap.get(CAP_PROP_GAIN) << endl;
+
+          //cap.set(CAP_PROP_AUTO_EXPOSURE, 1);
 
           // Manually adjust the exposure to a lower value to prevent overexposure
-          cap.set(CAP_PROP_EXPOSURE, 150); // Adjust this value as needed
+          //cap.set(CAP_PROP_EXPOSURE, 120);
+          //cap.set(CAP_PROP_BRIGHTNESS, -64);
+
+
+	  // Waste some frames so the camera can adjust
+	  Mat waste_frame;
+	  cap >> waste_frame;
+	  waste_frame.release();
+	  //std::this_thread::sleep_for(chrono::seconds(1));
+	  cap >> waste_frame;
+	  waste_frame.release();
+	  //std::this_thread::sleep_for(chrono::seconds(1));
+	  cap >> waste_frame;
+	  waste_frame.release();
+
 
           // Print the camera settings after manual adjustment
-          // cout << "[INFO] Settings after manual adjustment:" << endl;
-          // cout << "Exposure: " << cap.get(CAP_PROP_EXPOSURE) << endl;
-          // cout << "Brightness: " << cap.get(CAP_PROP_BRIGHTNESS) << endl;
-          // cout << "Gain: " << cap.get(CAP_PROP_GAIN) << endl;
+           cout << "[INFO] Settings after manual adjustment:" << endl;
+           cout << "Exposure: " << cap.get(CAP_PROP_EXPOSURE) << endl;
+           cout << "Brightness: " << cap.get(CAP_PROP_BRIGHTNESS) << endl;
+           cout << "Gamma: " << cap.get(CAP_PROP_GAMMA) << endl;
 
           // Wait a moment for the settings to take effect
-          std::this_thread::sleep_for(chrono::seconds(1));
+          //std::this_thread::sleep_for(chrono::seconds(2));
 
           // Capture a high-resolution frame
           Mat high_res_frame;
-          cap.read(high_res_frame);
-          cap.set(CAP_PROP_FRAME_WIDTH, 640);
-          cap.set(CAP_PROP_FRAME_HEIGHT, 480);
+          cap >> high_res_frame;
+	  std::this_thread::sleep_for(chrono::seconds(1));
+          //cap.set(CAP_PROP_FRAME_WIDTH, 640);
+          //cap.set(CAP_PROP_FRAME_HEIGHT, 480);
+
+          cap.set(CAP_PROP_AUTO_EXPOSURE, 3);
+	  //cap.set(CAP_PROP_BRIGHTNESS, 0);
 
           if (!high_res_frame.empty())
           {
@@ -208,6 +239,10 @@ void detect_markers()
             cout << "[ERROR] Failed to capture high-resolution frame." << endl;
           }
 
+
+          cap.set(CAP_PROP_FRAME_WIDTH, 640);
+          cap.set(CAP_PROP_FRAME_HEIGHT, 480);
+
           // Reset the timer
           all_time_start = steady_clock::time_point();
         }
@@ -231,6 +266,7 @@ void detect_markers()
       // putText(low_res_frame, to_string(duration_cast<seconds>(steady_clock::now() - all_time_start).count()),
       //         Point(10, 60), FONT_HERSHEY_SIMPLEX, 0.6, Scalar(255, 0, 255), 2);
     } else {
+      //std::this_thread::sleep_for(chrono::seconds(1));
       GlobalData::getInstance()->setReadyStatus(true);
     }
 
@@ -256,8 +292,8 @@ void detect_markers()
   }
 
   // Do a bit of cleanup
-  destroyAllWindows();
-  cap.release();
+  //destroyAllWindows();
+  //cap.release();
 
   // return 0;
 }

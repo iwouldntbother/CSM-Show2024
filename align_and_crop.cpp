@@ -137,12 +137,14 @@ void align_and_crop(Mat &image, Ptr<aruco::Dictionary> arucoDict, Ptr<aruco::Det
     } else {
       final_image = output_image_flipped;
     }
+    GlobalData::getInstance()->setProgressText("Collecting form data...");
+    GlobalData::getInstance()->setShowProgress(true);
     // imshow("Final Image", final_image);
     // GlobalData::getInstance()->setFrameData(final_image);
     // ocr(final_image);
     get_circle_results(final_image);
-    waitKey(0);
-    destroyAllWindows();
+    //waitKey(0);
+    //destroyAllWindows();
   }
   catch (const runtime_error &e)
   {
