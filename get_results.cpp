@@ -116,7 +116,7 @@ bool isCircleFilled(Mat& image, Point p1, Point p2, double fillThreshold = 0.9) 
 
     // Detect circles using Hough Circle Transform with adjusted parameters
     vector<Vec3f> circles;
-    HoughCircles(morph, circles, HOUGH_GRADIENT, 2, morph.rows / 8, 100, 30, morph.rows/4, morph.rows);
+    HoughCircles(morph, circles, HOUGH_GRADIENT, 2, morph.rows / 8., 100, 30, morph.rows/4, morph.rows);
 
     if (circles.empty()) {
         cout << "No circles detected." << endl;
@@ -195,11 +195,9 @@ bool* get_circle_results(cv::Mat &image) {
 
     GlobalData::getInstance()->setResultsData(results);
 
-    DisplayWidget* displaywidget = GlobalData::getInstance()->getDisplayWidget();
+    const DisplayWidget* displaywidget = GlobalData::getInstance()->getDisplayWidget();
     displaywidget->showSvg();
 
-//    waitKey(0);
-//    destroyAllWindows();
 
     if (hasValue) {
         GlobalData::getInstance()->setProgressText("Scanning form data...");

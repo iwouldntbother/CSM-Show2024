@@ -38,19 +38,16 @@ add_executable(form_scan main.cpp
         displaywidget.cpp
         displaywidget.h
         displaywidget.ui
-        DataContainer.h
-        SharedData.h
         GlobalData.h
         GlobalData.cpp
         SvgWidget.h
         SvgWidget.cpp
-        GLImageProcessor.cpp
-        GLImageProcessor.h
+#        GLImageProcessor.cpp
+#        GLImageProcessor.h
         detect_faces.cpp
         detect_faces.h
         analyse_results.cpp
         analyse_results.h
-        libescpos/
         printer.cpp
         printer.h
 )

@@ -6,7 +6,6 @@
 #include <thread>
 #include <vector>
 
-#include "SharedData.h"
 #include "DataContainer.h"
 
 #include "GlobalData.h"
@@ -15,33 +14,22 @@ using namespace std;
 using namespace cv;
 using namespace std::chrono;
 
-int getIndex(vector<int> v, int K)
+int getIndex(vector<int> v, const int K)
 {
-  auto it = find(v.begin(), v.end(), K);
-
   // If element was found
-  if (it != v.end())
+  if (const auto it = find(v.begin(), v.end(), K); it != v.end())
   {
-
-    // calculating the index
-    // of K
-    int index = it - v.begin();
+    const int index = it - v.begin();
     // cout << index << endl;
     return index;
   }
   else {
-    // If the element is not
-    // present in the vector
-    // cout << "-1" << endl;
     return -1;
   }
 }
 
 void detect_markers()
 {
-  // SharedData sharedData;
-  // auto container = sharedData.getDataContainer();
-
   // Define names of each possible ArUco tag OpenCV supports
   const Ptr<aruco::Dictionary> arucoDict = makePtr<aruco::Dictionary>(aruco::getPredefinedDictionary(aruco::DICT_7X7_100));
   const Ptr<aruco::DetectorParameters> arucoParams = makePtr<aruco::DetectorParameters>();
@@ -58,8 +46,6 @@ void detect_markers()
   }
   cap.set(CAP_PROP_FRAME_WIDTH, 640);
   cap.set(CAP_PROP_FRAME_HEIGHT, 480);
-  //cap.set(CAP_PROP_FRAME_WIDTH, 3264);
-  //cap.set(CAP_PROP_FRAME_HEIGHT, 2448);
   std::this_thread::sleep_for(chrono::seconds(1));
 
   cap.set(CAP_PROP_AUTO_EXPOSURE, 3);
@@ -78,7 +64,6 @@ void detect_markers()
   auto all_time_start = steady_clock::time_point();
 
   int frame_skip = 0;
-  const int skip_rate = 2; // Adjust this value to skip frames
 
   // Loop over the frames from the video stream
   while (true)
@@ -91,7 +76,7 @@ void detect_markers()
       break;
     }
 
-    if (frame_skip < skip_rate)
+    if (frame_skip < 2)
     {
       frame_skip++;
       continue;
@@ -112,30 +97,13 @@ void detect_markers()
       {
         foundMarkers.push_back(ids[i]);
 
-        // Point start(5,5);
-        // int size = 10;
-        // int gap = 2;
         rectangle(low_res_frame, Point(5+(i*12), 5), Point(15 + (i * 12), 15), Scalar(255, 255, 255), -1);
-        // rectangle(low_res_frame, Point(start.x+(i*(size+gap)), start.y), Point((start.x+size)+(i*(size+gap)), start.y+size), Scalar(255, 255, 255), -1);
 
         // Draw the bounding box of the ArUCo detection
         for (int j = 0; j < 4; j++)
         {
           line(low_res_frame, corners[i][j], corners[i][(j + 1) % 4], Scalar(255, 255, 255), 1);
         }
-
-        // Compute and draw the center (x, y)-coordinates of the ArUco marker
-        // Point2f center(0, 0);
-        // for (const auto &pt : corners[i])
-        // {
-        //   center += pt;
-        // }
-        // center *= (1.0 / 4);
-        // circle(low_res_frame, center, 4, Scalar(0, 0, 255), -1);
-
-        // Draw the ArUco marker ID on the frame
-        // putText(low_res_frame, to_string(ids[i]), corners[i][0] - Point2f(0, 15),
-        //         FONT_HERSHEY_SIMPLEX, 0.5, Scalar(0, 255, 0), 2);
       }
 
       // Check if the number of markers found is greater than 3
@@ -150,49 +118,21 @@ void detect_markers()
         // Check if the duration is greater than 2 seconds
         else if (duration_cast<seconds>(steady_clock::now() - all_time_start).count() > 2)
         {
-          // Print the number of markers found in blue
-          // putText(low_res_frame, "Found Markers: " + to_string(foundMarkers.size()), Point(10, 30),
-          //         FONT_HERSHEY_SIMPLEX, 0.6, Scalar(0, 255, 0), 2);
 
           // Switch to high resolution for capturing and apply the same settings
           cap.set(CAP_PROP_AUTO_EXPOSURE, 1);
           cap.set(CAP_PROP_EXPOSURE, 50);
-          //std::this_thread::sleep_for(chrono::seconds(1));
-          //cap.set(CAP_PROP_FRAME_WIDTH, 3264);
-          //cap.set(CAP_PROP_FRAME_HEIGHT, 2448);
           cap.set(CAP_PROP_FRAME_WIDTH, 2272);
           cap.set(CAP_PROP_FRAME_HEIGHT, 1704);
-          //cap.set(CAP_PROP_AUTO_EXPOSURE, 1);
           std::this_thread::sleep_for(chrono::seconds(1));
 
-          // Apply the copied camera settings to the high-resolution frame
-          //cap.set(CAP_PROP_EXPOSURE, exposure);
-          //cap.set(CAP_PROP_BRIGHTNESS, brightness);
-          //cap.set(CAP_PROP_GAIN, gain);
 
-          // Print the camera settings after applying them
-          cout << "[INFO] Settings after resolution change:" << endl;
-          cout << "Exposure: " << cap.get(CAP_PROP_EXPOSURE) << endl;
-          cout << "Brightness: " << cap.get(CAP_PROP_BRIGHTNESS) << endl;
-          // cout << "Gain: " << cap.get(CAP_PROP_GAIN) << endl;
-
-          //cap.set(CAP_PROP_AUTO_EXPOSURE, 1);
-
-          // Manually adjust the exposure to a lower value to prevent overexposure
-          //cap.set(CAP_PROP_EXPOSURE, 120);
-          //cap.set(CAP_PROP_BRIGHTNESS, -64);
-
-
-	  // Waste some frames so the camera can adjust
-	  Mat waste_frame;
-	  cap >> waste_frame;
-	  waste_frame.release();
-	  //std::this_thread::sleep_for(chrono::seconds(1));
-	  cap >> waste_frame;
-	  waste_frame.release();
-	  //std::this_thread::sleep_for(chrono::seconds(1));
-	  cap >> waste_frame;
-	  waste_frame.release();
+	        // Waste some frames so the camera can adjust
+	        Mat waste_frame;
+	        cap >> waste_frame;
+	        cap >> waste_frame;
+	        cap >> waste_frame;
+	        waste_frame.release();
 
 
           // Print the camera settings after manual adjustment
@@ -207,7 +147,7 @@ void detect_markers()
           // Capture a high-resolution frame
           Mat high_res_frame;
           cap >> high_res_frame;
-	  std::this_thread::sleep_for(chrono::seconds(1));
+	        std::this_thread::sleep_for(chrono::seconds(1));
           //cap.set(CAP_PROP_FRAME_WIDTH, 640);
           //cap.set(CAP_PROP_FRAME_HEIGHT, 480);
 
@@ -224,7 +164,7 @@ void detect_markers()
             // Check if marker one is in the top right corner
             vector<Point2f> markerOneLocation = corners[getIndex(ids, 1)];
             bool rotate;
-            if(markerOneLocation[0].x > low_res_frame.cols/2 && markerOneLocation[0].y < low_res_frame.rows/2) {
+            if(markerOneLocation[0].x > low_res_frame.cols/2. && markerOneLocation[0].y < low_res_frame.rows/2.) {
               rotate = true;
             } else {
               rotate = false;
@@ -251,49 +191,17 @@ void detect_markers()
         {
           // rectangle(low_res_frame, Point(5,17), Point(51, 20), Scalar(255, 255, 255), -1);
           rectangle(low_res_frame, Point(5,17), Point(std::min(chrono::duration<double>(steady_clock::now() - all_time_start).count() * 25.5, 51.0), 20), Scalar(255, 255, 255), -1);
-          // putText(low_res_frame, "Found Markers: " + to_string(foundMarkers.size()), Point(10, 30),
-          //         FONT_HERSHEY_SIMPLEX, 0.6, Scalar(255, 0, 0), 2);
         }
       }
-      // If the number of markers found is less than 3, reset the timer and print the number of markers found in red
       else
       {
         all_time_start = steady_clock::time_point();
-        // putText(low_res_frame, "Found Markers: " + to_string(foundMarkers.size()), Point(10, 30),
-        //         FONT_HERSHEY_SIMPLEX, 0.6, Scalar(0, 0, 255), 2);
       }
 
-      // putText(low_res_frame, to_string(duration_cast<seconds>(steady_clock::now() - all_time_start).count()),
-      //         Point(10, 60), FONT_HERSHEY_SIMPLEX, 0.6, Scalar(255, 0, 255), 2);
     } else {
-      //std::this_thread::sleep_for(chrono::seconds(1));
       GlobalData::getInstance()->setReadyStatus(true);
     }
 
-    // container->setFrameData(low_res_frame);
-    // bool* currentResults = container->getResults();
-    // cout << "Results: ";
-    // for (int i = 0; i < 40; i++)
-    // {
-    //   cout << currentResults[i] << " ";
-    // }
-    // cout << endl;
-
     GlobalData::getInstance()->setFrameData(low_res_frame);
-
-    // cout << "Frame data set" << low_res_frame.size() << endl;
-    // Show the output frame
-    // imshow("Frame", low_res_frame);
-    // char key = static_cast<char>(waitKey(1));
-    // if (key == 'q')
-    // {
-      // break;
-    // }
   }
-
-  // Do a bit of cleanup
-  //destroyAllWindows();
-  //cap.release();
-
-  // return 0;
 }

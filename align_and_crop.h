@@ -12,6 +12,6 @@
 using namespace cv;
 using namespace std;
 
-void align_and_crop(Mat &image, Ptr<aruco::Dictionary> arucoDict, Ptr<aruco::DetectorParameters> arucoParams, bool rotateImage);
+void align_and_crop(Mat &image, const Ptr<aruco::Dictionary>& arucoDict, const Ptr<aruco::DetectorParameters>& arucoParams, bool rotateImage);
 
 #endif // ALIGN_AND_CROP_H

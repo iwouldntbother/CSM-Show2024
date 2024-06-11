@@ -10,9 +10,9 @@ class GlobalData {
 private:
     static GlobalData* instance;  // Declaration
     static std::mutex mtx;        // Declaration
-    int faceCameraIdx;
-    int formCameraIdx;
-    DisplayWidget *displayWidget;
+    int faceCameraIdx{};
+    int formCameraIdx{};
+    DisplayWidget *displayWidget{};
     cv::Mat frameData;
     bool* resultsData;
     bool ready;

@@ -17,10 +17,10 @@ using namespace cv;
 vector<Point2f> get_corners(const vector<pair<vector<Point2f>, int>> &markers)
 {
   map<int, Point2f> points;
-  for (const auto &marker : markers)
+  for (const auto &[fst, snd] : markers)
   {
-    const int markerID = marker.second;
-    const auto &corners = marker.first;
+    const int markerID = snd;
+    const auto &corners = fst;
     switch (markerID)
     {
     case 1:
@@ -70,14 +70,14 @@ vector<Point2f> order_points(const vector<Point2f> &pts)
 
 Mat rotate_image(const Mat &image, double angle)
 {
-  Point2f center(image.cols / 2.0, image.rows / 2.0);
-  Mat rot = getRotationMatrix2D(center, angle, 1.0);
+  const Point2f center(image.cols / 2., image.rows / 2.);
+  const Mat rot = getRotationMatrix2D(center, angle, 1.0);
   Mat rotated;
   warpAffine(image, rotated, rot, image.size());
   return rotated;
 }
 
-void align_and_crop(Mat &image, Ptr<aruco::Dictionary> arucoDict, Ptr<aruco::DetectorParameters> arucoParams, bool rotateImage)
+void align_and_crop(Mat &image, const Ptr<aruco::Dictionary>& arucoDict, const Ptr<aruco::DetectorParameters>& arucoParams, bool rotateImage)
 {
   // Re-detect the markers in the high-resolution frame
   vector<int> ids;
@@ -90,6 +90,9 @@ void align_and_crop(Mat &image, Ptr<aruco::Dictionary> arucoDict, Ptr<aruco::Det
     imwrite("/tmp/img-no-detect.jpg", image);
     return;
   }
+
+  GlobalData::getInstance()->setProgressText("Collecting form data...");
+  GlobalData::getInstance()->setShowProgress(true);
 
   // Debug: Print detected marker IDs
   cout << "[INFO] Detected marker IDs: ";
@@ -130,21 +133,13 @@ void align_and_crop(Mat &image, Ptr<aruco::Dictionary> arucoDict, Ptr<aruco::Det
     warpPerspective(image, output_image, M, Size(new_width, new_height));
     cv::Mat output_image_flipped;
     cv::flip(output_image, output_image_flipped, 1);
-    // imshow("Original Image", image);
     cv::Mat final_image;
     if (rotateImage) {
       final_image = rotate_image(output_image_flipped, 180);
     } else {
       final_image = output_image_flipped;
     }
-    GlobalData::getInstance()->setProgressText("Collecting form data...");
-    GlobalData::getInstance()->setShowProgress(true);
-    // imshow("Final Image", final_image);
-    // GlobalData::getInstance()->setFrameData(final_image);
-    // ocr(final_image);
     get_circle_results(final_image);
-    //waitKey(0);
-    //destroyAllWindows();
   }
   catch (const runtime_error &e)
   {

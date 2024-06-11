@@ -26,14 +26,13 @@ public:
 
     void showSvg() const;
     private slots:
-        void updateFrame();
+        void updateFrame() const;
 
 
 private:
     Ui::DisplayWidget *ui;
     QTimer *timer;
-    GLImageProcessor *glProcessor;
-    void showFrame(const cv::Mat &frame);
+    void showFrame(const cv::Mat &frame) const;
 
     void showFace(const cv::Mat &frame) const;
 

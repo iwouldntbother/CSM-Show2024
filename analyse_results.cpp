@@ -56,7 +56,7 @@ std::string format_data(const bool* results) {
     for (int i = 0; i < 5; i++) {
         std::string for_result = "For: ";
         std::string against_result = "Against: ";
-        int start_index = 8 * i;
+        const int start_index = 8 * i;
 
         // Collect 'for' and 'against' responses
         for (int j = 0; j < 4; j++) {
@@ -70,37 +70,20 @@ std::string format_data(const bool* results) {
         if (for_result.length() > 5) for_result = for_result.substr(0, for_result.length() - 2);
         if (against_result.length() > 9) against_result = against_result.substr(0, against_result.length() - 2);
 
-        // std::cout << "Question: " + std::to_string(i) + ". " + questions[i] + for_result + against_result << std::endl;
-        resultsString += "Question: " + std::to_string(i) + ". " + questions[i] + " " + for_result + " " + against_result + "\n";
-        // resultsString.append(std::to_string(i));
-        // resultsString.append(questions[i]);
-        // resultsString.append(for_result);
-        // resultsString.append(against_result);
-        // resultsString.append("\n");
+        resultsString += "Question: " + std::to_string(i) + ". " += questions[i] + " " += for_result + " " += against_result + "\n";
     }
     return resultsString;
 }
 
 std::string analyse_results(const bool* results) {
 
-    // std::cout << "Using these results: ";
-    // for (int i=0; i<40; i++) {
-    //     std::cout << results[i] << " ";
-    // }
-    // std::cout << std::endl;
-
     std::string const input = format_data(results);
-
-    // std::cout << "Input to Python script: " << input << std::endl;
 
     std::string const command = "echo '" + input + "' | python3 /home/admin/form-scan/build/llm_python/summarise.py";
     std::string const result = exec(command.c_str());
-
-    // std::cout << "Result from Python script: " << result << std::endl;
 
     GlobalData::getInstance()->setAnalsysResults(result.substr(result.find("##split#here##")+14));
     GlobalData::getInstance()->setProgressText("Analysing form results...");
     print_results();
     return result.substr(result.find("##split#here##")+14);
-    // return "Result from Python script: " ;
 }

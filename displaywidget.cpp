@@ -7,7 +7,6 @@
 #include "displaywidget.h"
 #include "ui_displaywidget.h"
 
-// #include <QTimer>
 #include <qdom.h>
 #include <QFile>
 #include <QSvgWidget>
@@ -27,24 +26,19 @@ using namespace std;
 DisplayWidget::DisplayWidget(QWidget *parent) :
     QWidget(parent),
     ui(new Ui::DisplayWidget),
-    timer(new QTimer(this)),
-    glProcessor(new GLImageProcessor(this))
+    timer(new QTimer(this))
 {
     ui->setupUi(this);
 
     this->setCursor(Qt::BlankCursor);
 
     // Load the font from resources
-    int fontId = QFontDatabase::addApplicationFont(":/assets/fonts/ChakraPetch-Regular.ttf");
-    QString fontFamily = QFontDatabase::applicationFontFamilies(fontId).at(0);
+    const int fontId = QFontDatabase::addApplicationFont(":/assets/fonts/ChakraPetch-Regular.ttf");
+    const QString fontFamily = QFontDatabase::applicationFontFamilies(fontId).at(0);
 
     if (fontId == -1) {
         qWarning("Failed to load the font.");
     }
-
-    // SharedData sharedData;
-    // auto container = sharedData.getDataContainer();
-    // DisplayWidget::showResults(container->getResults());
 
     connect(timer, &QTimer::timeout, this, &DisplayWidget::updateFrame);
     timer->start(40); // Adjust the interval as needed
@@ -53,7 +47,7 @@ DisplayWidget::DisplayWidget(QWidget *parent) :
     showSvg();
 
     // Set fonts
-    QFont font(fontFamily);
+    const QFont font(fontFamily);
     ui->frameTitle->setFont(font);
 
     ui->logoLabel->setLineWidth(3);
@@ -66,25 +60,17 @@ DisplayWidget::DisplayWidget(QWidget *parent) :
     ui->frameWidget->setSizePolicy(QSizePolicy::Ignored, QSizePolicy::Ignored);
     ui->frameWidget->setScaledContents(true);
 
-    // UI Styling
-    //glProcessor->setParent(ui->faceWidget);
-    //glProcessor->setFixedSize(504, 504);
-    // const QImage logo = QImage::load(":/assets/images/print_logo.png");
 
     ui->logoLabel->setPixmap(QPixmap(":/assets/images/logo.png"));
-    // ui->logoLabel->setPixmap(QPixmap::fromImage(logo.scaled(ui->logoLabel->size(), Qt::KeepAspectRatio)));
 }
 
 DisplayWidget::~DisplayWidget() {
     delete ui;
 }
 
-void DisplayWidget::updateFrame() {
+void DisplayWidget::updateFrame() const {
     const cv::Mat globalFrame = GlobalData::getInstance()->getFrameData();
-    const bool* results = GlobalData::getInstance()->getResultsData();
     const cv::Mat faceFrame = GlobalData::getInstance()->getFaceFrame();
-
-    // showResults(results);
 
     if (!globalFrame.empty()) {
         showFrame(globalFrame);
@@ -101,25 +87,24 @@ void DisplayWidget::updateFrame() {
         ui->progressWidget->hide();
     }
 
-    DisplayWidget::updateSystemStats();
+    updateSystemStats();
 }
 
-void DisplayWidget::showFrame(const cv::Mat &frame) {
-    // cout << "Showing frame" << frame.cols << " x " << frame.rows << endl;
+void DisplayWidget::showFrame(const cv::Mat &frame) const {
     // Convert frame to QImage
     cv::Mat grayFrame;
     cv::cvtColor(frame, grayFrame, cv::COLOR_BGR2GRAY);
     cv::rotate(grayFrame, grayFrame, cv::ROTATE_90_CLOCKWISE);
     const QImage qimg(grayFrame.data, grayFrame.cols, grayFrame.rows, grayFrame.step, QImage::Format_Grayscale8);
-    // QImage scaled_frame = qimg.scaled(ui->frameWidget->size(), Qt::KeepAspectRatio);
     ui->frameWidget->setPixmap(QPixmap::fromImage(qimg.scaled(ui->frameWidget->size(), Qt::KeepAspectRatio)));
     // std::cout << "Frame updating" << std::endl;
 }
 
 void DisplayWidget::showFace(const cv::Mat &frame) const {
-    cv::Mat grayFrame;
-    cv::cvtColor(frame, grayFrame, cv::COLOR_BGR2GRAY);
-    const QImage qimg(grayFrame.data, grayFrame.cols, grayFrame.rows, grayFrame.step, QImage::Format_Grayscale8);
+    // cv::Mat grayFrame;
+    // cv::cvtColor(frame, grayFrame, cv::COLOR_BGR2GRAY);
+    // const QImage qimg(grayFrame.data, grayFrame.cols, grayFrame.rows, grayFrame.step, QImage::Format_Grayscale8);
+    const QImage qimg(frame.data, frame.cols, frame.rows, frame.step, QImage::Format_Grayscale8);
     ui->faceWidget->setPixmap(QPixmap::fromImage(qimg.scaled(ui->faceWidget->size(), Qt::KeepAspectRatio)));
     //glProcessor->updateFrame(resized_frame);
 }
@@ -161,7 +146,7 @@ void DisplayWidget::showSvg() const {
 
     const bool* results = GlobalData::getInstance()->getResultsData();
 
-    QDomElement resultsGroup = doc.documentElement().firstChildElement("g");
+    const QDomElement resultsGroup = doc.documentElement().firstChildElement("g");
     if (resultsGroup.isNull() || resultsGroup.attribute("id") != "resultsGroup") {
         qDebug() << "Results group not found or incorrect ID";
         return;
@@ -170,7 +155,7 @@ void DisplayWidget::showSvg() const {
     QDomElement path = resultsGroup.firstChildElement("path");
     while (!path.isNull()) {
         QString pathId = path.attribute("id");
-        bool condition = results[pathId.remove("result").toInt()];
+        const bool condition = results[pathId.remove("result").toInt()];
         QString newColor = condition ? "#000" : "#fff"; // Black if condition is true, otherwise White
 
         path.setAttribute("fill", newColor);
@@ -250,19 +235,19 @@ void DisplayWidget::updateSystemStats() const {
         ui->memBar->setValue(static_cast<int>(memUsagePercentage));
     }
 
-    if (QFile upFile("/proc/uptime"); upFile.open(QIODevice::ReadOnly | QIODevice::Text)) {
-        QTextStream stream(&upFile);
-        const QString uptime = stream.readLine();
-        upFile.close();
-
-        const int uptimeSeconds = uptime.split(" ")[0].toInt();
-        const int uptimeMinutes = uptimeSeconds / 60;
-        const int uptimeHours = uptimeMinutes / 60;
-        const int uptimeDays = uptimeHours / 24;
-
-        ui->uptimeLabel->setText(QString("Uptime: %1 days, %2 hours, %3 minutes")
-                                 .arg(uptimeDays).arg(uptimeHours % 24).arg(uptimeMinutes % 60));
-    }
+    // if (QFile upFile("/proc/uptime"); upFile.open(QIODevice::ReadOnly | QIODevice::Text)) {
+    //     QTextStream stream(&upFile);
+    //     const QString uptime = stream.readLine();
+    //     upFile.close();
+    //
+    //     const int uptimeSeconds = uptime.split(" ")[0].toInt();
+    //     const int uptimeMinutes = uptimeSeconds / 60;
+    //     const int uptimeHours = uptimeMinutes / 60;
+    //     const int uptimeDays = uptimeHours / 24;
+    //
+    //     ui->uptimeLabel->setText(QString("Uptime: %1 days, %2 hours, %3 minutes")
+    //                              .arg(uptimeDays).arg(uptimeHours % 24).arg(uptimeMinutes % 60));
+    // }
 }
 
 
